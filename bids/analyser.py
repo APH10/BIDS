@@ -1,14 +1,16 @@
 # Copyright (C) 2024 APH10 Limited
 # SPDX-License-Identifier: Apache-2.0
 
-from pathlib import Path
-from bids.elf_utils import BIDSElf
-from bids.callgraph import BIDSGraph
 import os
+from pathlib import Path
+
+from bids.callgraph import BIDSGraph
+from bids.elf_utils import BIDSElf
+
 
 class BIDSAnalyser:
 
-    def __init__(self, options = {}):
+    def __init__(self, options={}):
         self.filename = None
         self.options = options
         self.global_symbols = []
@@ -40,11 +42,10 @@ class BIDSAnalyser:
     def analyse(self, filename):
         self.check_file(filename)
         elf = BIDSElf(self.filename)
-        if not self.options.get("dependency",False):
+        if not self.options.get("dependency", False):
             self.dependencies = elf.get_dependencies()
-        if not self.options.get("symbols",False):
+        if not self.options.get("symbols", False):
             self.global_symbols, self.local_symbols = elf.get_symbols()
-
 
     def get_global_symbols(self):
         return self.global_symbols

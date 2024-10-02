@@ -6,8 +6,8 @@ import sys
 import textwrap
 from collections import ChainMap
 
-from bids.version import VERSION
 from bids.analyser import BIDSAnalyser
+from bids.version import VERSION
 
 # CLI processing
 
@@ -101,17 +101,17 @@ def main(argv=None):
     # Do stuff
     options = {
         "dependency": args["exclude_dependency"],
-        "symbol" : args["exclude_symbol"],
-        "callgraph" : args["exclude_callgraph"]
-        }
+        "symbol": args["exclude_symbol"],
+        "callgraph": args["exclude_callgraph"],
+    }
     analyser = BIDSAnalyser(options)
     analyser.analyse(binary_file)
 
-    #print (f"Dependencies: {analyser.get_dependencies()}")
-    #print (f"Symbols: {analyser.get_symbols()}")
+    # print (f"Dependencies: {analyser.get_dependencies()}")
+    # print (f"Symbols: {analyser.get_symbols()}")
 
     if len(analyser.get_dependencies()) > 0:
-        print ("GLOBAL")
+        print("GLOBAL")
         for dependency in analyser.get_dependencies():
             library = {}
             for symbol in analyser.get_global_symbols():
@@ -121,9 +121,9 @@ def main(argv=None):
                     else:
                         library[symbol[1]] = [symbol[2]]
 
-            print (f"Dependency: {dependency}")
+            print(f"Dependency: {dependency}")
             for lib, functions in library.items():
-                print (lib, sorted(functions))
+                print(lib, sorted(functions))
 
     # print ("LOCAL")
     # # Local
