@@ -11,10 +11,18 @@ from elftools.elf.gnuversions import (
 from elftools.elf.sections import SymbolTableSection
 from typecode import contenttype
 
+"""
+Functions and objects to extract information from binary Elf files using pyelftools.
+Based on code by: Eli Bendersky (eliben@gmail.com): "This code is in the public domain"
+
+For a good introduction on readelf and ELF see:
+    http://www.linuxforums.org/misc/understanding_elf_using_readelf_and_objdump.html
+"""
+
 
 class BIDSElf:
 
-    def __init__(self, file):
+    def __init__(self, file, debug=False):
         T = contenttype.get_type(file)
         if not T.is_elf:
             raise TypeError("Not an ELF file")
@@ -22,6 +30,11 @@ class BIDSElf:
         self.elffile = ELFFile(f)
         self._versioninfo = None
         self._init_versioninfo()
+        self.debug = debug
+
+    def get_header(self):
+        header = self.elffile.header
+        return header
 
     def get_dependencies(self):
         dependency = []
@@ -119,29 +132,37 @@ class BIDSElf:
 
             if section["sh_entsize"] > 0:
                 for nsym, symbol in enumerate(section.iter_symbols()):
+
                     if (
                         section["sh_type"] == "SHT_DYNSYM"
                         and self._versioninfo["type"] == "GNU"
                     ):
                         version = self._symbol_version(nsym)
-                        print(version, symbol.name)
+                        if self.debug:
+                            print(version, symbol.name)
                         if version["name"] != symbol.name and version["index"] not in (
                             "VER_NDX_LOCAL",
                             "VER_NDX_GLOBAL",
                         ):
                             # Just external symbols
                             if version["filename"]:
-                                # external symbol
-                                # name e.g. GLIBC_2.9
-                                # filename e.g. libc.so.6
+                                # external symbol consists of a name
+                                # e.g. GLIBC_2.9 and a filename e.g. libc.so.6
                                 global_symbols.append(
                                     [version["filename"], version["name"], symbol.name]
                                 )
                             else:
-                                local_symbols.append([version["name"], symbol.name])
+                                local_symbols.append(symbol.name)
                         else:
-                            local_symbols.append([version["name"], symbol.name])
+                            if symbol.name != "":
+                                local_symbols.append(symbol.name)
+                    else:
 
+                        print(
+                            f"Type: {section['sh_type']} "
+                            f"Name: {symbol.name} Version: "
+                            f"{self._symbol_version(nsym)}"
+                        )
         return global_symbols, local_symbols
 
     def get_text(self):
