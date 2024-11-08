@@ -7,6 +7,7 @@ import textwrap
 from collections import ChainMap
 
 from bids.analyser import BIDSAnalyser
+from bids.output import BIDSOutput
 from bids.version import VERSION
 
 # CLI processing
@@ -32,6 +33,12 @@ def main(argv=None):
         action="store",
         default="",
         help="identity of binary file",
+    )
+    input_group.add_argument(
+        "--description",
+        action="store",
+        default="",
+        help="description of file",
     )
     input_group.add_argument(
         "--exclude-dependency",
@@ -71,6 +78,7 @@ def main(argv=None):
 
     defaults = {
         "file": "",
+        "description": "",
         "exclude_dependency": False,
         "exclude_symbol": False,
         "exclude_callgraph": False,
@@ -88,11 +96,12 @@ def main(argv=None):
     binary_file = args["file"]
 
     if len(binary_file) == 0:
-        # print ("File not provided")
-        sys.exit(10)
+        print("[ERROR] File not provided")
+        sys.exit(1)
 
     if args["debug"]:
         print("File", binary_file)
+        print("Description", args["description"])
         print("Exclude Dependencies:", args["exclude_dependency"])
         print("Exclude Symbols:", args["exclude_symbol"])
         print("Exclude Call Graph:", args["exclude_callgraph"])
@@ -104,40 +113,33 @@ def main(argv=None):
         "symbol": args["exclude_symbol"],
         "callgraph": args["exclude_callgraph"],
     }
-    analyser = BIDSAnalyser(options)
-    analyser.analyse(binary_file)
+    analyser = BIDSAnalyser(options, description=args["description"])
+    try:
+        # Analyse file
+        analyser.analyse(binary_file)
 
-    # print (f"Dependencies: {analyser.get_dependencies()}")
-    # print (f"Symbols: {analyser.get_symbols()}")
+        if args["debug"]:
+            print(f"Dependencies: {analyser.get_dependencies()}")
+            print(f"Imports: {analyser.get_global_symbols()}")
+            print(f"Exports: {sorted(analyser.get_local_symbols())}")
 
-    if len(analyser.get_dependencies()) > 0:
-        print("GLOBAL")
-        for dependency in analyser.get_dependencies():
-            library = {}
-            for symbol in analyser.get_global_symbols():
-                if symbol[0] == dependency:
-                    if library.get(symbol[1]) is not None:
-                        library[symbol[1]].append(symbol[2])
-                    else:
-                        library[symbol[1]] = [symbol[2]]
+        # Create report
+        output = BIDSOutput(tool_version=VERSION)
+        output.create_metadata(analyser.get_file_data())
+        output.create_components(
+            analyser.get_dependencies(),
+            analyser.get_global_symbols(),
+            analyser.get_callgraph(),
+            local=analyser.get_local_symbols(),
+        )
+        output.generate_output(args["output_file"])
+        sys.exit(0)
+    except TypeError:
+        print("[ERROR] Only ELF files can be analysed.")
+    except FileNotFoundError:
+        print(f"[ERROR] {binary_file} not found.")
 
-            print(f"Dependency: {dependency}")
-            for lib, functions in library.items():
-                print(lib, sorted(functions))
-
-    # print ("LOCAL")
-    # # Local
-    # library = {}
-    # for symbol in analyser.get_local_symbols():
-    #     if library.get(symbol[0]) is not None:
-    #         library[symbol[0]].append(symbol[1])
-    #     else:
-    #         library[symbol[0]] = [symbol[1]]
-    #
-    # for lib, functions in library.items():
-    #     print(lib, sorted(functions))
-
-    sys.exit(0)
+    sys.exit(1)
 
 
 if __name__ == "__main__":
