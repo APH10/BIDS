@@ -19,8 +19,9 @@ class _OutputManager:
         if self.out_type == "file" and self.filename != "":
             try:
                 self.file_handle = open(filename, "w", encoding="utf-8")
-            except (FileNotFoundError, IsADirectoryError) as e:
+            except (FileNotFoundError, IsADirectoryError) as error:
                 # Unable to create file, so send output to console
+                print(error, file=sys.stderr)
                 self.out_type = "console"
                 self.file_handle = None
         else:
