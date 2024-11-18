@@ -5,6 +5,7 @@
 BIDS CLI tests
 """
 from pathlib import Path
+
 import pytest
 
 from bids.cli import main
@@ -21,7 +22,7 @@ class TestCLI:
         # No parameters will error
         with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME])
-        assert e.value.args[0] == 10
+        assert e.value.args[0] == 1
 
     def test_usage(self):
         """Test that the usage returns 0"""
@@ -78,9 +79,9 @@ class TestCLI:
         """Test file command"""
         # Invalid file
         test_file = f"{self.TEST_PATH}/test_assets/missing_file"
-        with pytest.raises(FileNotFoundError) as e:
+        with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME, "--file", test_file])
-        assert str(e.value) == ""
+        assert e.value.args[0] == 1
 
     def test_debug_command(self):
         """Test debug command"""
@@ -89,4 +90,25 @@ class TestCLI:
             main([self.SCRIPT_NAME, "--file", test_file, "--debug"])
         assert e.value.args[0] == 0
 
+    def test_description_command(self):
+        """Test debug command"""
+        test_file = f"{self.TEST_PATH}/test_assets/hello"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--description",
+                    "This is a test file",
+                ]
+            )
+        assert e.value.args[0] == 0
+
+    def test_check_nonELF_file(self, capsys):
+        filename = f"{self.TEST_PATH}/test_assets/hello.c"
+        with pytest.raises(SystemExit) as e:
+            main([self.SCRIPT_NAME, "--file", filename])
+        captured = capsys.readouterr()
+        assert "Only ELF files can be analysed" in captured.out
 
