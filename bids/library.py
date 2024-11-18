@@ -41,7 +41,7 @@ class DynamicLibrary:
                     and filePath.is_file()
                     and filePath.stat().st_size > 0
                 ):
-                    f = open(cache, "r")
+                    f = open(cache)
                     lines = f.readlines()
                     for line in lines[1:]:
                         if "=>" in line.strip():
