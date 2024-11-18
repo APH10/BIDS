@@ -109,5 +109,6 @@ class TestCLI:
         filename = f"{self.TEST_PATH}/test_assets/hello.c"
         with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME, "--file", filename])
+        assert e.value.args[0] == 1
         captured = capsys.readouterr()
         assert "Only ELF files can be analysed" in captured.out

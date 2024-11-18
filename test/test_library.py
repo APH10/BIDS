@@ -6,7 +6,6 @@ BIDS Library tests
 """
 from pathlib import Path
 
-
 from bids.library import DynamicLibrary
 
 

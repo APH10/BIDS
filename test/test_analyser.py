@@ -6,8 +6,6 @@ BIDS Analyser tests
 """
 from pathlib import Path
 
-
-
 from bids.analyser import BIDSAnalyser
 
 
