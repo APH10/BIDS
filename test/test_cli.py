@@ -111,4 +111,3 @@ class TestCLI:
             main([self.SCRIPT_NAME, "--file", filename])
         captured = capsys.readouterr()
         assert "Only ELF files can be analysed" in captured.out
-
