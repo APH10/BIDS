@@ -2,6 +2,7 @@ import os
 import subprocess
 from pathlib import Path
 
+
 class DynamicLibrary:
 
     def __init__(self, cache=None):
@@ -35,12 +36,18 @@ class DynamicLibrary:
                 # Check path
                 filePath = Path(cache)
                 # Check path exists, a valid file and not empty file
-                if filePath.exists() and filePath.is_file() and filePath.stat().st_size > 0:
-                    f = open(cache, 'r')
+                if (
+                    filePath.exists()
+                    and filePath.is_file()
+                    and filePath.stat().st_size > 0
+                ):
+                    f = open(cache, "r")
                     lines = f.readlines()
                     for line in lines[1:]:
                         if "=>" in line.strip():
-                            libname, lib_architecture, _, lib_path = line.strip().split(" ")
+                            libname, lib_architecture, _, lib_path = line.strip().split(
+                                " "
+                            )
                             # self.lib_details[libname] = lib_path
                             self.lib_details[libname] = os.path.realpath(lib_path)
 
@@ -67,4 +74,3 @@ class DynamicLibrary:
 
     def _get_library_cache(self):
         return self.lib_details
-

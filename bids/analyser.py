@@ -12,7 +12,7 @@ from bids.elf_utils import BIDSElf
 
 class BIDSAnalyser:
 
-    def __init__(self, options={}, description="", debug = False):
+    def __init__(self, options={}, description="", debug=False):
         self.filename = None
         self.options = options
         self.header = []
@@ -70,7 +70,7 @@ class BIDSAnalyser:
                 version = version[:-1]
             return version
         except Exception:
-            #print(f"[ERROR] Unable to find version for {application}")
+            # print(f"[ERROR] Unable to find version for {application}")
             return None
 
     def analyse(self, filename):
