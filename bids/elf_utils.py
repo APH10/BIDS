@@ -3,11 +3,8 @@
 
 from elftools.elf.dynamic import DynamicSection
 from elftools.elf.elffile import ELFFile
-from elftools.elf.gnuversions import (
-    GNUVerDefSection,
-    GNUVerNeedSection,
-    GNUVerSymSection,
-)
+from elftools.elf.gnuversions import (GNUVerDefSection, GNUVerNeedSection,
+                                      GNUVerSymSection)
 from elftools.elf.sections import SymbolTableSection
 from typecode import contenttype
 
