@@ -156,14 +156,10 @@ class BIDSElf:
                         else:
                             if symbol.name != "":
                                 local_symbols.append(symbol.name)
-                    else:
-
+                    elif self.debug:
                         print(
                             f"Type: {section['sh_type']} "
                             f"Name: {symbol.name} Version: "
                             f"{self._symbol_version(nsym)}"
                         )
         return global_symbols, local_symbols
-
-    def get_text(self):
-        pass

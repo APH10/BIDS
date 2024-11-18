@@ -12,7 +12,7 @@ from bids.elf_utils import BIDSElf
 
 class BIDSAnalyser:
 
-    def __init__(self, options={}, description=""):
+    def __init__(self, options={}, description="", debug = False):
         self.filename = None
         self.options = options
         self.header = []
@@ -22,6 +22,7 @@ class BIDSAnalyser:
         self.callgraph = []
         self.application = {}
         self.description = description
+        self.debug = debug
 
     def check_file(self, filename: str) -> None:
         """Check file exists
@@ -69,12 +70,12 @@ class BIDSAnalyser:
                 version = version[:-1]
             return version
         except Exception:
-            print(f"[ERROR] Unable to find version for {application}")
+            #print(f"[ERROR] Unable to find version for {application}")
             return None
 
     def analyse(self, filename):
         self.check_file(filename)
-        elf = BIDSElf(self.filename)
+        elf = BIDSElf(self.filename, debug=self.debug)
         self.header = elf.get_header()
         if not self.options.get("dependency", False):
             self.dependencies = elf.get_dependencies()

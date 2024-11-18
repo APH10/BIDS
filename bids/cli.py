@@ -113,7 +113,7 @@ def main(argv=None):
         "symbol": args["exclude_symbol"],
         "callgraph": args["exclude_callgraph"],
     }
-    analyser = BIDSAnalyser(options, description=args["description"])
+    analyser = BIDSAnalyser(options, description=args["description"], debug=args["debug"])
     try:
         # Analyse file
         analyser.analyse(binary_file)
