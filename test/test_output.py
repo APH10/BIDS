@@ -26,7 +26,8 @@ class TestOutput:
     # output.generate_output(args["output_file"])
 
     def test_metadata(self):
-        output_test = BIDSOutput(tool_version="1.0")
+        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
+        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         test_doc = output_test.get_document()
         assert "test" not in test_doc
@@ -35,7 +36,8 @@ class TestOutput:
         assert "metadata" in test_doc
 
     def test_components(self):
-        output_test = BIDSOutput(tool_version="1.0")
+        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
+        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
         # output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         test_doc = output_test.get_document()
@@ -45,7 +47,8 @@ class TestOutput:
         assert "localsymbols" not in test_doc["components"]
 
     def test_components_local(self):
-        output_test = BIDSOutput(tool_version="1.0")
+        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
+        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
         # output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [], local=[])
         test_doc = output_test.get_document()
@@ -55,7 +58,8 @@ class TestOutput:
         assert "localsymbols" in test_doc["components"]
 
     def test_document(self):
-        output_test = BIDSOutput(tool_version="1.0")
+        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
+        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         test_doc = output_test.get_document()
