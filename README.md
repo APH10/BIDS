@@ -1,5 +1,7 @@
 # BIDS
-BIDS (Binary Identification of Dependencies with Search) The BIDS project will deliver tooling to analyse ELF binaries and extract key features and store these for indexing, tooing to index these binary features in a search engine using an inverted index. This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
+BIDS (Binary Identification of Dependencies with Search). The BIDS project will deliver tooling to analyse ELF binaries and extract key features for indexing and searching. The tooling to index these binary features in a search engine uses an inverted index.
+
+This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
 
 ## Installation
 
@@ -174,8 +176,8 @@ bids-analyser -f go/bin/go --output gobin.json --description "Go binary"
 
 The following values are returned:
 
-0 - Binary analysis completed
-1 - Error detected in analysis process
+- 0 - Binary analysis completed
+- 1 - Error detected in analysis process
 
 ## License
 
