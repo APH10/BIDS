@@ -14,7 +14,7 @@ class TestOutput:
     """Tests the BIDS Output"""
 
     TEST_PATH = Path(__file__).parent.resolve()
-    # Cache file used to esnure constant test results
+    # Cache file used to ensure constant test results
     # deployed library will have dynamic values
     CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
 
