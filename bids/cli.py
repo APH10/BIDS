@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import argparse
+import os
 import sys
 import textwrap
 from collections import ChainMap
@@ -107,6 +108,11 @@ def main(argv=None):
         print("Exclude Call Graph:", args["exclude_callgraph"])
         print("Output file:", args["output_file"])
 
+    # Use cache if provided in environment variable
+    cache = None
+    if os.getenv("BIDS_CACHE") is not None:
+        cache = os.getenv("BIDS_CACHE")
+
     # Do stuff
     options = {
         "dependency": args["exclude_dependency"],
@@ -126,7 +132,7 @@ def main(argv=None):
             print(f"Exports: {sorted(analyser.get_local_symbols())}")
 
         # Create report
-        output = BIDSOutput(tool_version=VERSION)
+        output = BIDSOutput(tool_version=VERSION, cache=cache)
         output.create_metadata(analyser.get_file_data())
         output.create_components(
             analyser.get_dependencies(),

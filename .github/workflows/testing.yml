@@ -24,6 +24,8 @@ jobs:
           if [ -f requirements_test.txt ]; then pip install --upgrade -r requirements_test.txt; fi
           python -m pip install .
       - name: Test with pytest
+        env:
+          BIDS_CACHE = test/test_assets/cache
         run: |
           coverage run -m pytest -v test/*
       - name: Generate Coverage Report
