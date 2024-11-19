@@ -14,20 +14,12 @@ class TestOutput:
     """Tests the BIDS Output"""
 
     TEST_PATH = Path(__file__).parent.resolve()
-
-    # output = BIDSOutput(tool_version=VERSION)
-    # output.create_metadata(analyser.get_file_data())
-    # output.create_components(
-    #     analyser.get_dependencies(),
-    #     analyser.get_global_symbols(),
-    #     analyser.get_callgraph(),
-    #     local=analyser.get_local_symbols(),
-    # )
-    # output.generate_output(args["output_file"])
+    # Cache file used to esnure constant test results
+    # deployed library will have dynamic values
+    CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
 
     def test_metadata(self):
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         test_doc = output_test.get_document()
         assert "test" not in test_doc
@@ -36,8 +28,7 @@ class TestOutput:
         assert "metadata" in test_doc
 
     def test_components(self):
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         # output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         test_doc = output_test.get_document()
@@ -47,8 +38,7 @@ class TestOutput:
         assert "localsymbols" not in test_doc["components"]
 
     def test_components_local(self):
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         # output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [], local=[])
         test_doc = output_test.get_document()
@@ -58,8 +48,7 @@ class TestOutput:
         assert "localsymbols" in test_doc["components"]
 
     def test_document(self):
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         test_doc = output_test.get_document()
@@ -70,11 +59,7 @@ class TestOutput:
         assert "relationships" in test_doc
 
     def test_output(self, capsys):
-        TEST_PATH = Path(__file__).parent.resolve()
-        # Cache file used to esnure constant test results
-        # deployed library will have dynamic values
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         output_test.generate_output(filename="")
@@ -86,11 +71,7 @@ class TestOutput:
         assert "relationships" in captured.out
 
     def test_output2(self, capsys):
-        TEST_PATH = Path(__file__).parent.resolve()
-        # Cache file used to esnure constant test results
-        # deployed library will have dynamic values
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         # Can't write to a directory so will be redirected to the console
@@ -103,14 +84,10 @@ class TestOutput:
         assert "relationships" in captured.out
 
     def test_output_to_file(self):
-        TEST_PATH = Path(__file__).parent.resolve()
-        # Cache file used to esnure constant test results
-        # deployed library will have dynamic values
-        CACHE_FILE = f"{TEST_PATH}/test_assets/cache"
-        output_test = BIDSOutput(tool_version="1.0", cache=CACHE_FILE)
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
-        TEST_OUTPUT_FILE = f"{TEST_PATH}/test_assets/test.json"
+        TEST_OUTPUT_FILE = f"{self.TEST_PATH}/test_assets/test.json"
         output_test.generate_output(filename=TEST_OUTPUT_FILE)
         # Now check contents of file
         # bids_json = json.load(open(TEST_OUTPUT_FILE, "r", encoding="utf-8"))
