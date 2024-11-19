@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Runs at 04:00 UTC every Sunday
-    - cron: '4 0 * * 7'
+    - cron: '4 0 * * 0'
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     strategy:
       matrix:
-        python: ['3.9', '3.10', '3.11', '3.12']
+        python: ['3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c # v2.9.0
@@ -40,8 +40,8 @@ jobs:
           pip install . --upgrade --upgrade-strategy=eager
       - name: Generate SBOM for BIDS
         run: |
-          sbom4python --module bids --output bids-py${{ matrix.python }}.spdx
-          sbom4python --module bids --sbom cyclonedx --format json --output bids-py${{ matrix.python }}.json
+          sbom4python --module bids-analyser --output bids-py${{ matrix.python }}.spdx
+          sbom4python --module bids-analyser --sbom cyclonedx --format json --output bids-py${{ matrix.python }}.json
       - name: Compare SBOM for BIDS
         id: diff-sbom
         # This would fail due to time/date of SBOM generation in SBOM header
