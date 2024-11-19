@@ -7,7 +7,7 @@ This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
 
 To install use the following command:
 
-`pip install bids`
+`pip install bids-analyser`
 
 Alternatively, just clone the repo and install dependencies using the following command:
 
