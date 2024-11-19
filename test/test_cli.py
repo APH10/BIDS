@@ -44,7 +44,7 @@ class TestCLI:
 
         # invalid command
         with pytest.raises(SystemExit) as e:
-            main([self.SCRIPT_NAME, "non-existant"])
+            main([self.SCRIPT_NAME, "non-existent"])
         assert e.value.args[0] == 2
 
         # bad parameter
