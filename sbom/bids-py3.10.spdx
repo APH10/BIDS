@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-e6998b40-63b8-44c7-9391-6e146bcfa1f1
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-373fb9f6-20e3-40a9-a7dd-6b06f6c2a2c8
 LicenseListVersion: 3.22
 Creator: Tool: sbom4python-0.11.3
-Created: 2024-11-24T10:19:30Z
+Created: 2024-11-24T10:32:12Z
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 
@@ -212,18 +212,18 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:certifi:2024.8.30:*:*:*:
 
 PackageName: charset-normalizer
 SPDXID: SPDXRef-13-charset-normalizer
-PackageVersion: 3.3.2
+PackageVersion: 3.4.0
 PrimaryPackagePurpose: LIBRARY
-PackageSupplier: Person: Ahmed TAHRI (ahmed.tahri@cloudnursery.dev)
-PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.3.2/#files
+PackageSupplier: Person: Ahmed TAHRI (tahri.ahmed@proton.me)
+PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Ousret/charset_normalizer
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.</text>
-ExternalRef: PACKAGE_MANAGER purl pkg:pypi/charset-normalizer@3.3.2
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_tahri:charset-normalizer:3.3.2:*:*:*:*:*:*:*
+ExternalRef: PACKAGE_MANAGER purl pkg:pypi/charset-normalizer@3.4.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: idna
@@ -327,18 +327,18 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:yusuke_shinyama_\+_philippe_guglielmet
 
 PackageName: cryptography
 SPDXID: SPDXRef-20-cryptography
-PackageVersion: 43.0.1
+PackageVersion: 43.0.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: The cryptography developers The Python Cryptographic Authority and individual contributors (cryptography-dev@python.org)
-PackageDownloadLocation: https://pypi.org/project/cryptography/43.0.1/#files
+PackageDownloadLocation: https://pypi.org/project/cryptography/43.0.3/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/pyca/cryptography
 PackageLicenseDeclared: Apache-2.0 OR BSD-3-Clause
 PackageLicenseConcluded: Apache-2.0 OR BSD-3-Clause
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>cryptography is a package which provides cryptographic recipes and primitives to Python developers.</text>
-ExternalRef: PACKAGE_MANAGER purl pkg:pypi/cryptography@43.0.1
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:43.0.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE_MANAGER purl pkg:pypi/cryptography@43.0.3
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:43.0.3:*:*:*:*:*:*:*
 ##### 
 
 PackageName: cffi
