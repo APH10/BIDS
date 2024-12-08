@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-e6998b40-63b8-44c7-9391-6e146bcfa1f1
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-39d3e993-5021-4c60-a2ca-72668835ea65
 LicenseListVersion: 3.22
 Creator: Tool: sbom4python-0.11.3
-Created: 2024-11-24T10:19:30Z
+Created: 2024-12-08T02:07:49Z
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 
@@ -113,18 +113,18 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:mark_pilgrim:chardet:5.2.0:*:*:*:*:*:*
 
 PackageName: commoncode
 SPDXID: SPDXRef-7-commoncode
-PackageVersion: 32.0.0
+PackageVersion: 32.1.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: nexB. Inc. and others (info@aboutcode.org)
-PackageDownloadLocation: https://pypi.org/project/commoncode/32.0.0/#files
+PackageDownloadLocation: https://pypi.org/project/commoncode/32.1.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/aboutcode-org/commoncode
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Set of common utilities, originally split from ScanCode</text>
-ExternalRef: PACKAGE_MANAGER purl pkg:pypi/commoncode@32.0.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:commoncode:32.0.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE_MANAGER purl pkg:pypi/commoncode@32.1.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:commoncode:32.1.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: beautifulsoup4
@@ -212,18 +212,18 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:certifi:2024.8.30:*:*:*:
 
 PackageName: charset-normalizer
 SPDXID: SPDXRef-13-charset-normalizer
-PackageVersion: 3.3.2
+PackageVersion: 3.4.0
 PrimaryPackagePurpose: LIBRARY
-PackageSupplier: Person: Ahmed TAHRI (ahmed.tahri@cloudnursery.dev)
-PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.3.2/#files
+PackageSupplier: Person: Ahmed TAHRI (tahri.ahmed@proton.me)
+PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Ousret/charset_normalizer
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.</text>
-ExternalRef: PACKAGE_MANAGER purl pkg:pypi/charset-normalizer@3.3.2
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_tahri:charset-normalizer:3.3.2:*:*:*:*:*:*:*
+ExternalRef: PACKAGE_MANAGER purl pkg:pypi/charset-normalizer@3.4.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: idna
@@ -327,18 +327,18 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:yusuke_shinyama_\+_philippe_guglielmet
 
 PackageName: cryptography
 SPDXID: SPDXRef-20-cryptography
-PackageVersion: 43.0.1
+PackageVersion: 44.0.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: The cryptography developers The Python Cryptographic Authority and individual contributors (cryptography-dev@python.org)
-PackageDownloadLocation: https://pypi.org/project/cryptography/43.0.1/#files
+PackageDownloadLocation: https://pypi.org/project/cryptography/44.0.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/pyca/cryptography
 PackageLicenseDeclared: Apache-2.0 OR BSD-3-Clause
 PackageLicenseConcluded: Apache-2.0 OR BSD-3-Clause
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>cryptography is a package which provides cryptographic recipes and primitives to Python developers.</text>
-ExternalRef: PACKAGE_MANAGER purl pkg:pypi/cryptography@43.0.1
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:43.0.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE_MANAGER purl pkg:pypi/cryptography@44.0.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:44.0.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: cffi
@@ -349,6 +349,7 @@ PackageSupplier: Organization: Armin Maciej Fijalkowski (python-cffi@googlegroup
 PackageDownloadLocation: https://pypi.org/project/cffi/1.17.1/#files
 FilesAnalyzed: false
 PackageHomePage: http://cffi.readthedocs.org
+PackageChecksum: SHA1: 38bd6be6b94a65182f4bffb45c78e230e9290f51
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
