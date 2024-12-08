@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:50b234dc-7ee6-41cd-aa59-836490f60d8c",
+  "serialNumber": "urn:uuid:a56bc009-5042-4627-90ae-67801e48d2bc",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-11-24T10:20:27Z",
+    "timestamp": "2024-12-08T02:07:57Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -71,7 +71,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -120,7 +120,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -172,7 +172,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         }
       ]
     },
@@ -212,7 +212,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -270,7 +270,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -328,7 +328,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -340,7 +340,7 @@
       "type": "library",
       "bom-ref": "7-commoncode",
       "name": "commoncode",
-      "version": "32.0.0",
+      "version": "32.1.0",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -349,7 +349,7 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.0.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.1.0:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
       "licenses": [
         {
@@ -367,12 +367,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/commoncode/32.0.0/#files",
+          "url": "https://pypi.org/project/commoncode/32.1.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/commoncode@32.0.0",
+      "purl": "pkg:pypi/commoncode@32.1.0",
       "properties": [
         {
           "name": "language",
@@ -380,11 +380,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
-          "value": "2024-09-05T13:56:57.000Z"
+          "value": "2024-12-06T19:20:29.000Z"
         }
       ]
     },
@@ -432,7 +432,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -481,7 +481,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         }
       ]
     },
@@ -526,7 +526,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -584,7 +584,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -636,7 +636,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -648,16 +648,16 @@
       "type": "library",
       "bom-ref": "13-charset-normalizer",
       "name": "charset-normalizer",
-      "version": "3.3.2",
+      "version": "3.4.0",
       "supplier": {
         "name": "Ahmed TAHRI",
         "contact": [
           {
-            "email": "ahmed.tahri@cloudnursery.dev"
+            "email": "tahri.ahmed@proton.me"
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_tahri:charset-normalizer:3.3.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "licenses": [
         {
@@ -675,12 +675,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/charset-normalizer/3.3.2/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.3.2",
+      "purl": "pkg:pypi/charset-normalizer@3.4.0",
       "properties": [
         {
           "name": "language",
@@ -688,7 +688,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
+        },
+        {
+          "name": "package_release_date",
+          "value": "2024-10-09T07:38:02.000Z"
         }
       ]
     },
@@ -722,7 +726,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -766,7 +770,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -824,7 +828,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -876,7 +880,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -934,7 +938,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -992,7 +996,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -1004,7 +1008,7 @@
       "type": "library",
       "bom-ref": "20-cryptography",
       "name": "cryptography",
-      "version": "43.0.1",
+      "version": "44.0.0",
       "supplier": {
         "name": "The cryptography developers The Python Cryptographic Authority and individual contributors",
         "contact": [
@@ -1013,7 +1017,7 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:43.0.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:44.0.0:*:*:*:*:*:*:*",
       "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
       "licenses": [
         {
@@ -1027,12 +1031,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/cryptography/43.0.1/#files",
+          "url": "https://pypi.org/project/cryptography/44.0.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/cryptography@43.0.1",
+      "purl": "pkg:pypi/cryptography@44.0.0",
       "properties": [
         {
           "name": "language",
@@ -1040,7 +1044,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
+        },
+        {
+          "name": "package_release_date",
+          "value": "2024-11-27T18:05:55.000Z"
         }
       ]
     },
@@ -1059,6 +1067,12 @@
       },
       "cpe": "cpe:2.3:a:armin_maciej_fijalkowski:cffi:1.17.1:*:*:*:*:*:*:*",
       "description": "Foreign Function Interface for Python calling C code.",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "38bd6be6b94a65182f4bffb45c78e230e9290f51"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1088,7 +1102,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -1146,7 +1160,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -1198,7 +1212,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
@@ -1256,7 +1270,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.8"
+          "value": "3.10.15"
         },
         {
           "name": "package_release_date",
