@@ -1,7 +1,6 @@
 # BIDS
 BIDS (Binary Identification of Dependencies with Search). The BIDS project will deliver tooling to analyse ELF binaries and extract key features for indexing and searching. The tooling to index these binary features in a search engine uses an inverted index.
 
-<<<<<<<
 This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
 
 ## Installation
@@ -194,8 +193,6 @@ The tool has the following limitations:
 
 ## Feedback and Contributions
 
-Bugs and feature requests can be made via GitHub Issues.
-=======
 This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
 
 ## Installation
@@ -389,4 +386,6 @@ The tool has the following limitations:
 ## Feedback and Contributions
 
 Bugs and feature requests can be made via GitHub Issues.
->>>>>>>
+=======
+Bugs and feature requests can be made via GitHub Issues.
+>>>>>>> origin/main
