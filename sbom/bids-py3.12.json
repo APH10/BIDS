@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:b976f892-10d0-487f-9647-561dec1d0e4a",
+  "serialNumber": "urn:uuid:c5481cd9-86f2-4ba4-a23e-c2e1b28c1b48",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-12-08T02:07:58Z",
+    "timestamp": "2024-12-29T01:59:02Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -15,7 +15,7 @@
       "components": [
         {
           "name": "sbom4python",
-          "version": "0.11.3",
+          "version": "0.12.1",
           "type": "application"
         }
       ]
@@ -42,6 +42,12 @@
       },
       "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.1.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3c5dc6f9ce9d1ff3a2e799bde04cd8313e6676a6c674026c93b1be5e1b0c266f"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -66,16 +72,16 @@
       "purl": "pkg:pypi/bids-analyser@0.1.0",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-11-19T11:56:22Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-11-19T11:56:22.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -96,8 +102,8 @@
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "ff0118701a091ea9cbf3b44c65046754e3c77156"
+          "alg": "SHA-256",
+          "content": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
         }
       ],
       "externalReferences": [
@@ -115,16 +121,16 @@
       "purl": "pkg:pypi/pyelftools@0.31",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-03-14T13:28:20Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-03-14T13:28:20.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -143,6 +149,12 @@
       },
       "cpe": "cpe:2.3:a:nexb._inc._and_others:typecode:30.0.2:*:*:*:*:*:*:*",
       "description": "Comprehensive filetype and mimetype detection using libmagic and Pygments.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "06b1bffa93525acf4b6a52393fd0ee20916f62ddd40c0f2d27ca75a08231a46c"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -167,12 +179,16 @@
       "purl": "pkg:pypi/typecode@30.0.2",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-08-07T02:23:31Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
+          "value": "3.12.8"
         }
       ]
     },
@@ -180,7 +196,7 @@
       "type": "library",
       "bom-ref": "4-attrs",
       "name": "attrs",
-      "version": "24.2.0",
+      "version": "24.3.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -189,34 +205,54 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:24.2.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:24.3.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "6771a04893780166e4b7826b63599f43ac30d00a"
+          "alg": "SHA-256",
+          "content": "ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/24.2.0/#files",
+          "url": "https://pypi.org/project/attrs/24.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://www.attrs.org/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://www.attrs.org/en/stable/changelog.html",
+          "type": "log"
+        },
+        {
+          "url": "https://github.com/python-attrs/attrs",
+          "type": "vcs"
+        },
+        {
+          "url": "https://github.com/sponsors/hynek",
+          "type": "other"
+        },
+        {
+          "url": "https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi",
+          "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@24.2.0",
+      "purl": "pkg:pypi/attrs@24.3.0",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-16T06:59:26Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-08-06T14:37:36.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -237,8 +273,8 @@
       "description": "Ultra-lightweight pure Python package to check if a file is binary or text.",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "fb901271a1486786961854039931950b708de950"
+          "alg": "SHA-256",
+          "content": "b8b71173c917bddcd2c16070412e369c3ed7f0528926f70cac18a6c97fd563e4"
         }
       ],
       "licenses": [
@@ -265,16 +301,16 @@
       "purl": "pkg:pypi/binaryornot@0.4.4",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2017-08-03T15:55:31Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2017-08-03T15:55:31.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -295,8 +331,8 @@
       "description": "Universal encoding detector for Python 3",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "78250d917a2883aa60215c04480aeb27a545f1d9"
+          "alg": "SHA-256",
+          "content": "e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970"
         }
       ],
       "licenses": [
@@ -318,21 +354,33 @@
           "url": "https://pypi.org/project/chardet/5.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://chardet.readthedocs.io/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://github.com/chardet/chardet",
+          "type": "other"
+        },
+        {
+          "url": "https://github.com/chardet/chardet/issues",
+          "type": "issue-tracker"
         }
       ],
       "purl": "pkg:pypi/chardet@5.2.0",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2023-08-01T19:23:00Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2023-08-01T19:23:00.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -351,6 +399,12 @@
       },
       "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.1.0:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e4cf69af173118bc80892f7e2a3f97cb657cd0e123382007dc0993e3509fe06f"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -375,16 +429,16 @@
       "purl": "pkg:pypi/commoncode@32.1.0",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-12-06T19:20:29Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-12-06T19:20:29.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -403,11 +457,17 @@
       },
       "cpe": "cpe:2.3:a:leonard_richardson:beautifulsoup4:4.12.3:*:*:*:*:*:*:*",
       "description": "Screen-scraping library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed"
+        }
+      ],
       "licenses": [
         {
           "license": {
             "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
+            "url": "https://opensource.org/license/mit/",
             "acknowledgement": "concluded"
           }
         }
@@ -422,21 +482,25 @@
           "url": "https://pypi.org/project/beautifulsoup4/4.12.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://www.crummy.com/software/BeautifulSoup/bs4/download/",
+          "type": "other"
         }
       ],
       "purl": "pkg:pypi/beautifulsoup4@4.12.3",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-01-17T16:53:12Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-01-17T16:53:12.000Z"
+          "value": "3.12.8"
         }
       ]
     },
@@ -457,8 +521,8 @@
       "description": "A modern CSS selector implementation for Beautiful Soup.",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "f974ea7e2e70cc940e1bda98b815f5a68eb43990"
+          "alg": "SHA-256",
+          "content": "e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"
         }
       ],
       "externalReferences": [
@@ -476,12 +540,16 @@
       "purl": "pkg:pypi/soupsieve@2.6",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-08-13T13:39:10Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
+          "value": "3.12.8"
         }
       ]
     },
@@ -489,54 +557,226 @@
       "type": "library",
       "bom-ref": "10-click",
       "name": "click",
-      "version": "8.1.7",
+      "version": "8.1.8",
       "description": "Composable command line interface toolkit",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "874ca2bc1c30d93a4ac6e36a15ed685eafe89097"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "BSD-3-Clause",
-            "url": "https://opensource.org/licenses/BSD-3-Clause",
-            "acknowledgement": "concluded"
-          }
+          "alg": "SHA-256",
+          "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://palletsprojects.com/p/click/",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/click/8.1.7/#files",
+          "url": "https://pypi.org/project/click/8.1.8/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://click.palletsprojects.com/changes/",
+          "type": "log"
+        },
+        {
+          "url": "https://discord.gg/pallets",
+          "type": "chat"
+        },
+        {
+          "url": "https://click.palletsprojects.com/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://palletsprojects.com/donate",
+          "type": "other"
+        },
+        {
+          "url": "https://github.com/pallets/click/",
+          "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/click@8.1.7",
+      "purl": "pkg:pypi/click@8.1.8",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-21T18:38:41Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2023-08-17T17:29:10.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "11-requests",
+      "bom-ref": "11-importlib-metadata",
+      "name": "importlib-metadata",
+      "version": "8.0.0",
+      "supplier": {
+        "name": "Jason R .",
+        "contact": [
+          {
+            "email": "jaraco@jaraco.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:jason_r.:importlib-metadata:8.0.0:*:*:*:*:*:*:*",
+      "description": "Read metadata from Python packages",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/importlib-metadata/8.0.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/python/importlib_metadata",
+          "type": "vcs"
+        }
+      ],
+      "purl": "pkg:pypi/importlib-metadata@8.0.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-06-25T18:38:02Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "12-zipp",
+      "name": "zipp",
+      "version": "3.19.2",
+      "supplier": {
+        "name": "Jason R .",
+        "contact": [
+          {
+            "email": "jaraco@jaraco.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:jason_r.:zipp:3.19.2:*:*:*:*:*:*:*",
+      "description": "Backport of pathlib-compatible object wrapper for zip files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/jaraco/zipp",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/zipp/3.19.2/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/zipp@3.19.2",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-06-04T17:21:07Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "13-typing-extensions",
+      "name": "typing-extensions",
+      "version": "4.12.2",
+      "supplier": {
+        "name": "Guido van Jukka ukasz Michael",
+        "contact": [
+          {
+            "email": "levkivskyi@gmail.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-extensions:4.12.2:*:*:*:*:*:*:*",
+      "description": "Backported and Experimental Type Hints for Python 3.8+",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/python/typing_extensions",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/typing-extensions/4.12.2/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/python/typing_extensions/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+          "type": "log"
+        },
+        {
+          "url": "https://typing-extensions.readthedocs.io/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://github.com/python/typing/discussions",
+          "type": "other"
+        },
+        {
+          "url": "https://github.com/python/typing_extensions",
+          "type": "vcs"
+        }
+      ],
+      "purl": "pkg:pypi/typing-extensions@4.12.2",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-06-07T18:52:13Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "14-requests",
       "name": "requests",
       "version": "2.32.3",
       "supplier": {
@@ -551,8 +791,8 @@
       "description": "Python HTTP for Humans.",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "0e322af87745eff34caffe4df68456ebc20d9068"
+          "alg": "SHA-256",
+          "content": "70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
         }
       ],
       "licenses": [
@@ -574,29 +814,222 @@
           "url": "https://pypi.org/project/requests/2.32.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://requests.readthedocs.io",
+          "type": "documentation"
+        },
+        {
+          "url": "https://github.com/psf/requests",
+          "type": "vcs"
         }
       ],
       "purl": "pkg:pypi/requests@2.32.3",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-05-29T15:37:47Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-05-29T15:37:47.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "12-certifi",
+      "bom-ref": "15-charset-normalizer",
+      "name": "charset-normalizer",
+      "version": "3.4.1",
+      "supplier": {
+        "name": "Ahmed R .",
+        "contact": [
+          {
+            "email": "tahri.ahmed@proton.me"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.1:*:*:*:*:*:*:*",
+      "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "91b36a978b5ae0ee86c394f5a54d6ef44db1de0815eb43de826d41d21e4af3de"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/charset-normalizer/3.4.1/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+          "type": "log"
+        },
+        {
+          "url": "https://charset-normalizer.readthedocs.io/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://github.com/jawah/charset_normalizer",
+          "type": "vcs"
+        },
+        {
+          "url": "https://github.com/jawah/charset_normalizer/issues",
+          "type": "issue-tracker"
+        }
+      ],
+      "purl": "pkg:pypi/charset-normalizer@3.4.1",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-24T18:09:43Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "16-idna",
+      "name": "idna",
+      "version": "3.10",
+      "supplier": {
+        "name": "Kim Davies",
+        "contact": [
+          {
+            "email": "kim+pypi@gumleaf.org"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:kim_davies:idna:3.10:*:*:*:*:*:*:*",
+      "description": "Internationalized Domain Names in Applications (IDNA)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/idna/3.10/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/kjd/idna/blob/master/HISTORY.rst",
+          "type": "log"
+        },
+        {
+          "url": "https://github.com/kjd/idna/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/kjd/idna",
+          "type": "vcs"
+        }
+      ],
+      "purl": "pkg:pypi/idna@3.10",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-09-15T18:07:37Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "17-urllib3",
+      "name": "urllib3",
+      "version": "2.3.0",
+      "supplier": {
+        "name": "Andrey Petrov",
+        "contact": [
+          {
+            "email": "andrey.petrov@shazow.net"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.3.0:*:*:*:*:*:*:*",
+      "description": "HTTP library with thread-safe connection pooling, file post, and more.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/urllib3/2.3.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+          "type": "log"
+        },
+        {
+          "url": "https://urllib3.readthedocs.io",
+          "type": "documentation"
+        },
+        {
+          "url": "https://github.com/urllib3/urllib3",
+          "type": "vcs"
+        },
+        {
+          "url": "https://github.com/urllib3/urllib3/issues",
+          "type": "issue-tracker"
+        }
+      ],
+      "purl": "pkg:pypi/urllib3@2.3.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-22T07:47:28Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.12.8"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "18-certifi",
       "name": "certifi",
-      "version": "2024.8.30",
+      "version": "2024.12.14",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -605,8 +1038,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2024.8.30:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2024.12.14:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -623,164 +1062,34 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2024.8.30/#files",
+          "url": "https://pypi.org/project/certifi/2024.12.14/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/certifi/python-certifi",
+          "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2024.8.30",
+      "purl": "pkg:pypi/certifi@2024.12.14",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-14T13:52:36Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-08-30T01:55:02.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "13-charset-normalizer",
-      "name": "charset-normalizer",
-      "version": "3.4.0",
-      "supplier": {
-        "name": "Ahmed TAHRI",
-        "contact": [
-          {
-            "email": "tahri.ahmed@proton.me"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*",
-      "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/Ousret/charset_normalizer",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.0/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.0",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-10-09T07:38:02.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "14-idna",
-      "name": "idna",
-      "version": "3.10",
-      "supplier": {
-        "name": "Kim Davies",
-        "contact": [
-          {
-            "email": "kim+pypi@gumleaf.org"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:kim_davies:idna:3.10:*:*:*:*:*:*:*",
-      "description": "Internationalized Domain Names in Applications (IDNA)",
-      "externalReferences": [
-        {
-          "url": "https://pypi.org/project/idna/3.10/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/idna@3.10",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-09-15T18:07:37.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "15-urllib3",
-      "name": "urllib3",
-      "version": "2.2.3",
-      "supplier": {
-        "name": "Andrey Petrov",
-        "contact": [
-          {
-            "email": "andrey.petrov@shazow.net"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.2.3:*:*:*:*:*:*:*",
-      "description": "HTTP library with thread-safe connection pooling, file post, and more.",
-      "hashes": [
-        {
-          "alg": "SHA-1",
-          "content": "2458bfcd3dacdf6c196e98d077fc6bb02a5fc1df"
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://pypi.org/project/urllib3/2.2.3/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/urllib3@2.2.3",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-09-12T10:52:16.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "16-saneyaml",
+      "bom-ref": "19-saneyaml",
       "name": "saneyaml",
       "version": "0.6.1",
       "supplier": {
@@ -795,8 +1104,8 @@
       "description": "Read and write readable YAML safely preserving order and avoiding bad surprises with unwanted infered type conversions. This library is a PyYaml wrapper with sane behaviour to read and write readable YAML safely, typically when used for configuration.",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "133462863e3877a8beeec0c37444de1581bbf275"
+          "alg": "SHA-256",
+          "content": "60553363ac55433cef2bc1d6c5a1c9f6e2787e5f40e8c6fad5983eb701592c5b"
         }
       ],
       "licenses": [
@@ -823,22 +1132,22 @@
       "purl": "pkg:pypi/saneyaml@0.6.1",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-08-14T06:25:38Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-08-14T06:25:38.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "17-pyyaml",
+      "bom-ref": "20-pyyaml",
       "name": "pyyaml",
       "version": "6.0.2",
       "supplier": {
@@ -851,11 +1160,17 @@
       },
       "cpe": "cpe:2.3:a:kirill_simonov:pyyaml:6.0.2:*:*:*:*:*:*:*",
       "description": "YAML parser and emitter for Python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0a9a2848a5b7feac301353437eb7d5957887edbf81d56e903999a75a3d743086"
+        }
+      ],
       "licenses": [
         {
           "license": {
             "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
+            "url": "https://opensource.org/license/mit/",
             "acknowledgement": "concluded"
           }
         }
@@ -867,30 +1182,50 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyyaml/6.0.2/#files",
+          "url": "https://pypi.org/project/PyYAML/",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml/actions",
+          "type": "build-system"
+        },
+        {
+          "url": "https://pyyaml.org/wiki/PyYAMLDocumentation",
+          "type": "documentation"
+        },
+        {
+          "url": "http://lists.sourceforge.net/lists/listinfo/yaml-core",
+          "type": "mailing-list"
+        },
+        {
+          "url": "https://github.com/yaml/pyyaml",
+          "type": "vcs"
         }
       ],
       "purl": "pkg:pypi/pyyaml@6.0.2",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-08-06T20:31:40Z"
+        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-08-06T20:31:40.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "18-text-unidecode",
+      "bom-ref": "21-text-unidecode",
       "name": "text-unidecode",
       "version": "1.3",
       "supplier": {
@@ -905,8 +1240,8 @@
       "description": "The most basic Text::Unidecode port",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "a0005d7a0b43a6aa21ce8a63f1da48c6c44f03e1"
+          "alg": "SHA-256",
+          "content": "1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8"
         }
       ],
       "licenses": [
@@ -933,244 +1268,22 @@
       "purl": "pkg:pypi/text-unidecode@1.3",
       "properties": [
         {
-          "name": "language",
-          "value": "Python"
+          "name": "release_date",
+          "value": "2019-08-30T21:37:03Z"
         },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2019-08-30T21:37:03.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "19-pdfminer.six",
-      "name": "pdfminer.six",
-      "version": "20240706",
-      "supplier": {
-        "name": "Yusuke Shinyama  Philippe Guglielmetti",
-        "contact": [
-          {
-            "email": "pdfminer@goulu.net"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:yusuke_shinyama_\\+_philippe_guglielmetti:pdfminer.six:20240706:*:*:*:*:*:*:*",
-      "description": "PDF parser and analyzer",
-      "hashes": [
-        {
-          "alg": "SHA-1",
-          "content": "fcfbcd3bfd61a429ac5ea92dd20f83a14d50e2f2"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/pdfminer/pdfminer.six",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/pdfminer.six/20240706/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/pdfminer.six@20240706",
-      "properties": [
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-07-06T13:48:48.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "20-cryptography",
-      "name": "cryptography",
-      "version": "44.0.0",
-      "supplier": {
-        "name": "The cryptography developers The Python Cryptographic Authority and individual contributors",
-        "contact": [
-          {
-            "email": "cryptography-dev@python.org"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:the_cryptography_developers_the_python_cryptographic_authority_and_individual_contributors:cryptography:44.0.0:*:*:*:*:*:*:*",
-      "description": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
-      "licenses": [
-        {
-          "expression": "Apache-2.0 OR BSD-3-Clause"
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/pyca/cryptography",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/cryptography/44.0.0/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/cryptography@44.0.0",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-11-27T18:05:55.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "21-cffi",
-      "name": "cffi",
-      "version": "1.17.1",
-      "supplier": {
-        "name": "Armin Maciej Fijalkowski",
-        "contact": [
-          {
-            "email": "python-cffi@googlegroups.com"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:armin_maciej_fijalkowski:cffi:1.17.1:*:*:*:*:*:*:*",
-      "description": "Foreign Function Interface for Python calling C code.",
-      "hashes": [
-        {
-          "alg": "SHA-1",
-          "content": "38bd6be6b94a65182f4bffb45c78e230e9290f51"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "http://cffi.readthedocs.org",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/cffi/1.17.1/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/cffi@1.17.1",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-09-04T20:43:30.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "22-pycparser",
-      "name": "pycparser",
-      "version": "2.22",
-      "supplier": {
-        "name": "Eli Bendersky",
-        "contact": [
-          {
-            "email": "eliben@gmail.com"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:eli_bendersky:pycparser:2.22:*:*:*:*:*:*:*",
-      "description": "C parser in Python",
-      "hashes": [
-        {
-          "alg": "SHA-1",
-          "content": "129d32ef805d715d90a3b2035b13168c17ca63d2"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "BSD-3-Clause",
-            "url": "https://opensource.org/licenses/BSD-3-Clause",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/eliben/pycparser",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/pycparser/2.22/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/pycparser@2.22",
-      "properties": [
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-03-30T13:22:20.000Z"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "23-plugincode",
+      "bom-ref": "22-plugincode",
       "name": "plugincode",
       "version": "32.0.0",
       "supplier": {
@@ -1183,6 +1296,12 @@
       },
       "cpe": "cpe:2.3:a:nexb._inc._and_others:plugincode:32.0.0:*:*:*:*:*:*:*",
       "description": "plugincode is a library that provides plugin functionality for ScanCode toolkit.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "344bb9943fcf4d6d05669c3c61efd4093fffa6a290fba7c5c11db15f2b51305e"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1207,22 +1326,22 @@
       "purl": "pkg:pypi/plugincode@32.0.0",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2023-05-02T19:13:58Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2023-05-02T19:13:58.000Z"
+          "value": "3.12.8"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "24-pluggy",
+      "bom-ref": "23-pluggy",
       "name": "pluggy",
       "version": "1.5.0",
       "supplier": {
@@ -1237,15 +1356,15 @@
       "description": "plugin and hook calling mechanisms for python",
       "hashes": [
         {
-          "alg": "SHA-1",
-          "content": "f8aa4a009716a7994f2f6c1947d9fa69feccbdd5"
+          "alg": "SHA-256",
+          "content": "44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669"
         }
       ],
       "licenses": [
         {
           "license": {
             "id": "MIT",
-            "url": "https://opensource.org/licenses/MIT",
+            "url": "https://opensource.org/license/mit/",
             "acknowledgement": "concluded"
           }
         }
@@ -1265,16 +1384,16 @@
       "purl": "pkg:pypi/pluggy@1.5.0",
       "properties": [
         {
+          "name": "release_date",
+          "value": "2024-04-20T21:34:40Z"
+        },
+        {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.12.7"
-        },
-        {
-          "name": "package_release_date",
-          "value": "2024-04-20T21:34:40.000Z"
+          "value": "3.12.8"
         }
       ]
     }
@@ -1299,8 +1418,7 @@
         "4-attrs",
         "5-binaryornot",
         "7-commoncode",
-        "19-pdfminer.six",
-        "23-plugincode"
+        "22-plugincode"
       ]
     },
     {
@@ -1315,9 +1433,9 @@
         "4-attrs",
         "8-beautifulsoup4",
         "10-click",
-        "11-requests",
-        "16-saneyaml",
-        "18-text-unidecode"
+        "14-requests",
+        "19-saneyaml",
+        "21-text-unidecode"
       ]
     },
     {
@@ -1327,45 +1445,39 @@
       ]
     },
     {
-      "ref": "11-requests",
+      "ref": "10-click",
       "dependsOn": [
-        "12-certifi",
-        "13-charset-normalizer",
-        "14-idna",
-        "15-urllib3"
+        "11-importlib-metadata"
       ]
     },
     {
-      "ref": "16-saneyaml",
+      "ref": "11-importlib-metadata",
       "dependsOn": [
-        "17-pyyaml"
+        "12-zipp",
+        "13-typing-extensions"
       ]
     },
     {
-      "ref": "19-pdfminer.six",
+      "ref": "14-requests",
       "dependsOn": [
-        "13-charset-normalizer",
-        "20-cryptography"
+        "15-charset-normalizer",
+        "16-idna",
+        "17-urllib3",
+        "18-certifi"
       ]
     },
     {
-      "ref": "20-cryptography",
+      "ref": "19-saneyaml",
       "dependsOn": [
-        "21-cffi"
+        "20-pyyaml"
       ]
     },
     {
-      "ref": "21-cffi",
-      "dependsOn": [
-        "22-pycparser"
-      ]
-    },
-    {
-      "ref": "23-plugincode",
+      "ref": "22-plugincode",
       "dependsOn": [
         "10-click",
         "7-commoncode",
-        "24-pluggy"
+        "23-pluggy"
       ]
     }
   ]
