@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-52534169-a443-4d7d-9cce-5e2b28ea707f
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-9e3a8bb2-e46b-49cb-aabd-553762853006
 LicenseListVersion: 3.25
 Creator: Tool: sbom4python-0.12.1
-Created: 2024-12-22T01:57:48Z
+Created: 2024-12-29T01:59:05Z
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 
@@ -190,11 +190,12 @@ PrimaryPackagePurpose: LIBRARY
 PackageSupplier: NOASSERTION
 PackageDownloadLocation: https://pypi.org/project/click/8.1.8/#files
 FilesAnalyzed: false
+PackageChecksum: SHA256: 63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Composable command line interface toolkit</text>
-ReleaseDate: 2024-08-13T13:39:10Z
+ReleaseDate: 2024-12-21T18:38:41Z
 ExternalRef: OTHER log https://click.palletsprojects.com/changes/
 ExternalRef: OTHER chat https://discord.gg/pallets
 ExternalRef: OTHER documentation https://click.palletsprojects.com/
@@ -284,22 +285,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:requests:2.32.3:*:*:*:*:
 
 PackageName: charset-normalizer
 SPDXID: SPDXRef-15-charset-normalizer
-PackageVersion: 3.4.0
+PackageVersion: 3.4.1
 PrimaryPackagePurpose: LIBRARY
-PackageSupplier: Person: Ahmed TAHRI (tahri.ahmed@proton.me)
-PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.0/#files
+PackageSupplier: Organization: Ahmed R. (tahri.ahmed@proton.me)
+PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.1/#files
 FilesAnalyzed: false
-PackageHomePage: https://github.com/Ousret/charset_normalizer
-PackageChecksum: SHA256: 4f9fc98dad6c2eaa32fc3af1417d95b5e3d08aff968df0cd320066def971f9a6
+PackageChecksum: SHA256: 91b36a978b5ae0ee86c394f5a54d6ef44db1de0815eb43de826d41d21e4af3de
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.</text>
-ReleaseDate: 2024-10-09T07:38:02Z
-ExternalRef: OTHER issue-tracker https://github.com/Ousret/charset_normalizer/issues
-ExternalRef: OTHER documentation https://charset-normalizer.readthedocs.io/en/latest
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*
+ReleaseDate: 2024-12-24T18:09:43Z
+ExternalRef: OTHER log https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md
+ExternalRef: OTHER documentation https://charset-normalizer.readthedocs.io/
+ExternalRef: OTHER vcs https://github.com/jawah/charset_normalizer
+ExternalRef: OTHER issue-tracker https://github.com/jawah/charset_normalizer/issues
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: idna
@@ -324,23 +326,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kim_davies:idna:3.10:*:*:*:*:*:*:*
 
 PackageName: urllib3
 SPDXID: SPDXRef-17-urllib3
-PackageVersion: 2.2.3
+PackageVersion: 2.3.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Andrey Petrov (andrey.petrov@shazow.net)
-PackageDownloadLocation: https://pypi.org/project/urllib3/2.2.3/#files
+PackageDownloadLocation: https://pypi.org/project/urllib3/2.3.0/#files
 FilesAnalyzed: false
-PackageChecksum: SHA256: ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac
+PackageChecksum: SHA256: 1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>HTTP library with thread-safe connection pooling, file post, and more.</text>
-ReleaseDate: 2024-09-12T10:52:16Z
+ReleaseDate: 2024-12-22T07:47:28Z
 ExternalRef: OTHER log https://github.com/urllib3/urllib3/blob/main/CHANGES.rst
 ExternalRef: OTHER documentation https://urllib3.readthedocs.io
 ExternalRef: OTHER vcs https://github.com/urllib3/urllib3
 ExternalRef: OTHER issue-tracker https://github.com/urllib3/urllib3/issues
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/urllib3@2.2.3
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:andrey_petrov:urllib3:2.2.3:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/urllib3@2.3.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:andrey_petrov:urllib3:2.3.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: certifi
