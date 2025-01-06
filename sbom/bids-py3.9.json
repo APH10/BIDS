@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:d298fee6-4388-43f5-b0c8-cc2d902ebc77",
+  "serialNumber": "urn:uuid:48bf00d8-3d33-4d28-81f9-b7642b343e5a",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-12-22T01:57:54Z",
+    "timestamp": "2025-01-05T01:58:04Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -559,6 +559,12 @@
       "name": "click",
       "version": "8.1.8",
       "description": "Composable command line interface toolkit",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://pypi.org/project/click/8.1.8/#files",
@@ -590,7 +596,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-08-13T13:39:10Z"
+          "value": "2024-12-21T18:38:41Z"
         },
         {
           "name": "language",
@@ -837,21 +843,21 @@
       "type": "library",
       "bom-ref": "15-charset-normalizer",
       "name": "charset-normalizer",
-      "version": "3.4.0",
+      "version": "3.4.1",
       "supplier": {
-        "name": "Ahmed TAHRI",
+        "name": "Ahmed R .",
         "contact": [
           {
             "email": "tahri.ahmed@proton.me"
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_tahri:charset-normalizer:3.4.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.1:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "4f9fc98dad6c2eaa32fc3af1417d95b5e3d08aff968df0cd320066def971f9a6"
+          "content": "91b36a978b5ae0ee86c394f5a54d6ef44db1de0815eb43de826d41d21e4af3de"
         }
       ],
       "licenses": [
@@ -865,29 +871,32 @@
       ],
       "externalReferences": [
         {
-          "url": "https://github.com/Ousret/charset_normalizer",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.0/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
         {
-          "url": "https://github.com/Ousret/charset_normalizer/issues",
-          "type": "issue-tracker"
+          "url": "https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+          "type": "log"
         },
         {
-          "url": "https://charset-normalizer.readthedocs.io/en/latest",
+          "url": "https://charset-normalizer.readthedocs.io/",
           "type": "documentation"
+        },
+        {
+          "url": "https://github.com/jawah/charset_normalizer",
+          "type": "vcs"
+        },
+        {
+          "url": "https://github.com/jawah/charset_normalizer/issues",
+          "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.0",
+      "purl": "pkg:pypi/charset-normalizer@3.4.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-10-09T07:38:02Z"
+          "value": "2024-12-24T18:09:43Z"
         },
         {
           "name": "language",
@@ -959,7 +968,7 @@
       "type": "library",
       "bom-ref": "17-urllib3",
       "name": "urllib3",
-      "version": "2.2.3",
+      "version": "2.3.0",
       "supplier": {
         "name": "Andrey Petrov",
         "contact": [
@@ -968,17 +977,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.2.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.3.0:*:*:*:*:*:*:*",
       "description": "HTTP library with thread-safe connection pooling, file post, and more.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac"
+          "content": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/urllib3/2.2.3/#files",
+          "url": "https://pypi.org/project/urllib3/2.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -999,11 +1008,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/urllib3@2.2.3",
+      "purl": "pkg:pypi/urllib3@2.3.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-09-12T10:52:16Z"
+          "value": "2024-12-22T07:47:28Z"
         },
         {
           "name": "language",
