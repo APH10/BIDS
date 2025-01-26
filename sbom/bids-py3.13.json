@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:8976de7e-afa8-4e37-85ea-f6593dbd724b",
+  "serialNumber": "urn:uuid:8ed4c6ad-871e-4559-8383-1fa7fd191ee1",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-01-05T01:58:03Z",
+    "timestamp": "2025-01-26T01:51:19Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -196,7 +196,7 @@
       "type": "library",
       "bom-ref": "4-attrs",
       "name": "attrs",
-      "version": "24.3.0",
+      "version": "25.1.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -205,17 +205,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:24.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308"
+          "content": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/24.3.0/#files",
+          "url": "https://pypi.org/project/attrs/25.1.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -240,11 +240,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@24.3.0",
+      "purl": "pkg:pypi/attrs@25.1.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-16T06:59:26Z"
+          "value": "2025-01-25T11:30:10Z"
         },
         {
           "name": "language",
