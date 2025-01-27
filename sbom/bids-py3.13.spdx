@@ -2,10 +2,17 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
+<<<<<<< HEAD
 DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-dd8d0b28-4e51-4032-b132-f3b3c4fee4e7
 LicenseListVersion: 3.25
 Creator: Tool: sbom4python-0.12.1
 Created: 2024-12-29T01:59:01Z
+=======
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-8613fa02-0b9f-4c9f-9f79-934ff3497f4c
+LicenseListVersion: 3.25
+Creator: Tool: sbom4python-0.12.1
+Created: 2025-01-05T01:58:01Z
+>>>>>>> origin/chore-sbom-py3.12
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 

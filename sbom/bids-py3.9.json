@@ -2,10 +2,17 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
+<<<<<<< HEAD
   "serialNumber": "urn:uuid:25836112-8f34-4812-87ad-d8646c5c7f7f",
   "version": 1,
   "metadata": {
     "timestamp": "2024-12-29T01:59:07Z",
+=======
+  "serialNumber": "urn:uuid:48bf00d8-3d33-4d28-81f9-b7642b343e5a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-01-05T01:58:04Z",
+>>>>>>> origin/chore-sbom-py3.12
     "lifecycles": [
       {
         "phase": "build"
