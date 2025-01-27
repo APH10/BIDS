@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:48bf00d8-3d33-4d28-81f9-b7642b343e5a",
+  "serialNumber": "urn:uuid:6c6e887b-55a6-4829-88e2-2a899997a80f",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-01-05T01:58:04Z",
+    "timestamp": "2025-01-26T01:51:06Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -81,7 +81,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -130,7 +130,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -188,7 +188,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -196,7 +196,7 @@
       "type": "library",
       "bom-ref": "4-attrs",
       "name": "attrs",
-      "version": "24.3.0",
+      "version": "25.1.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -205,17 +205,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:24.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308"
+          "content": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/24.3.0/#files",
+          "url": "https://pypi.org/project/attrs/25.1.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -240,11 +240,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@24.3.0",
+      "purl": "pkg:pypi/attrs@25.1.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-16T06:59:26Z"
+          "value": "2025-01-25T11:30:10Z"
         },
         {
           "name": "language",
@@ -252,7 +252,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -310,7 +310,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -380,7 +380,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -438,7 +438,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -500,7 +500,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -549,7 +549,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -604,7 +604,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -612,7 +612,7 @@
       "type": "library",
       "bom-ref": "11-importlib-metadata",
       "name": "importlib-metadata",
-      "version": "8.5.0",
+      "version": "8.6.1",
       "supplier": {
         "name": "Jason R .",
         "contact": [
@@ -621,17 +621,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:jason_r.:importlib-metadata:8.5.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:jason_r.:importlib-metadata:8.6.1:*:*:*:*:*:*:*",
       "description": "Read metadata from Python packages",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b"
+          "content": "02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/importlib-metadata/8.5.0/#files",
+          "url": "https://pypi.org/project/importlib-metadata/8.6.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -640,11 +640,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/importlib-metadata@8.5.0",
+      "purl": "pkg:pypi/importlib-metadata@8.6.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-09-11T14:56:07Z"
+          "value": "2025-01-20T22:21:29Z"
         },
         {
           "name": "language",
@@ -652,7 +652,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -700,7 +700,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -769,7 +769,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -835,7 +835,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -904,7 +904,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -960,7 +960,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1020,7 +1020,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1082,7 +1082,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1140,7 +1140,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1218,7 +1218,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1276,7 +1276,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1334,7 +1334,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     },
@@ -1392,7 +1392,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.20"
+          "value": "3.9.21"
         }
       ]
     }
