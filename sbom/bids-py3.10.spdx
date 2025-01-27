@@ -2,17 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-<<<<<<< HEAD
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-5d942915-27c0-4175-b974-dd36b9b73b32
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-706acd93-1a94-4ee1-872e-a0926fef8be4
 LicenseListVersion: 3.25
 Creator: Tool: sbom4python-0.12.1
-Created: 2024-12-29T01:59:00Z
-=======
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-c7277d7a-7a1f-41db-8018-7f300a68e280
-LicenseListVersion: 3.25
-Creator: Tool: sbom4python-0.12.1
-Created: 2025-01-05T01:57:54Z
->>>>>>> origin/chore-sbom-py3.12
+Created: 2025-01-26T01:51:05Z
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 
@@ -73,24 +66,24 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:typecode:30.0.2:
 
 PackageName: attrs
 SPDXID: SPDXRef-4-attrs
-PackageVersion: 24.3.0
+PackageVersion: 25.1.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Hynek Schlawack (hs@ox.cx)
-PackageDownloadLocation: https://pypi.org/project/attrs/24.3.0/#files
+PackageDownloadLocation: https://pypi.org/project/attrs/25.1.0/#files
 FilesAnalyzed: false
-PackageChecksum: SHA256: ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308
+PackageChecksum: SHA256: c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Classes Without Boilerplate</text>
-ReleaseDate: 2024-12-16T06:59:26Z
+ReleaseDate: 2025-01-25T11:30:10Z
 ExternalRef: OTHER documentation https://www.attrs.org/
 ExternalRef: OTHER log https://www.attrs.org/en/stable/changelog.html
 ExternalRef: OTHER vcs https://github.com/python-attrs/attrs
 ExternalRef: OTHER other https://github.com/sponsors/hynek
 ExternalRef: OTHER other https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/attrs@24.3.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:hynek_schlawack:attrs:24.3.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/attrs@25.1.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: binaryornot

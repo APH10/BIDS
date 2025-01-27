@@ -2,17 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-<<<<<<< HEAD
-  "serialNumber": "urn:uuid:7965aa9f-aed2-4330-b47f-4176a846873a",
+  "serialNumber": "urn:uuid:55cc43ea-b794-4695-ac52-ba3f6f161b33",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-12-29T01:59:02Z",
-=======
-  "serialNumber": "urn:uuid:e940b1bb-d445-427e-95ac-436d24cb3395",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-01-05T01:57:56Z",
->>>>>>> origin/chore-sbom-py3.12
+    "timestamp": "2025-01-26T01:51:07Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -88,7 +81,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -137,7 +130,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -195,7 +188,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -203,7 +196,7 @@
       "type": "library",
       "bom-ref": "4-attrs",
       "name": "attrs",
-      "version": "24.3.0",
+      "version": "25.1.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -212,17 +205,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:24.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308"
+          "content": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/24.3.0/#files",
+          "url": "https://pypi.org/project/attrs/25.1.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -247,11 +240,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@24.3.0",
+      "purl": "pkg:pypi/attrs@25.1.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-16T06:59:26Z"
+          "value": "2025-01-25T11:30:10Z"
         },
         {
           "name": "language",
@@ -259,7 +252,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -317,7 +310,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -387,7 +380,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -445,7 +438,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -507,7 +500,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -556,7 +549,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -611,7 +604,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -659,7 +652,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -708,7 +701,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -777,7 +770,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -843,7 +836,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -912,7 +905,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -968,7 +961,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1028,7 +1021,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1090,7 +1083,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1148,7 +1141,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1226,7 +1219,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1284,7 +1277,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1342,7 +1335,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     },
@@ -1400,7 +1393,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.10.15"
+          "value": "3.10.16"
         }
       ]
     }
