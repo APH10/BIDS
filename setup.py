@@ -36,6 +36,7 @@ setup_kwargs = dict(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
     ],
@@ -44,6 +45,9 @@ setup_kwargs = dict(
     entry_points={
         "console_scripts": [
             "bids-analyser = bids.cli:main",
+            "sbom4bids = bids.sbom4bids:main",
+            "bids-search = bids.search:main",
+            "bids-scan = bids.scan:main"
         ],
     },
 )
