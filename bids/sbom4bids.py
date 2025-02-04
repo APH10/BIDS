@@ -3,13 +3,13 @@ from lib4sbom.data.package import SBOMPackage
 from lib4sbom.generator import SBOMGenerator
 from lib4sbom.data.relationship import SBOMRelationship
 from lib4sbom.sbom import SBOM
+import os
+from bids.version import VERSION
 
 import sys
 import argparse
 from collections import ChainMap
 import json
-
-VERSION = "0.1.0"
 
 def main(argv=None):
 
@@ -87,7 +87,7 @@ def main(argv=None):
         print("Output file:", args["output_file"])
 
     if len(args["input"]) > 0:
-        sbom_packages, sbom_relationships = create_sbom(args["input"])
+        sbom_packages, sbom_relationships = create_sbom(args["input"],"binary")
     else:
         print("[ERROR] Nothing to process")
         return -1
@@ -105,7 +105,7 @@ def main(argv=None):
 
     return 0
 
-def create_sbom(bids_file):
+def create_sbom(bids_file, appname):
     # Parse file
     data = json.load(open(bids_file, "r", encoding="utf-8"))
 
@@ -114,11 +114,11 @@ def create_sbom(bids_file):
     # Create parent package
     bids_package = SBOMPackage()
     bids_package.set_type("application")
-    bids_package.set_name(data["metadata"]["binary"]["filename"].basename())
+    bids_package.set_name(os.path.basename(data["metadata"]["binary"]["filename"]))
     bids_package.set_value(
         "release_date", data["metadata"]["binary"]["filedate"]
     )
-    # TODO
+
     bids_package.set_evidence(data["metadata"]["binary"]["filename"])
     # Add evidence details relating to filename and filesize
     checksum_algorithm = data["metadata"]["binary"]["checksum"]["algorithm"]
@@ -133,6 +133,11 @@ def create_sbom(bids_file):
     ] = bids_package.get_package()
 
     # TODO Describes relationship
+    dependency_relationship = SBOMRelationship()
+    dependency_relationship.set_relationship(
+        appname, "DESCRIBES", bids_package.get_name()
+    )
+    sbom_relationships.append(dependency_relationship.get_relationship())
 
     # Now look at dependencies
     for library in data["components"]["dynamiclibrary"]:
@@ -147,11 +152,12 @@ def create_sbom(bids_file):
             (dependency_package.get_name(), dependency_package.get_value("version"))
         ] = dependency_package.get_package()
 
-        # Create relationship
-        # dependency_relationship = SBOMRelationship()
-        # dependency_relationship.set_source(bids_package.get_id())
-        # dependency_relationship.set_target(dependency_package.get_id())
-        # DEPENDS ON relationship
+        # Create relationship with parent application
+        dependency_relationship = SBOMRelationship()
+        dependency_relationship.set_relationship(
+            bids_package.get_name(), "DEPENDS_ON", dependency_package.get_name()
+        )
+        sbom_relationships.append(dependency_relationship.get_relationship())
 
     return sbom_packages, sbom_relationships
 
