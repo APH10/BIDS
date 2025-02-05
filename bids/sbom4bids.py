@@ -5,6 +5,7 @@ from lib4sbom.data.relationship import SBOMRelationship
 from lib4sbom.sbom import SBOM
 import os
 from bids.version import VERSION
+from pathlib import Path
 
 import sys
 import argparse
@@ -87,10 +88,14 @@ def main(argv=None):
         print("Output file:", args["output_file"])
 
     if len(args["input"]) > 0:
-        sbom_packages, sbom_relationships = create_sbom(args["input"],"binary")
+        try:
+            sbom_packages, sbom_relationships = create_sbom(args["input"],"binary")
+        except FileNotFoundError:
+            print(f"[ERROR] {args['input']} not found.")
+            sys.exit(1)
     else:
         print("[ERROR] Nothing to process")
-        return -1
+        sys.exit(1)
 
     # Generate SBOM
     bids_sbom = SBOM()
@@ -103,11 +108,22 @@ def main(argv=None):
     sbom_generator = SBOMGenerator(False, sbom_type=args["sbom"], format=args["format"], application=app_name, version=VERSION)
     sbom_generator.generate(project_name="BIDS_Application", sbom_data=bids_sbom.get_sbom(),filename=args["output_file"])
 
-    return 0
+    sys.exit(0)
 
 def create_sbom(bids_file, appname):
+    # Check file exists
+    invalid_file = True
+    if len(bids_file) > 0:
+        # Check path
+        filePath = Path(bids_file)
+        # Check path exists, a valid file and not empty file
+        if filePath.exists() and filePath.is_file() and filePath.stat().st_size > 0:
+            # Assume that processing can proceed
+            invalid_file = False
+    if invalid_file:
+        raise FileNotFoundError
     # Parse file
-    data = json.load(open(bids_file, "r", encoding="utf-8"))
+    data = json.load(open(os.path.realpath(bids_file), "r", encoding="utf-8"))
 
     sbom_packages = {}
     sbom_relationships = []
@@ -126,8 +142,8 @@ def create_sbom(bids_file, appname):
     bids_package.set_checksum(checksum_algorithm, checksum)
     for property in ["class", "architecture", "bits", "os"]:
         bids_package.set_property(property, data["metadata"]["binary"][property])
-    if "description" in data["metadata"]:
-        bids_package.set_description(data["metadata"]["description"])
+    if "description" in data["metadata"]["binary"]:
+        bids_package.set_description(data["metadata"]["binary"]["description"])
     sbom_packages[
         (bids_package.get_name(), bids_package.get_value("version"))
     ] = bids_package.get_package()
@@ -163,4 +179,3 @@ def create_sbom(bids_file, appname):
 
 if __name__ == "__main__":
     sys.exit(main())
-
