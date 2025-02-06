@@ -109,14 +109,13 @@ def main(argv=None):
                 output_file = os.path.join(args["output"], f"{os.path.basename(filename)}.json")
                 output.generate_output(output_file)
             except Exception as e:
-                print(f"Warning: Could not process {filename}. Skipping. Error: {e}")
-                continue  # Go to the next file
+                print(f"[WARNING] Could not process {filename}. Error: {e}")
             except TypeError:
                 print(f"[ERROR] {filename} - Only ELF files can be analysed.")
             except FileNotFoundError:
                 print(f"[ERROR] {filename} not found.")
 
-    sys.exit(1)
+    sys.exit(0)
 
 
 if __name__ == "__main__":
