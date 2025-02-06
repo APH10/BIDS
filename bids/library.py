@@ -1,5 +1,5 @@
 import os
-import subprocess # nosec
+import subprocess  # nosec
 from pathlib import Path
 
 
@@ -22,7 +22,9 @@ class DynamicLibrary:
         # Load cache
         self.lib_details = {}
         if cache is None:
-            lines = subprocess.run(["ldconfig", "-p"], capture_output=True, text=True) # nosec
+            lines = subprocess.run(
+                ["ldconfig", "-p"], capture_output=True, text=True
+            )  # nosec
             for line in lines.stdout.splitlines()[1:]:
                 if "=>" in line.strip():
                     libname, lib_architecture, _, lib_path = line.strip().split(" ")
