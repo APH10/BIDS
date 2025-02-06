@@ -45,7 +45,7 @@ setup_kwargs = dict(
     entry_points={
         "console_scripts": [
             "bids-analyser = bids.cli:main",
-            "sbom4bids = bids.sbom4bids:main",
+            "sbom4bids = bids.sbom:main",
             "bids-search = bids.search:main",
             "bids-scan = bids.scan:main"
         ],

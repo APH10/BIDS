@@ -7,7 +7,7 @@ BIDS SBOM tests
 
 from pathlib import Path
 import pytest
-from bids.sbom4bids import main
+from bids.sbom import main
 
 class TestSBOM:
     """Tests the BIDS SBOM module"""
