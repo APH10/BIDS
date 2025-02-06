@@ -43,10 +43,6 @@ jobs:
           pre-commit autoupdate
           pre-commit uninstall
 
-      - name: Sync `dev-requirements.txt`
-        run: |
-          python .github/workflows/update-dev-requirements.py
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
         with:

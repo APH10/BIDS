@@ -35,6 +35,6 @@ jobs:
           pre-commit install
       - name: Run ${{ matrix.tool }} using pre-commit
         run: |
-          pre-commit run ${{ matrix.tool }} bids/*.py
+          pre-commit run ${{ matrix.tool }} --files bids/*.py
 
 
