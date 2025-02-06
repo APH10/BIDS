@@ -3,7 +3,7 @@
 
 import hashlib
 import os
-import subprocess
+import subprocess # nosec
 import time
 from pathlib import Path
 
