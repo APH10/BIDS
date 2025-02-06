@@ -37,10 +37,25 @@ class BIDSIndexer:
 
     def get_files(self, directory):
         files = []
-        print (f"Find files in {directory}")
+        if self.debug:
+            print (f"Find files in {directory}")
         for file_path in Path(directory).glob("**/*"):
             if self.debug:
                 print (f"Processing {file_path}")
+            # Ignore symlinks
+            if Path(file_path).is_symlink():
+                if self.debug:
+                    print ("Symlink ignored")
+                continue
+            # Ignore directories
+            if Path(file_path).is_dir():
+                if self.debug:
+                    print ("Directory ignored)")
+                continue
+            if not str(file_path).endswith(".json"):
+                if self.debug:
+                    print ("Not a JSON file")
+                continue
             with open(file_path, 'r', encoding='utf-8') as f:
                 files.append({
                     "file_path": str(file_path),
@@ -55,7 +70,8 @@ class BIDSIndexer:
 
             batch_count = 0
             for file_info in files:
-                print (f"Process: {file_info['file_path']}")
+                if self.debug:
+                    print (f"Process: {file_info['file_path']}")
                 doc = tantivy.Document(
                     file_path=file_info["file_path"],
                     content=file_info["content"],
@@ -88,10 +104,26 @@ class BIDSIndexer:
                 results.append(element)
         return results
 
+    def reinitialise_index(self):
+        shutil.rmtree(self.index_path)
+        self.create_schema()
+        self.initialise_index()
+
     def import_data(self, filename):
-        # extract data into index
-        shutil.unpack_archive(filename, self.index_path, "zip")
+        # Extract data into index
+        if self.debug:
+            print (f"Import file {filename}")
+        # Check file exists
+        if Path(filename).exists():
+            # Remove existing data
+            self.reinitialise_index()
+            shutil.unpack_archive(filename, self.index_path, "zip")
+            return True
+        return False
 
     def export_data(self, export_filename):
         # store data in index
         shutil.make_archive(export_filename, 'zip', self.index_path)
+
+    def get_index_path(self):
+        return self.index_path

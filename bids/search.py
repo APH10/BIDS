@@ -18,6 +18,11 @@ def main(argv=None):
 
     input_group = parser.add_argument_group("Input")
     input_group.add_argument(
+        "--initialise",
+        action="store_true",
+        help="initialise dataset",
+    )
+    input_group.add_argument(
         "--index",
         action="store",
         default="",
@@ -66,6 +71,7 @@ def main(argv=None):
     parser.add_argument("-V", "--version", action="version", version=VERSION)
 
     defaults = {
+        "initialise": False,
         "index": "",
         "search": "",
         "import": "",
@@ -83,13 +89,19 @@ def main(argv=None):
 
     indexer = BIDSIndexer(debug=args["debug"])
 
+    if args["initialise"]:
+        indexer.reinitialise_index()
     if args["index"] != "":
         # Index the specified directory
         print(f'Indexing files in {args["index"]}...')
         indexer.index_files(args["index"])
         print("Indexing complete!")
     elif args["import"] != "":
-        indexer.import_data(args["import"])
+        if indexer.import_data(args["import"]):
+            print("Import complete!")
+        else:
+            print ("Import failed")
+            sys.exit(1)
     elif args["export"] != "":
         indexer.export_data(args["export"])
     elif args["search"] != "":
@@ -112,6 +124,11 @@ def main(argv=None):
                 if args["verbose"]:
                     print(f"   Content: {json.dumps(json_data,indent=2)}\n")
             print("-" * 80)
+    else:
+        print ("[ERROR] Must specify a command")
+        sys.exit(1)
+
+    sys.exit(0)
 
 if __name__ == "__main__":
     main() 
