@@ -12,7 +12,8 @@ from bids.elf_utils import BIDSElf
 
 class BIDSAnalyser:
 
-    COMMAND_TIMEOUT = 5 # Seconds
+    COMMAND_TIMEOUT = 5  # Seconds
+
     def __init__(self, options={}, description="", debug=False):
         self.filename = None
         self.options = options
@@ -64,7 +65,10 @@ class BIDSAnalyser:
     def app_version(self, application):
         try:
             lines = subprocess.run(
-                [application, "--version"], capture_output=True, text=True, timeout=self.COMMAND_TIMEOUT
+                [application, "--version"],
+                capture_output=True,
+                text=True,
+                timeout=self.COMMAND_TIMEOUT,
             )
             version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
             if version[-1] == ".":

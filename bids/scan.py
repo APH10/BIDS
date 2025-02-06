@@ -80,14 +80,16 @@ def main(argv=None):
 
     if args["debug"]:
         print("Input directory:", args["directory"])
-        print ("File Pattern:", args["pattern"])
+        print("File Pattern:", args["pattern"])
         print("Output directory:", args["output"])
 
     # Check output directory exists
     Path(args["output"]).mkdir(parents=True, exist_ok=True)
 
     analyser = BIDSAnalyser(debug=args["debug"])
-    for filename in glob.glob(os.path.join(args["directory"], args["pattern"])):  # Use glob for pattern matching
+    for filename in glob.glob(
+        os.path.join(args["directory"], args["pattern"])
+    ):  # Use glob for pattern matching
         if os.path.isfile(filename):  # Ensure it's a file (not a directory)
             try:
                 # Ignore non executable files
@@ -96,7 +98,7 @@ def main(argv=None):
                         print(f"{filename} is not executable, skipping.")
                     continue
                 if args["debug"]:
-                    print (f"Processing {filename}")
+                    print(f"Processing {filename}")
                 analyser.analyse(filename)
                 output = BIDSOutput(tool_version=VERSION)
                 output.create_metadata(analyser.get_file_data())
@@ -106,7 +108,9 @@ def main(argv=None):
                     analyser.get_callgraph(),
                     local=analyser.get_local_symbols(),
                 )
-                output_file = os.path.join(args["output"], f"{os.path.basename(filename)}.json")
+                output_file = os.path.join(
+                    args["output"], f"{os.path.basename(filename)}.json"
+                )
                 output.generate_output(output_file)
             except Exception as e:
                 print(f"[WARNING] Could not process {filename}. Error: {e}")

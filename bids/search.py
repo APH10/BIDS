@@ -3,9 +3,11 @@
 import argparse
 import json
 import sys
-from bids.index import BIDSIndexer
 from collections import ChainMap
+
+from bids.index import BIDSIndexer
 from bids.version import VERSION
+
 
 def main(argv=None):
 
@@ -14,7 +16,7 @@ def main(argv=None):
 
     MAX_RESULTS = 10
     # TODO rewrite
-    parser = argparse.ArgumentParser(prog=app_name,description='BIDS Search Tool')
+    parser = argparse.ArgumentParser(prog=app_name, description="BIDS Search Tool")
 
     input_group = parser.add_argument_group("Input")
     input_group.add_argument(
@@ -53,7 +55,7 @@ def main(argv=None):
         help=f"Maximum number of results to return (default {MAX_RESULTS})",
     )
 
-    ## Import /export index
+    # Import /export index
     database_group = parser.add_argument_group("Database Management")
     database_group.add_argument(
         "--export",
@@ -100,7 +102,7 @@ def main(argv=None):
         if indexer.import_data(args["import"]):
             print("Import complete!")
         else:
-            print ("Import failed")
+            print("Import failed")
             sys.exit(1)
     elif args["export"] != "":
         indexer.export_data(args["export"])
@@ -108,27 +110,30 @@ def main(argv=None):
         # Search the index
         print(f'Searching for: {args["search"]}')
         results = indexer.search(args["search"], limit=int(args["results"]))
-        
+
         if not results:
             print("No results found.")
         else:
             print("\nSearch Results:")
             print("-" * 80)
             for i, result in enumerate(results, 1):
-                #print(f"{i}. {result['file_path']} (Score: {result['score']:.2f})")
+                # print(f"{i}. {result['file_path']} (Score: {result['score']:.2f})")
                 print(f"{i}. Score: {result['score']:.4f}")
-                json_data = json.loads(result['content'])
-                print (f'   File: {json_data["metadata"]["binary"]["filename"]}')
+                json_data = json.loads(result["content"])
+                print(f'   File: {json_data["metadata"]["binary"]["filename"]}')
                 if "description" in json_data["metadata"]["binary"]:
-                    print (f'   Description: {json_data["metadata"]["binary"]["description"]}')
+                    print(
+                        f'   Description: {json_data["metadata"]["binary"]["description"]}'
+                    )
                 if args["verbose"]:
                     print(f"   Content: {json.dumps(json_data,indent=2)}\n")
             print("-" * 80)
     else:
-        print ("[ERROR] Must specify a command")
+        print("[ERROR] Must specify a command")
         sys.exit(1)
 
     sys.exit(0)
 
+
 if __name__ == "__main__":
-    main() 
+    main()

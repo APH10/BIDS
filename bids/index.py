@@ -1,8 +1,9 @@
 # See https://github.com/ajitesh123/codesearch/tree/main/codesearch
 
-import tantivy
-from pathlib import Path
 import shutil
+from pathlib import Path
+
+import tantivy
 
 
 class BIDSIndexer:
@@ -10,7 +11,8 @@ class BIDSIndexer:
     DISK_LOCATION_DEFAULT = Path("~").expanduser() / ".cache" / "bids"
 
     INDEX_SIZE = 30000000
-    def __init__(self, index_path = None, debug = False):
+
+    def __init__(self, index_path=None, debug=False):
         if index_path is None:
             self.index_path = self.DISK_LOCATION_DEFAULT / "bids_index"
         else:
@@ -28,7 +30,7 @@ class BIDSIndexer:
         schema_builder.add_text_field("content", stored=True)
         # schema_builder.add_text_field("metadata", stored=True)
         schema_builder.add_integer_field("doc_id", stored=True, indexed=True, fast=True)
-        
+
         return schema_builder.build()
 
     def initialise_index(self):
@@ -38,32 +40,34 @@ class BIDSIndexer:
     def get_files(self, directory):
         files = []
         if self.debug:
-            print (f"Find files in {directory}")
+            print(f"Find files in {directory}")
         for file_path in Path(directory).glob("**/*"):
             if self.debug:
-                print (f"Processing {file_path}")
+                print(f"Processing {file_path}")
             # Ignore symlinks
             if Path(file_path).is_symlink():
                 if self.debug:
-                    print ("Symlink ignored")
+                    print("Symlink ignored")
                 continue
             # Ignore directories
             if Path(file_path).is_dir():
                 if self.debug:
-                    print ("Directory ignored)")
+                    print("Directory ignored)")
                 continue
             if not str(file_path).endswith(".json"):
                 if self.debug:
-                    print ("Not a JSON file")
+                    print("Not a JSON file")
                 continue
-            with open(file_path, 'r', encoding='utf-8') as f:
-                files.append({
-                    "file_path": str(file_path),
-                    "content": f.read(),
-                })
+            with open(file_path, "r", encoding="utf-8") as f:
+                files.append(
+                    {
+                        "file_path": str(file_path),
+                        "content": f.read(),
+                    }
+                )
         return files
 
-    def index_files(self, directory, batch_size = 1000):
+    def index_files(self, directory, batch_size=1000):
         files = self.get_files(directory)
         try:
             writer = self.index.writer(self.INDEX_SIZE, 1)
@@ -71,11 +75,11 @@ class BIDSIndexer:
             batch_count = 0
             for file_info in files:
                 if self.debug:
-                    print (f"Process: {file_info['file_path']}")
+                    print(f"Process: {file_info['file_path']}")
                 doc = tantivy.Document(
                     file_path=file_info["file_path"],
                     content=file_info["content"],
-                    doc_id= self.docid(file_info["file_path"])
+                    doc_id=self.docid(file_info["file_path"]),
                 )
                 writer.add_document(doc)
                 batch_count += 1
@@ -87,18 +91,18 @@ class BIDSIndexer:
         except Exception as e:
             raise Exception(f"Failed to index files: {str(e)}")
 
-    def search(self, query, limit = 10):
+    def search(self, query, limit=10):
         self.index.reload()
         parsed_query = self.index.parse_query(query, ["content"])
         searcher = self.index.searcher()
-        
+
         results = []
         for score, doc_address in searcher.search(parsed_query, limit=limit).hits:
             doc = searcher.doc(doc_address)
-            element={
+            element = {
                 "file_path": doc["file_path"][0],
                 "score": score,
-                "content": doc["content"][0]
+                "content": doc["content"][0],
             }
             if element not in results:
                 results.append(element)
@@ -112,7 +116,7 @@ class BIDSIndexer:
     def import_data(self, filename):
         # Extract data into index
         if self.debug:
-            print (f"Import file {filename}")
+            print(f"Import file {filename}")
         # Check file exists
         if Path(filename).exists():
             # Remove existing data
@@ -123,7 +127,7 @@ class BIDSIndexer:
 
     def export_data(self, export_filename):
         # store data in index
-        shutil.make_archive(export_filename, 'zip', self.index_path)
+        shutil.make_archive(export_filename, "zip", self.index_path)
 
     def get_index_path(self):
         return self.index_path

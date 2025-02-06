@@ -1,16 +1,18 @@
-from lib4sbom.data.document import SBOMDocument
-from lib4sbom.data.package import SBOMPackage
-from lib4sbom.generator import SBOMGenerator
-from lib4sbom.data.relationship import SBOMRelationship
-from lib4sbom.sbom import SBOM
+import argparse
+import json
 import os
-from bids.version import VERSION
+import sys
+from collections import ChainMap
 from pathlib import Path
 
-import sys
-import argparse
-from collections import ChainMap
-import json
+from lib4sbom.data.document import SBOMDocument
+from lib4sbom.data.package import SBOMPackage
+from lib4sbom.data.relationship import SBOMRelationship
+from lib4sbom.generator import SBOMGenerator
+from lib4sbom.sbom import SBOM
+
+from bids.version import VERSION
+
 
 def main(argv=None):
 
@@ -18,7 +20,7 @@ def main(argv=None):
     app_name = "sbom4bids"
     parser = argparse.ArgumentParser(
         prog=app_name,
-        description="Generates a Software Bill of Materials (SBOM) from a Bids JSON file"
+        description="Generates a Software Bill of Materials (SBOM) from a Bids JSON file",
     )
     input_group = parser.add_argument_group("Input")
     input_group.add_argument(
@@ -89,7 +91,7 @@ def main(argv=None):
 
     if len(args["input"]) > 0:
         try:
-            sbom_packages, sbom_relationships = create_sbom(args["input"],"binary")
+            sbom_packages, sbom_relationships = create_sbom(args["input"], "binary")
         except FileNotFoundError:
             print(f"[ERROR] {args['input']} not found.")
             sys.exit(1)
@@ -105,10 +107,21 @@ def main(argv=None):
     bids_sbom.add_document(bids_doc.get_document())
     bids_sbom.add_packages(sbom_packages)
     bids_sbom.add_relationships(sbom_relationships)
-    sbom_generator = SBOMGenerator(False, sbom_type=args["sbom"], format=args["format"], application=app_name, version=VERSION)
-    sbom_generator.generate(project_name="BIDS_Application", sbom_data=bids_sbom.get_sbom(),filename=args["output_file"])
+    sbom_generator = SBOMGenerator(
+        False,
+        sbom_type=args["sbom"],
+        format=args["format"],
+        application=app_name,
+        version=VERSION,
+    )
+    sbom_generator.generate(
+        project_name="BIDS_Application",
+        sbom_data=bids_sbom.get_sbom(),
+        filename=args["output_file"],
+    )
 
     sys.exit(0)
+
 
 def create_sbom(bids_file, appname):
     # Check file exists
@@ -131,9 +144,7 @@ def create_sbom(bids_file, appname):
     bids_package = SBOMPackage()
     bids_package.set_type("application")
     bids_package.set_name(os.path.basename(data["metadata"]["binary"]["filename"]))
-    bids_package.set_value(
-        "release_date", data["metadata"]["binary"]["filedate"]
-    )
+    bids_package.set_value("release_date", data["metadata"]["binary"]["filedate"])
 
     bids_package.set_evidence(data["metadata"]["binary"]["filename"])
     # Add evidence details relating to filename and filesize
@@ -144,9 +155,9 @@ def create_sbom(bids_file, appname):
         bids_package.set_property(property, data["metadata"]["binary"][property])
     if "description" in data["metadata"]["binary"]:
         bids_package.set_description(data["metadata"]["binary"]["description"])
-    sbom_packages[
-        (bids_package.get_name(), bids_package.get_value("version"))
-    ] = bids_package.get_package()
+    sbom_packages[(bids_package.get_name(), bids_package.get_value("version"))] = (
+        bids_package.get_package()
+    )
 
     # TODO Describes relationship
     dependency_relationship = SBOMRelationship()
@@ -176,6 +187,7 @@ def create_sbom(bids_file, appname):
         sbom_relationships.append(dependency_relationship.get_relationship())
 
     return sbom_packages, sbom_relationships
+
 
 if __name__ == "__main__":
     sys.exit(main())
