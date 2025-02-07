@@ -178,6 +178,21 @@ def create_sbom(bids_file, appname):
             dependency_package.set_value("version", library["version"])
         if "checksum" in library:
             dependency_package.set_checksum(library["algorithm"], library["checksum"])
+        # Get functions
+        func_id = 1
+        for function in data["relationships"][dependency_package.get_name()]:
+            dependency_package.set_property(f"function_{func_id}", function)
+            func_id += 1
+        sbom_packages[
+            (dependency_package.get_name(), dependency_package.get_value("version"))
+        ] = dependency_package.get_package()
+
+        # Create relationship with parent application
+        dependency_relationship = SBOMRelationship()
+        dependency_relationship.set_relationship(
+            bids_package.get_name(), "DEPENDS_ON", dependency_package.get_name()
+        )
+        sbom_relationships.append(dependency_relationship.get_relationship())
         sbom_packages[
             (dependency_package.get_name(), dependency_package.get_value("version"))
         ] = dependency_package.get_package()
