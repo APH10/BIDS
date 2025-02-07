@@ -90,7 +90,7 @@ def main(argv=None):
     for filename in glob.glob(
         os.path.join(args["directory"], args["pattern"])
     ):  # Use glob for pattern matching
-        if os.path.isfile(filename):  # Ensure it's a file (not a directory)
+        if Path(filename).is_file():  # Ensure it's a file (not a directory)
             try:
                 # Ignore non executable files
                 if not os.access(filename, os.X_OK):
