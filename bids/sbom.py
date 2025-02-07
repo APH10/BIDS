@@ -176,6 +176,8 @@ def create_sbom(bids_file, appname):
         dependency_package.set_evidence(library["location"])
         if "version" in library:
             dependency_package.set_value("version", library["version"])
+        if "checksum" in library:
+            dependency_package.set_checksum(library["algorithm"], library["checksum"])
         sbom_packages[
             (dependency_package.get_name(), dependency_package.get_value("version"))
         ] = dependency_package.get_package()

@@ -1,3 +1,7 @@
+# Copyright (C) 2024 APH10 Limited
+# SPDX-License-Identifier: Apache-2.0
+
+import hashlib
 import os
 import subprocess  # nosec
 from pathlib import Path
@@ -13,9 +17,16 @@ class DynamicLibrary:
     def get_library(self, library):
         # Return details of a dynamic library
         library_name = self.lib_details.get(library)
+        if library_name is not None:
+            with open(library_name, "rb") as f:
+                contents = f.read()
+                checksum = hashlib.sha256(contents).hexdigest()
+        else:
+            checksum = None
         return {
             "location": library_name,
             "version": self.version(library_name),
+            "checksum": checksum,
         }
 
     def _load_cache(self, cache):

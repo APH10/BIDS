@@ -104,6 +104,9 @@ class BIDSOutput:
                 info["location"] = library_info["location"]
             if library_info["version"] is not None:
                 info["version"] = library_info["version"]
+            if library_info["checksum"] is not None:
+                info["algorithm"] = "SHA256"
+                info["checksum"] = library_info["checksum"]
             dependency.append(info)
         components["dynamiclibrary"] = dependency
         symbol = []
