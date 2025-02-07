@@ -153,7 +153,7 @@ def create_sbom(bids_file, appname):
     bids_package.set_checksum(checksum_algorithm, checksum)
     for package_property in ["class", "architecture", "bits", "os"]:
         bids_package.set_property(
-            property, data["metadata"]["binary"][package_property]
+            package_property, data["metadata"]["binary"][package_property]
         )
     if "description" in data["metadata"]["binary"]:
         bids_package.set_description(data["metadata"]["binary"]["description"])
