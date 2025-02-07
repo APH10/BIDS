@@ -58,7 +58,7 @@ class BIDSIndexer:
                 if self.debug:
                     print("Not a JSON file")
                 continue
-            with open(file_path, "r", encoding="utf-8") as f:
+            with open(file_path, encoding="utf-8") as f:
                 files.append(
                     {
                         "file_path": str(file_path),

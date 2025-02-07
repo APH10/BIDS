@@ -136,7 +136,7 @@ def create_sbom(bids_file, appname):
     if invalid_file:
         raise FileNotFoundError
     # Parse file
-    data = json.load(open(os.path.realpath(bids_file), "r", encoding="utf-8"))
+    data = json.load(open(os.path.realpath(bids_file), encoding="utf-8"))
 
     sbom_packages = {}
     sbom_relationships = []
@@ -151,15 +151,16 @@ def create_sbom(bids_file, appname):
     checksum_algorithm = data["metadata"]["binary"]["checksum"]["algorithm"]
     checksum = data["metadata"]["binary"]["checksum"]["value"]
     bids_package.set_checksum(checksum_algorithm, checksum)
-    for property in ["class", "architecture", "bits", "os"]:
-        bids_package.set_property(property, data["metadata"]["binary"][property])
+    for package_property in ["class", "architecture", "bits", "os"]:
+        bids_package.set_property(
+            property, data["metadata"]["binary"][package_property]
+        )
     if "description" in data["metadata"]["binary"]:
         bids_package.set_description(data["metadata"]["binary"]["description"])
     sbom_packages[(bids_package.get_name(), bids_package.get_value("version"))] = (
         bids_package.get_package()
     )
 
-    # TODO Describes relationship
     dependency_relationship = SBOMRelationship()
     dependency_relationship.set_relationship(
         appname, "DESCRIBES", bids_package.get_name()
