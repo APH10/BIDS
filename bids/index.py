@@ -1,5 +1,9 @@
+# Copyright (C) 2025 APH10 Limited
+# SPDX-License-Identifier: Apache-2.0
+
 # See https://github.com/ajitesh123/codesearch/tree/main/codesearch
 
+import os
 import shutil
 from pathlib import Path
 
@@ -13,29 +17,49 @@ class BIDSIndexer:
     INDEX_SIZE = 30000000
 
     def __init__(self, index_path=None, debug=False):
+        self.debug = debug
         if index_path is None:
-            self.index_path = self.DISK_LOCATION_DEFAULT / "bids_index"
+            # Check if environment variable set
+            index_location = os.getenv("BIDS_DATASET")
+            if index_location is None:
+                self.index_path = self.DISK_LOCATION_DEFAULT / "bids_index"
+            else:
+                self.index_path = Path(index_location) / "bids_index"
         else:
             self.index_path = index_path
+        if self.debug:
+            print (f"Dataset locatioo: {self.index_path}")
         self.schema = self.create_schema()
         self.index = self.initialise_index()
-        self.debug = debug
+        if self.index is None:
+            # Attempt to clean up by resetting dataset
+            if self.debug:
+                print ("[RESET] reinitialise dataset")
+            self.reinitialise_index()
+
 
     def docid(self, file_path):
         return abs(hash(file_path))
 
     def create_schema(self):
-        schema_builder = tantivy.SchemaBuilder()
-        schema_builder.add_text_field("file_path", stored=True)
-        schema_builder.add_text_field("content", stored=True)
-        # schema_builder.add_text_field("metadata", stored=True)
-        schema_builder.add_integer_field("doc_id", stored=True, indexed=True, fast=True)
-
-        return schema_builder.build()
+        try:
+            schema_builder = tantivy.SchemaBuilder()
+            schema_builder.add_text_field("file_path", stored=True)
+            schema_builder.add_text_field("content", stored=True)
+            # schema_builder.add_text_field("metadata", stored=True)
+            schema_builder.add_integer_field("doc_id", stored=True, indexed=True, fast=True)
+            return schema_builder.build()
+        except Exception as e:
+            print(f"[SCHEMA] Error creating schema: {e}")
+            return None
 
     def initialise_index(self):
         Path(str(self.index_path)).mkdir(parents=True, exist_ok=True)
-        return tantivy.Index(self.schema, path=str(self.index_path))
+        try:
+            return tantivy.Index(self.schema, path=str(self.index_path))
+        except Exception as e:
+            print(f"[INDEX] Error creating index: {e}")
+            return None
 
     def get_files(self, directory):
         files = []

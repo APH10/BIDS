@@ -1,3 +1,6 @@
+# Copyright (C) 2025 APH10 Limited
+# SPDX-License-Identifier: Apache-2.0
+
 # See https://github.com/ajitesh123/codesearch/tree/main/codesearch
 
 import argparse
@@ -93,7 +96,7 @@ def main(argv=None):
 
     if args["initialise"]:
         indexer.reinitialise_index()
-    if args["index"] != "":
+    elif args["index"] != "":
         # Index the specified directory
         print(f'Indexing files in {args["index"]}...')
         indexer.index_files(args["index"])
@@ -113,6 +116,7 @@ def main(argv=None):
 
         if not results:
             print("No results found.")
+            sys.exit(2)
         else:
             print("\nSearch Results:")
             print("-" * 80)
