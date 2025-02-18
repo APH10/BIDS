@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:8ed4c6ad-871e-4559-8383-1fa7fd191ee1",
+  "serialNumber": "urn:uuid:ddd516cd-1e54-454a-aed9-c6f800fa369f",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-01-26T01:51:19Z",
+    "timestamp": "2025-02-16T01:59:16Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -81,7 +81,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -130,7 +130,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -188,7 +188,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -252,7 +252,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -310,7 +310,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -380,7 +380,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -388,7 +388,7 @@
       "type": "library",
       "bom-ref": "7-commoncode",
       "name": "commoncode",
-      "version": "32.1.0",
+      "version": "32.2.0",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -397,12 +397,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.0:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e4cf69af173118bc80892f7e2a3f97cb657cd0e123382007dc0993e3509fe06f"
+          "content": "2d6ba12556d5e47dbb4f63613bbc8212ddd6b2d83b54776548faa96fef5722b6"
         }
       ],
       "licenses": [
@@ -421,16 +421,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/commoncode/32.1.0/#files",
+          "url": "https://pypi.org/project/commoncode/32.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/commoncode@32.1.0",
+      "purl": "pkg:pypi/commoncode@32.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-06T19:20:29Z"
+          "value": "2025-02-14T19:49:59Z"
         },
         {
           "name": "language",
@@ -438,7 +438,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -446,7 +446,7 @@
       "type": "library",
       "bom-ref": "8-beautifulsoup4",
       "name": "beautifulsoup4",
-      "version": "4.12.3",
+      "version": "4.13.3",
       "supplier": {
         "name": "Leonard Richardson",
         "contact": [
@@ -455,12 +455,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:leonard_richardson:beautifulsoup4:4.12.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:leonard_richardson:beautifulsoup4:4.13.3:*:*:*:*:*:*:*",
       "description": "Screen-scraping library",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed"
+          "content": "99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"
         }
       ],
       "licenses": [
@@ -479,7 +479,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/beautifulsoup4/4.12.3/#files",
+          "url": "https://pypi.org/project/beautifulsoup4/4.13.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -488,11 +488,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/beautifulsoup4@4.12.3",
+      "purl": "pkg:pypi/beautifulsoup4@4.13.3",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-01-17T16:53:12Z"
+          "value": "2025-02-04T20:05:03Z"
         },
         {
           "name": "language",
@@ -500,7 +500,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -549,165 +549,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "10-click",
-      "name": "click",
-      "version": "8.1.8",
-      "description": "Composable command line interface toolkit",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://pypi.org/project/click/8.1.8/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        },
-        {
-          "url": "https://click.palletsprojects.com/changes/",
-          "type": "log"
-        },
-        {
-          "url": "https://discord.gg/pallets",
-          "type": "chat"
-        },
-        {
-          "url": "https://click.palletsprojects.com/",
-          "type": "documentation"
-        },
-        {
-          "url": "https://palletsprojects.com/donate",
-          "type": "other"
-        },
-        {
-          "url": "https://github.com/pallets/click/",
-          "type": "vcs"
-        }
-      ],
-      "purl": "pkg:pypi/click@8.1.8",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2024-12-21T18:38:41Z"
-        },
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.13.1"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "11-importlib-metadata",
-      "name": "importlib-metadata",
-      "version": "8.0.0",
-      "supplier": {
-        "name": "Jason R .",
-        "contact": [
-          {
-            "email": "jaraco@jaraco.com"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:jason_r.:importlib-metadata:8.0.0:*:*:*:*:*:*:*",
-      "description": "Read metadata from Python packages",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f"
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://pypi.org/project/importlib-metadata/8.0.0/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        },
-        {
-          "url": "https://github.com/python/importlib_metadata",
-          "type": "vcs"
-        }
-      ],
-      "purl": "pkg:pypi/importlib-metadata@8.0.0",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2024-06-25T18:38:02Z"
-        },
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.13.1"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "12-zipp",
-      "name": "zipp",
-      "version": "3.19.2",
-      "supplier": {
-        "name": "Jason R .",
-        "contact": [
-          {
-            "email": "jaraco@jaraco.com"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:jason_r.:zipp:3.19.2:*:*:*:*:*:*:*",
-      "description": "Backport of pathlib-compatible object wrapper for zip files",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c"
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/jaraco/zipp",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/zipp/3.19.2/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/zipp@3.19.2",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2024-06-04T17:21:07Z"
-        },
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.13.1"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "13-typing-extensions",
+      "bom-ref": "10-typing-extensions",
       "name": "typing-extensions",
       "version": "4.12.2",
       "supplier": {
@@ -770,7 +618,159 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "11-click",
+      "name": "click",
+      "version": "8.1.8",
+      "description": "Composable command line interface toolkit",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/click/8.1.8/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://click.palletsprojects.com/changes/",
+          "type": "log"
+        },
+        {
+          "url": "https://discord.gg/pallets",
+          "type": "chat"
+        },
+        {
+          "url": "https://click.palletsprojects.com/",
+          "type": "documentation"
+        },
+        {
+          "url": "https://palletsprojects.com/donate",
+          "type": "other"
+        },
+        {
+          "url": "https://github.com/pallets/click/",
+          "type": "vcs"
+        }
+      ],
+      "purl": "pkg:pypi/click@8.1.8",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-21T18:38:41Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "12-importlib-metadata",
+      "name": "importlib-metadata",
+      "version": "8.0.0",
+      "supplier": {
+        "name": "Jason R .",
+        "contact": [
+          {
+            "email": "jaraco@jaraco.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:jason_r.:importlib-metadata:8.0.0:*:*:*:*:*:*:*",
+      "description": "Read metadata from Python packages",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/importlib-metadata/8.0.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/python/importlib_metadata",
+          "type": "vcs"
+        }
+      ],
+      "purl": "pkg:pypi/importlib-metadata@8.0.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-06-25T18:38:02Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "13-zipp",
+      "name": "zipp",
+      "version": "3.19.2",
+      "supplier": {
+        "name": "Jason R .",
+        "contact": [
+          {
+            "email": "jaraco@jaraco.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:jason_r.:zipp:3.19.2:*:*:*:*:*:*:*",
+      "description": "Backport of pathlib-compatible object wrapper for zip files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/jaraco/zipp",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/zipp/3.19.2/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/zipp@3.19.2",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-06-04T17:21:07Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
         }
       ]
     },
@@ -836,7 +836,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -905,7 +905,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -961,7 +961,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1021,7 +1021,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1029,7 +1029,7 @@
       "type": "library",
       "bom-ref": "18-certifi",
       "name": "certifi",
-      "version": "2024.12.14",
+      "version": "2025.1.31",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -1038,12 +1038,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2024.12.14:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2025.1.31:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56"
+          "content": "ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe"
         }
       ],
       "licenses": [
@@ -1062,7 +1062,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2024.12.14/#files",
+          "url": "https://pypi.org/project/certifi/2025.1.31/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1071,11 +1071,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2024.12.14",
+      "purl": "pkg:pypi/certifi@2025.1.31",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-14T13:52:36Z"
+          "value": "2025-01-31T02:16:45Z"
         },
         {
           "name": "language",
@@ -1083,7 +1083,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1141,7 +1141,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1219,7 +1219,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1277,7 +1277,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1335,7 +1335,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
         }
       ]
     },
@@ -1393,7 +1393,233 @@
         },
         {
           "name": "python_version",
-          "value": "3.13.1"
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "24-lib4sbom",
+      "name": "lib4sbom",
+      "version": "0.8.1",
+      "supplier": {
+        "name": "Anthony Harrison",
+        "contact": [
+          {
+            "email": "anthony.p.harrison@gmail.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.1:*:*:*:*:*:*:*",
+      "description": "Software Bill of Material (SBOM) generator and consumer library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7fba7451760c49738911b344fef96a3a274baaef6d34ab61e89284c506f0a343"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/anthonyharrison/lib4sbom",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/lib4sbom/0.8.1/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/lib4sbom@0.8.1",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-12-18T21:54:27Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "25-semantic-version",
+      "name": "semantic-version",
+      "version": "2.10.0",
+      "supplier": {
+        "name": "Raphael Barrois",
+        "contact": [
+          {
+            "email": "raphael.barrois+semver@polytechnique.org"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:raphael_barrois:semantic-version:2.10.0:*:*:*:*:*:*:*",
+      "description": "A library implementing the 'SemVer' scheme.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/rbarrois/python-semanticversion",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/semantic-version/2.10.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/semantic-version@2.10.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2022-05-26T13:35:21Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "26-defusedxml",
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "supplier": {
+        "name": "Christian Heimes",
+        "contact": [
+          {
+            "email": "christian@python.org"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:christian_heimes:defusedxml:0.7.1:*:*:*:*:*:*:*",
+      "description": "XML bomb protection for Python stdlib modules",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0",
+            "url": "https://opensource.org/licenses/Python-2.0",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/tiran/defusedxml",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.python.org/pypi/defusedxml",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2021-03-08T10:59:24Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "27-tantivy",
+      "name": "tantivy",
+      "version": "0.22.0",
+      "supplier": {
+        "name": "Damir Jelic Damir Jelic",
+        "contact": [
+          {
+            "email": "poljar@termina.org.uk"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:damir_jelic_damir_jelic:tantivy:0.22.0:*:*:*:*:*:*:*",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "732ec74c4dd531253af4c14756b7650527f22c7fab244e83b42d76a0a1437219"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/project/tantivy/0.22.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/tantivy@0.22.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-05-05T14:11:29Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.13.2"
         }
       ]
     }
@@ -1409,7 +1635,9 @@
       "ref": "1-bids-analyser",
       "dependsOn": [
         "2-pyelftools",
-        "3-typecode"
+        "3-typecode",
+        "24-lib4sbom",
+        "27-tantivy"
       ]
     },
     {
@@ -1432,7 +1660,7 @@
       "dependsOn": [
         "4-attrs",
         "8-beautifulsoup4",
-        "10-click",
+        "11-click",
         "14-requests",
         "19-saneyaml",
         "21-text-unidecode"
@@ -1441,20 +1669,21 @@
     {
       "ref": "8-beautifulsoup4",
       "dependsOn": [
-        "9-soupsieve"
+        "9-soupsieve",
+        "10-typing-extensions"
       ]
     },
     {
-      "ref": "10-click",
+      "ref": "11-click",
       "dependsOn": [
-        "11-importlib-metadata"
+        "12-importlib-metadata"
       ]
     },
     {
-      "ref": "11-importlib-metadata",
+      "ref": "12-importlib-metadata",
       "dependsOn": [
-        "12-zipp",
-        "13-typing-extensions"
+        "13-zipp",
+        "10-typing-extensions"
       ]
     },
     {
@@ -1475,9 +1704,17 @@
     {
       "ref": "22-plugincode",
       "dependsOn": [
-        "10-click",
+        "11-click",
         "7-commoncode",
         "23-pluggy"
+      ]
+    },
+    {
+      "ref": "24-lib4sbom",
+      "dependsOn": [
+        "20-pyyaml",
+        "25-semantic-version",
+        "26-defusedxml"
       ]
     }
   ]
