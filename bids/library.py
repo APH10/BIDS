@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import os
-import subprocess  # nosec
 from pathlib import Path
 import bids.util as util
 
@@ -30,9 +29,7 @@ class DynamicLibrary:
         # Load cache
         self.lib_details = {}
         if cache is None:
-            lines = subprocess.run(
-                ["ldconfig", "-p"], capture_output=True, text=True
-            )  # nosec
+            lines = util.run_process(["ldconfig", "-p"])
             for line in lines.stdout.splitlines()[1:]:
                 if "=>" in line.strip():
                     libname, lib_architecture, _, lib_path = line.strip().split(" ")
@@ -68,7 +65,7 @@ class DynamicLibrary:
             return None
         if self.cache is None:
             try:
-                lines = subprocess.run(library, capture_output=True, text=True)
+                lines = util.run_process(library)
                 if len(lines.stdout.splitlines()) > 0:
                     version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
                     if version[-1] == ".":

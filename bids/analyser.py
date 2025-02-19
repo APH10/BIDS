@@ -3,7 +3,6 @@
 
 # import hashlib
 import os
-import subprocess  # nosec
 import time
 from pathlib import Path
 
@@ -63,12 +62,7 @@ class BIDSAnalyser:
 
     def app_version(self, application):
         try:
-            lines = subprocess.run(
-                [application, "--version"],
-                capture_output=True,
-                text=True,
-                timeout=self.COMMAND_TIMEOUT,
-            )
+            lines = util.run_process([application, "--version"])
             version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
             if version[-1] == ".":
                 version = version[:-1]
