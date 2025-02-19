@@ -2,9 +2,9 @@
   "metadata": {
     "docFormat": "BIDS",
     "specVersion": "1.0",
-    "id": "94ff8bb0-6e7f-4dd5-ae82-4dc0d37c4ae1",
+    "id": "873cfee6-4755-46a9-8044-75b6fa04a449",
     "version": 1,
-    "timestamp": "2025-02-05T21:38:22Z",
+    "timestamp": "2025-02-19T20:54:30Z",
     "tool": "bids_generator:0.1.0",
     "binary": {
       "class": "ELF64",
@@ -15,11 +15,32 @@
       "version": "world!",
       "filesize": 15952,
       "filedate": "Tue Nov 19 11:13:36 2024",
-      "checksum": {
-        "algorithm": "SHA256",
-        "value": "4434a9af25d451e4a9f4515d418a270b99f2362326245a06523c921e564cde21"
-      },
-      "description": "Test file"
+      "checksum": [
+        {
+          "algorithm": "sha256",
+          "value": "4434a9af25d451e4a9f4515d418a270b99f2362326245a06523c921e564cde21"
+        },
+        {
+          "algorithm": "sha384",
+          "value": "8088e53ee015ef9af1656e0426c1678cdb69bfd4abfb2e5593dfee0e7d6b22a13cd19f47ac124e5d90c721e4680383b9"
+        },
+        {
+          "algorithm": "sha512",
+          "value": "d11bc10ed1ed367753eb5050fa4d78a543c5f4a2c9c6ab7fcce2d5f0804a4722de91689b51cf91b11a698b7ee26ccab703ab143c91afca9427fde9550869e089"
+        },
+        {
+          "algorithm": "sha3-256",
+          "value": "d4b4dc35397beeff05d247bd4c653b9b65162c747656321b827e7cc1d7f6a625"
+        },
+        {
+          "algorithm": "sha3-384",
+          "value": "dec32ea35cc5b5d805d3d245463251e126d23b226085012f053b9c2207d7a1d74c925204d46518848a76396b515aa0cc"
+        },
+        {
+          "algorithm": "sha3-512",
+          "value": "8ca2c3817db6846b808a5367b08b8f9ed963bd308aaf0127a6fc4a23784c01f82948d6222689b761df65991807b5ad904538f756666239d94a8f70f15896bf75"
+        }
+      ]
     }
   },
   "components": {
@@ -27,7 +48,35 @@
       {
         "name": "libc.so.6",
         "location": "/usr/lib32/libc.so.6",
-        "version": "2.38"
+        "version": "2.38",
+        "filesize": 2249404,
+        "filedate": "Mon Jun 10 21:25:19 2024",
+        "checksum": [
+          {
+            "algorithm": "sha256",
+            "value": "b9fa789b4c164f5028bebd1b95e73a4c1c2c72595e61c555a15a7fa7530e9deb"
+          },
+          {
+            "algorithm": "sha384",
+            "value": "96cbe253284c374c767585d9c4c3f12da56cecb0d264e3bd2e6081c922b6a2b9b243e1ce0c99d9ad7ffab98fbe51fcba"
+          },
+          {
+            "algorithm": "sha512",
+            "value": "ce06c6cd63a1694ad159588108c1a8abe9b3f03fb242eadaf0f3571494a472f586553c33062bdce250b9b3fcab21bb1305c7e480dc37d602ad8a3db3917baf5e"
+          },
+          {
+            "algorithm": "sha3-256",
+            "value": "9ad001c03992afc220a46b02947989c0d5f60bf9cbb88477e2ee8d3d2c492a3d"
+          },
+          {
+            "algorithm": "sha3-384",
+            "value": "8ce1b3a966aba6c4b1f029a7e9c709087bfc96caf71271af9fbd2b802411242cc76169c61d1a037b8c53db9eb68a2413"
+          },
+          {
+            "algorithm": "sha3-512",
+            "value": "40ab4e012b96fbb92559ba64a239615dd9767499674077fc4c5ac7318f655da4ae526d74213060a5c216f826b262332a248f37c9a0077a8993f323c04c0549af"
+          }
+        ]
       }
     ],
     "globalsymbol": [
