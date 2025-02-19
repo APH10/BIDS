@@ -81,7 +81,7 @@ class TestSearch:
         """Test search command"""
         with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME, "--search", "not_available"])
-        assert e.value.args[0] == 0
+        assert e.value.args[0] == 2
 
     def test_export_command(self):
         """Test export command"""
