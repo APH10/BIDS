@@ -9,8 +9,10 @@ from pathlib import Path
 COMMAND_TIMEOUT = 5  # Seconds
 CHECKSUM_ALGORITHMS = ["sha256", "sha384", "sha512", "sha3-256", "sha3-384", "sha3-512"]
 
+
 def get_checksum_algorithms():
     return CHECKSUM_ALGORITHMS
+
 
 def calculate_checksum(filename):
     # Calculate checksum for specified file

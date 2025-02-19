@@ -14,8 +14,8 @@ from lib4sbom.data.relationship import SBOMRelationship
 from lib4sbom.generator import SBOMGenerator
 from lib4sbom.sbom import SBOM
 
-from bids.version import VERSION
 import bids.util as util
+from bids.version import VERSION
 
 
 def main(argv=None):

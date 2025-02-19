@@ -3,11 +3,11 @@
 
 # import hashlib
 import os
-import time
 from pathlib import Path
 
-from bids.elf_utils import BIDSElf
 import bids.util as util
+from bids.elf_utils import BIDSElf
+
 
 class BIDSAnalyser:
 

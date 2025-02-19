@@ -28,15 +28,14 @@ class BIDSIndexer:
         else:
             self.index_path = index_path
         if self.debug:
-            print (f"Dataset locatioo: {self.index_path}")
+            print(f"Dataset locatioo: {self.index_path}")
         self.schema = self.create_schema()
         self.index = self.initialise_index()
         if self.index is None:
             # Attempt to clean up by resetting dataset
             if self.debug:
-                print ("[RESET] reinitialise dataset")
+                print("[RESET] reinitialise dataset")
             self.reinitialise_index()
-
 
     def docid(self, file_path):
         return abs(hash(file_path))
@@ -47,7 +46,9 @@ class BIDSIndexer:
             schema_builder.add_text_field("file_path", stored=True)
             schema_builder.add_text_field("content", stored=True)
             # schema_builder.add_text_field("metadata", stored=True)
-            schema_builder.add_integer_field("doc_id", stored=True, indexed=True, fast=True)
+            schema_builder.add_integer_field(
+                "doc_id", stored=True, indexed=True, fast=True
+            )
             return schema_builder.build()
         except Exception as e:
             print(f"[SCHEMA] Error creating schema: {e}")

@@ -7,8 +7,8 @@ import sys
 import uuid
 from datetime import datetime
 
-from bids.library import DynamicLibrary
 import bids.util as util
+from bids.library import DynamicLibrary
 
 
 class _OutputManager:

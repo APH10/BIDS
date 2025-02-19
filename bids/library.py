@@ -3,7 +3,9 @@
 
 import os
 from pathlib import Path
+
 import bids.util as util
+
 
 class DynamicLibrary:
 
