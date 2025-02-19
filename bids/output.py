@@ -8,6 +8,7 @@ import uuid
 from datetime import datetime
 
 from bids.library import DynamicLibrary
+import bids.util as util
 
 
 class _OutputManager:
@@ -78,19 +79,24 @@ class BIDSOutput:
             component["filename"] = application["location"]
         if application.get("version") is not None:
             component["version"] = application["version"]
-        if application.get("size") is not None:
-            component["filesize"] = application["size"]
-        if application.get("date") is not None:
-            component["filedate"] = application["date"]
-        hash = {}
-        hash["algorithm"] = "SHA256"
         if application.get("checksum") is not None:
-            hash["value"] = application["checksum"]
-        component["checksum"] = hash
+            component["filesize"] = application["checksum"]["size"]
+            component["filedate"] = application["checksum"]["date"]
+            component["checksum"] = self.process_checksum(application["checksum"])
         if application.get("description") is not None:
             component["description"] = application["description"]
         metadata["binary"] = component
         self.bids_document["metadata"] = metadata
+
+    def process_checksum(self, checksum_data):
+        checksum = []
+        for algorithm in util.get_checksum_algorithms():
+            if algorithm in checksum_data:
+                hash = {}
+                hash["algorithm"] = algorithm
+                hash["value"] = checksum_data[algorithm]
+                checksum.append(hash)
+        return checksum
 
     def create_components(self, dependencies, symbols, callgraph, local=None):
         components = {}
@@ -105,8 +111,9 @@ class BIDSOutput:
             if library_info["version"] is not None:
                 info["version"] = library_info["version"]
             if library_info["checksum"] is not None:
-                info["algorithm"] = "SHA256"
-                info["checksum"] = library_info["checksum"]
+                info["filesize"] = library_info["checksum"]["size"]
+                info["filedate"] = library_info["checksum"]["date"]
+                info["checksum"] = self.process_checksum(library_info["checksum"])
             dependency.append(info)
         components["dynamiclibrary"] = dependency
         symbol = []

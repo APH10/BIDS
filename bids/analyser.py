@@ -1,14 +1,14 @@
 # Copyright (C) 2024 APH10 Limited
 # SPDX-License-Identifier: Apache-2.0
 
-import hashlib
+# import hashlib
 import os
 import subprocess  # nosec
 import time
 from pathlib import Path
 
 from bids.elf_utils import BIDSElf
-
+import bids.util as util
 
 class BIDSAnalyser:
 
@@ -48,13 +48,12 @@ class BIDSAnalyser:
             raise FileNotFoundError
         self.filename = os.path.realpath(filename)
         # Store some relevant info related to file
-        self.application["size"] = filePath.stat().st_size
-        self.application["date"] = time.ctime(filePath.stat().st_mtime)
+        # self.application["size"] = filePath.stat().st_size
+        # self.application["date"] = time.ctime(filePath.stat().st_mtime)
         self.application["location"] = self.filename
-        # Calculate checksum
-        with open(self.filename, "rb") as f:
-            contents = f.read()
-            self.application["checksum"] = hashlib.sha256(contents).hexdigest()
+        # Calculate checksum and assoicated file data
+        checksum = util.calculate_checksum(filename)
+        self.application["checksum"] = checksum
         if len(self.description) > 0:
             self.application["description"] = self.description
         # Try to find version

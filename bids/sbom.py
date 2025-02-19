@@ -15,6 +15,7 @@ from lib4sbom.generator import SBOMGenerator
 from lib4sbom.sbom import SBOM
 
 from bids.version import VERSION
+import bids.util as util
 
 
 def main(argv=None):
@@ -150,10 +151,12 @@ def create_sbom(bids_file, appname):
     bids_package.set_value("release_date", data["metadata"]["binary"]["filedate"])
 
     bids_package.set_evidence(data["metadata"]["binary"]["filename"])
-    # Add evidence details relating to filename and filesize
-    checksum_algorithm = data["metadata"]["binary"]["checksum"]["algorithm"]
-    checksum = data["metadata"]["binary"]["checksum"]["value"]
-    bids_package.set_checksum(checksum_algorithm, checksum)
+    for checksum_data in data["metadata"]["binary"]["checksum"]:
+        for algorithm in util.get_checksum_algorithms():
+            if algorithm in checksum_data["algorithm"]:
+                checksum = checksum_data["value"]
+                bids_package.set_checksum(algorithm.upper(), checksum)
+
     for package_property in ["class", "architecture", "bits", "os"]:
         bids_package.set_property(
             package_property, data["metadata"]["binary"][package_property]
@@ -179,8 +182,12 @@ def create_sbom(bids_file, appname):
         dependency_package.set_evidence(library["location"])
         if "version" in library:
             dependency_package.set_value("version", library["version"])
-        if "checksum" in library:
-            dependency_package.set_checksum(library["algorithm"], library["checksum"])
+        dependency_package.set_value("release_date", library["filedate"])
+        for checksum_data in library["checksum"]:
+            for algorithm in util.get_checksum_algorithms():
+                if algorithm in checksum_data["algorithm"]:
+                    checksum = checksum_data["value"]
+                    dependency_package.set_checksum(algorithm.upper(), checksum)
         # Get functions
         func_id = 1
         for function in data["relationships"][dependency_package.get_name()]:
