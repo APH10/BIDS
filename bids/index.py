@@ -70,7 +70,11 @@ class BIDSIndexer:
             return False
         with open(filename, encoding="utf-8") as f:
             json_data = json.load(f)
-            if "metadata" in json_data and "docFormat" in json_data["metadata"] and json_data["metadata"]["docFormat"] == "BIDS":
+            if (
+                "metadata" in json_data
+                and "docFormat" in json_data["metadata"]
+                and json_data["metadata"]["docFormat"] == "BIDS"
+            ):
                 return True
             else:
                 return False
