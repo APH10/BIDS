@@ -96,7 +96,7 @@ class TestSearch:
         """Test import command"""
         test_import = f"{self.TEST_PATH}/test_assets/index.zip"
         with pytest.raises(SystemExit) as e:
-            main([self.SCRIPT_NAME, "--import", test_import])
+            main([self.SCRIPT_NAME, "--import", test_import, "--debug"])
         assert e.value.args[0] == 0
         # Check contents
 

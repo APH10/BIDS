@@ -109,12 +109,12 @@ def main(argv=None):
                 )
                 output_file = Path(args["output"]) / f"{Path(filename).name}.json"
                 output.generate_output(output_file)
-            except Exception as e:
-                print(f"[WARNING] Could not process {filename}. Error: {e}")
             except TypeError:
                 print(f"[ERROR] {filename} - Only ELF files can be analysed.")
             except FileNotFoundError:
                 print(f"[ERROR] {filename} not found.")
+            except Exception as e:
+                print(f"[WARNING] Could not process {filename}. Error: {e}")
 
     sys.exit(0)
 

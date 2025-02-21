@@ -73,7 +73,6 @@ class DynamicLibrary:
                     if version[-1] == ".":
                         version = version[:-1]
                     return version
-                return None
             except PermissionError:
                 return None
         # No version if cache used

@@ -89,3 +89,10 @@ class TestScan:
         with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME, "--directory", test_file, "--debug", "--output", output_dir])
         assert e.value.args[0] == 0
+
+    def test_not_elf_file(self):
+        test_files = f"{self.TEST_PATH}/test_assets/notelf"
+        output_dir = "/tmp"
+        with pytest.raises(SystemExit) as e:
+            main([self.SCRIPT_NAME, "--directory", test_files, "--output", output_dir])
+        assert e.value.args[0] == 0
