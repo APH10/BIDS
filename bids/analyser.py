@@ -54,7 +54,8 @@ class BIDSAnalyser:
         if len(self.description) > 0:
             self.application["description"] = self.description
         # Try to find version
-        app_version = self.app_version(self.filename)
+        # app_version = self.app_version(self.filename)
+        app_version = util.get_version([self.filename, "--version"])
         if app_version is not None:
             self.application["version"] = app_version
 

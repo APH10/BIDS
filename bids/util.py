@@ -39,3 +39,18 @@ def run_process(command):
         text=True,
         timeout=COMMAND_TIMEOUT,
     )
+
+
+def get_version(application):
+    try:
+        lines = run_process(application)
+        if len(lines.stdout.splitlines()) > 0:
+            version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
+            if version[-1] == ".":
+                version = version[:-1]
+            # Check at least one number is in version
+            if any(char.isdigit() for char in version):
+                return version
+            return None
+    except PermissionError:
+        return None

@@ -23,7 +23,7 @@ class DynamicLibrary:
             checksum = {}
         return {
             "location": library_name,
-            "version": self.version(library_name),
+            "version": self.version([library_name]),
             "checksum": checksum,
         }
 
@@ -66,15 +66,7 @@ class DynamicLibrary:
         if library is None:
             return None
         if self.cache is None:
-            try:
-                lines = util.run_process(library)
-                if len(lines.stdout.splitlines()) > 0:
-                    version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
-                    if version[-1] == ".":
-                        version = version[:-1]
-                    return version
-            except PermissionError:
-                return None
+            return util.get_version(library)
         # No version if cache used
         return None
 
