@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "docFormat": "BIDS",
+    "specVersion": "1.0",
+    "id": "b8c56b09-ecc3-49a9-a6da-5f00c6e3ed2c",
+    "version": 1,
+    "timestamp": "2025-02-21T16:36:22Z",
+    "tool": "bids_generator:0.1.0",
+    "binary": {
+      "class": "ELF64",
+      "architecture": "x86_64",
+      "bits": 64,
+      "os": "linux",
+      "filename": "/usr/bin/gs",
+      "version": "10.01.2",
+      "filesize": 14576,
+      "filedate": "Thu Jun 22 07:15:42 2023",
+      "checksum": [
+        {
+          "algorithm": "sha256",
+          "value": "16ceb6f6f84fd52e4238dd6c7f1a259ad3c342acdf6e7561aee89998610dbd0e"
+        },
+        {
+          "algorithm": "sha384",
+          "value": "4cf6954e8485decdf9daabdc8e4f3fd93cc66e4f749c44d8379585f62e1a95dcb3f31ce7947060fe404493ec14ab64b3"
+        },
+        {
+          "algorithm": "sha512",
+          "value": "2959ca4603d112b3f54c1ad4725d54285a1b6d2cd38bc21050826c5e61722519b8768454a43a8c05ef86bcce95559b6421f16dd58208b2dc13114d17dbdb4f6a"
+        },
+        {
+          "algorithm": "sha3-256",
+          "value": "ea5f3e0c27feb8433c6764ddcf253148398821baf25a853493e3a6ebc42c2a38"
+        },
+        {
+          "algorithm": "sha3-384",
+          "value": "149c300046425bf38c759d21757714ec71551463fc3f3b263ece9ca0bae610ac9353ea0169f76cb80cb925feeb983c53"
+        },
+        {
+          "algorithm": "sha3-512",
+          "value": "709e51ea9b3d2edabdc87261c5cda7bb03ef225bc16ae3bd6b01eb577e584622dc44bef2507fd7467ecc51a3b50619de307111f9f6f829fa009d3501cdf869ed"
+        }
+      ]
+    }
+  },
+  "components": {
+    "dynamiclibrary": [
+      {
+        "name": "libgs.so.10",
+        "location": "/usr/lib/x86_64-linux-gnu/libgs.so.10.01",
+        "filesize": 22259624,
+        "filedate": "Thu Jun 22 07:15:42 2023",
+        "checksum": [
+          {
+            "algorithm": "sha256",
+            "value": "05081f18ff312c8c728fd5695978f00f92f596adaaeb9a122b31b5f6c3c879c0"
+          },
+          {
+            "algorithm": "sha384",
+            "value": "63745d9866b00e4d6afaa2b06da7935e2195f4546766bca16e69959b718deb8733a98bea3075eb8f11ac7e5d0219a415"
+          },
+          {
+            "algorithm": "sha512",
+            "value": "781aba7c819de8607741712f853752110afa1bf6e48473e91427a14687ef5dabb1306fdeadfb3067308fece790a6c46b5fefc58c9bf153867b03ed2063ab415d"
+          },
+          {
+            "algorithm": "sha3-256",
+            "value": "ebab6fd34e9c14bf7f2fd069bf41f674ba9fdcf48e819ddba2e4d967fd57706d"
+          },
+          {
+            "algorithm": "sha3-384",
+            "value": "e097b9580e9b1eeb9558729e96f745e8644f5058e407ffbeb9bedfd850b5b01fb2b75ad5a878ce577b43b5b4406bb97f"
+          },
+          {
+            "algorithm": "sha3-512",
+            "value": "cd0a488b945cdb1f9eab70730e0af758c6a417bde8978f80ffda4e5c5d562222a5888479477d47b28cfa39b475768b9667f347f5943a2ab83bf543ddd3b662a7"
+          }
+        ]
+      },
+      {
+        "name": "libc.so.6",
+        "location": "/usr/lib32/libc.so.6",
+        "version": "2.38",
+        "filesize": 2249404,
+        "filedate": "Mon Jun 10 21:25:19 2024",
+        "checksum": [
+          {
+            "algorithm": "sha256",
+            "value": "b9fa789b4c164f5028bebd1b95e73a4c1c2c72595e61c555a15a7fa7530e9deb"
+          },
+          {
+            "algorithm": "sha384",
+            "value": "96cbe253284c374c767585d9c4c3f12da56cecb0d264e3bd2e6081c922b6a2b9b243e1ce0c99d9ad7ffab98fbe51fcba"
+          },
+          {
+            "algorithm": "sha512",
+            "value": "ce06c6cd63a1694ad159588108c1a8abe9b3f03fb242eadaf0f3571494a472f586553c33062bdce250b9b3fcab21bb1305c7e480dc37d602ad8a3db3917baf5e"
+          },
+          {
+            "algorithm": "sha3-256",
+            "value": "9ad001c03992afc220a46b02947989c0d5f60bf9cbb88477e2ee8d3d2c492a3d"
+          },
+          {
+            "algorithm": "sha3-384",
+            "value": "8ce1b3a966aba6c4b1f029a7e9c709087bfc96caf71271af9fbd2b802411242cc76169c61d1a037b8c53db9eb68a2413"
+          },
+          {
+            "algorithm": "sha3-512",
+            "value": "40ab4e012b96fbb92559ba64a239615dd9767499674077fc4c5ac7318f655da4ae526d74213060a5c216f826b262332a248f37c9a0077a8993f323c04c0549af"
+          }
+        ]
+      }
+    ],
+    "globalsymbol": [
+      "__cxa_finalize",
+      "__libc_start_main",
+      "__stack_chk_fail",
+      "fflush",
+      "fileno",
+      "fwrite",
+      "read",
+      "stderr",
+      "stdin",
+      "stdout"
+    ],
+    "localsymbols": [
+      "_ITM_deregisterTMCloneTable",
+      "_ITM_registerTMCloneTable",
+      "__bss_start",
+      "__gmon_start__",
+      "_edata",
+      "_end",
+      "gsapi_delete_instance",
+      "gsapi_exit",
+      "gsapi_init_with_args",
+      "gsapi_new_instance",
+      "gsapi_run_string",
+      "gsapi_set_stdio"
+    ]
+  },
+  "callgraph": [],
+  "relationships": {
+    "libc.so.6": [
+      "__stack_chk_fail",
+      "fflush",
+      "read",
+      "fwrite",
+      "fileno",
+      "__libc_start_main",
+      "__cxa_finalize",
+      "stdout",
+      "stderr",
+      "stdin"
+    ]
+  }
+}

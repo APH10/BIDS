@@ -95,3 +95,11 @@ class TestSBOM:
         with pytest.raises(SystemExit) as e:
             main([self.SCRIPT_NAME, "--input", test_file, "--debug"])
         assert e.value.args[0] == 0
+
+    def test_no_functions(self):
+        """Test generation works when library has no functions"""
+        test_file = f"{self.TEST_PATH}/test_assets/gs.json"
+        with pytest.raises(SystemExit) as e:
+            # Format shoould get changed to Json
+            main([self.SCRIPT_NAME, "--input", test_file, "--sbom", "cyclonedx"])
+        assert e.value.args[0] == 0
