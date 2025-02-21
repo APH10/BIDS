@@ -3,6 +3,7 @@
 
 # See https://github.com/ajitesh123/codesearch/tree/main/codesearch
 
+import json
 import os
 import shutil
 from pathlib import Path
@@ -28,7 +29,7 @@ class BIDSIndexer:
         else:
             self.index_path = index_path
         if self.debug:
-            print(f"Dataset locatioo: {self.index_path}")
+            print(f"Dataset location: {self.index_path}")
         self.schema = self.create_schema()
         self.index = self.initialise_index()
         if self.index is None:
@@ -62,6 +63,18 @@ class BIDSIndexer:
             print(f"[INDEX] Error creating index: {e}")
             return None
 
+    def is_bids_file(self, filename):
+        # See if metadata contains BIDS information
+        # Assume JSON file indicated by json file extension
+        if not str(filename).endswith(".json"):
+            return False
+        with open(filename, encoding="utf-8") as f:
+            json_data = json.load(f)
+            if "metadata" in json_data and "docFormat" in json_data["metadata"] and json_data["metadata"]["docFormat"] == "BIDS":
+                return True
+            else:
+                return False
+
     def get_files(self, directory):
         files = []
         if self.debug:
@@ -83,6 +96,12 @@ class BIDSIndexer:
                 if self.debug:
                     print("Not a JSON file")
                 continue
+            # Check BIDS JSON file
+            if not self.is_bids_file(file_path):
+                if self.debug:
+                    print("Not a BIDS JSON file")
+                continue
+            # Add to files list
             with open(file_path, encoding="utf-8") as f:
                 files.append(
                     {
