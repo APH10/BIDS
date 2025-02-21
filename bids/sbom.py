@@ -149,6 +149,8 @@ def create_sbom(bids_file, appname):
     bids_package.set_type("application")
     bids_package.set_name(os.path.basename(data["metadata"]["binary"]["filename"]))
     bids_package.set_value("release_date", data["metadata"]["binary"]["filedate"])
+    if "version" in data["metadata"]["binary"]:
+        bids_package.set_version(data["metadata"]["binary"]["version"])
 
     bids_package.set_evidence(data["metadata"]["binary"]["filename"])
     for checksum_data in data["metadata"]["binary"]["checksum"]:

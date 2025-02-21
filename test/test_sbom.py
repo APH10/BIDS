@@ -103,3 +103,12 @@ class TestSBOM:
             # Format shoould get changed to Json
             main([self.SCRIPT_NAME, "--input", test_file, "--sbom", "cyclonedx"])
         assert e.value.args[0] == 0
+
+    def test_application_version(self, capsys):
+        test_file = f"{self.TEST_PATH}/test_assets/gs.json"
+        with pytest.raises(SystemExit) as e:
+            main([self.SCRIPT_NAME, "--input", test_file])
+        captured = capsys.readouterr()
+        # Check package version is included in output
+        assert "PackageVersion: 10.01.2" in captured.out
+
