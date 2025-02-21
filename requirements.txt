@@ -1,7 +1,8 @@
 # Copyright (C) 2025 APH10 Limited
 # SPDX-License-Identifier: Apache-2.0
 pyelftools
-typecode-libmagic-system-provided
-typecode
+typecode-libmagic-system-provided; python_version >= "3.10"
+typecode; python_version >= "3.10"
+typecode[full]; python_version < "3.10"
 lib4sbom
 tantivy
