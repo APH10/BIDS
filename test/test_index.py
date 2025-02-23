@@ -53,6 +53,14 @@ class TestIndex:
         file_path = f"{self.TEST_PATH}/test_assets/hello.c"
         assert index_file.is_bids_file(file_path) == False
 
+    def test_reinitialise(self):
+        # Create an inded
+        index_file = BIDSIndexer()
+        # Will include files in directory
+        index_file.reinitialise_index()
+        # Check if the index has been reset
+        assert "bids_index" in str(index_file.get_index_path())
+
 
 
 
