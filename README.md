@@ -508,6 +508,177 @@ The following values are returned:
 - 0 - BOM generation process completed
 - 1 - Error detected in generation process
 
+## API
+
+BIDs can be used as a library to analyse ELF binary files, store data in a dataset and to search for features within the dataset.
+
+To analyse a binary file and store the results in a file, the following sequence of calls can be performed:
+
+```python
+from bids.analyser import BIDSAnalyser
+analyser = BIDSAnalyser()
+# Analyse a binary
+analyser.analyse("test/test_assets/hello")
+# Get details about the file
+analyser.get_file_data()
+{'location': '/root/Documents/git_repo/BIDS/test/test_assets/hello', 'checksum': {'size': 15952, 'date': 'Tue Nov 19 11:13:36 2024', 'sha256': '4434a9af25d451e4a9f4515d418a270b99f2362326245a06523c921e564cde21', 'sha384': '8088e53ee015ef9af1656e0426c1678cdb69bfd4abfb2e5593dfee0e7d6b22a13cd19f47ac124e5d90c721e4680383b9', 'sha512': 'd11bc10ed1ed367753eb5050fa4d78a543c5f4a2c9c6ab7fcce2d5f0804a4722de91689b51cf91b11a698b7ee26ccab703ab143c91afca9427fde9550869e089', 'sha3-256': 'd4b4dc35397beeff05d247bd4c653b9b65162c747656321b827e7cc1d7f6a625', 'sha3-384': 'dec32ea35cc5b5d805d3d245463251e126d23b226085012f053b9c2207d7a1d74c925204d46518848a76396b515aa0cc', 'sha3-512': '8ca2c3817db6846b808a5367b08b8f9ed963bd308aaf0127a6fc4a23784c01f82948d6222689b761df65991807b5ad904538f756666239d94a8f70f15896bf75'}}
+# Identify the dependencies
+analyser.get_dependencies()
+['libc.so.6']
+# Examine the global symbols
+analyser.get_global_symbols()
+[['libc.so.6', 'GLIBC_2.34', '__libc_start_main'], ['libc.so.6', 'GLIBC_2.2.5', 'printf'], ['libc.so.6', 'GLIBC_2.2.5', '__cxa_finalize']]
+# ..and local symbols
+analyser.get_local_symbols()
+['_ITM_deregisterTMCloneTable', '__gmon_start__', '_ITM_registerTMCloneTable']
+# Store data in a file
+from bids.output import BIDSOutput
+output = BIDSOutput()
+output.create_metadata(analyser.get_file_data())
+output.create_components(
+    analyser.get_dependencies(),
+    analyser.get_global_symbols(),
+    analyser.get_callgraph(),
+    local=analyser.get_local_symbols(),
+)
+output.generate_output(<<Filename>>)
+```
+
+To add data to a dataset, put all the files to be added to the index in a directory and call index_files with the name of the directory.
+
+```python
+from bids.index import BIDSIndexer
+dataset = BIDSIndexer()
+# Assume analysed files are in a directory
+dataset.index_files(<<Directory>>)
+```
+
+An example of how to search the dataset:
+
+```python
+from bids.index import BIDSIndexer
+dataset = BIDSIndexer()
+# Optionally load data into the dataset
+dataset.import_data(<<Filename>>)
+# Search dataset
+search_results = dataset.search("strcpy")
+# Examine the top results
+print (search_results[0])
+{'file_path': '/tmp/bids/grub-ntldr-img.json', 'score': 1.2741155624389648, 'content': '{\n  "metadata": {\n    "docFormat": "BIDS",\n    "specVersion": "1.0",\n    "id": "a0e508d6-9f1f-49ee-8bd6-39ebc6bc76dc",\n    "version": 1,\n    "timestamp": "2025-02-04T21:51:25Z",\n    "tool": "bids_generator:0.1.0",\n    "binary": {\n      "class": "ELF64",\n      "architecture": "x86_64",\n      "bits": 64,\n      "os": "linux",\n      "filename": "/usr/lib/grub/i386-pc/grub-ntldr-img",\n      "version": "2.2.40",\n      "filesize": 35408,\n      "filedate": "Tue Jun 13 14:25:11 2023",\n      "checksum": {\n        "algorithm": "SHA256",\n        "value": "6bcb9781c412a822031f94a2470d6d420e9fa643e7ee8e921bc491d008aa2c19"\n      }\n    }\n  },\n  "components": {\n    "dynamiclibrary": [\n      {\n        "name": "libc.so.6",\n        "location": "/usr/lib32/libc.so.6",\n        "version": "2.38"\n      }\n    ],\n    "globalsymbol": [\n      "__cxa_finalize",\n      "__errno_location",\n      "__fprintf_chk",\n      "__libc_start_main",\n      "__memcpy_chk",\n      "__sprintf_chk",\n      "__stack_chk_fail",\n      "__strcpy_chk",\n      "close",\n      "fflush",\n      "fgetc",\n      "fwrite",\n      "lseek64",\n      "memcmp",\n      "open64",\n      "perror",\n      "read",\n      "stderr",\n      "stdin",\n      "strchr",\n      "strcmp",\n      "strcpy",\n      "strlen",\n      "strncmp",\n      "strtol",\n      "strtoul",\n      "write"\n    ],\n    "localsymbols": [\n      "_ITM_deregisterTMCloneTable",\n      "_ITM_registerTMCloneTable",\n      "__gmon_start__"\n    ]\n  },\n  "callgraph": [],\n  "relationships": {\n    "libc.so.6": [\n      "__libc_start_main",\n      "__errno_location",\n      "strncmp",\n      "strcpy",\n      "write",\n      "strlen",\n      "__stack_chk_fail",\n      "strchr",\n      "fgetc",\n      "close",\n      "read",\n      "memcmp",\n      "strcmp",\n      "__memcpy_chk",\n      "strtol",\n      "fflush",\n      "__strcpy_chk",\n      "open64",\n      "perror",\n      "strtoul",\n      "fwrite",\n      "lseek64",\n      "__fprintf_chk",\n      "__sprintf_chk",\n      "__cxa_finalize",\n      "stdin",\n      "stderr"\n    ]\n  }\n}\n'}
+print (search_results[1])
+{'file_path': '/tmp/bids/gencnval.json', 'score': 1.2453277111053467, 'content': '{\n  "metadata": {\n    "docFormat": "BIDS",\n    "specVersion": "1.0",\n    "id": "5424250f-8732-4ea4-ae14-8f7bad435cf5",\n    "version": 1,\n    "timestamp": "2025-02-04T21:52:00Z",\n    "tool": "bids_generator:0.1.0",\n    "binary": {\n      "class": "ELF64",\n      "architecture": "x86_64",\n      "bits": 64,\n      "os": "linux",\n      "filename": "/usr/bin/gencnval",\n      "version": "0.98",\n      "filesize": 27200,\n      "filedate": "Mon Jul  1 18:52:08 2024",\n      "checksum": {\n        "algorithm": "SHA256",\n        "value": "e4f41bdecbaebcf56317d2f7748ab1b9973103ce03e3ea0942231d0f03ffe98a"\n      }\n    }\n  },\n  "components": {\n    "dynamiclibrary": [\n      {\n        "name": "libicutu.so.72",\n        "location": "/usr/lib/x86_64-linux-gnu/libicutu.so.72.1"\n      },\n      {\n        "name": "libicuuc.so.72",\n        "location": "/usr/lib/x86_64-linux-gnu/libicuuc.so.72.1"\n      },\n      {\n        "name": "libc.so.6",\n        "location": "/usr/lib32/libc.so.6",\n        "version": "2.38"\n      }\n    ],\n    "globalsymbol": [\n      "__ctype_b_loc",\n      "__cxa_finalize",\n      "__fprintf_chk",\n      "__libc_start_main",\n      "__printf_chk",\n      "__stack_chk_fail",\n      "__strcpy_chk",\n      "exit",\n      "memcpy",\n      "memset",\n      "puts",\n      "qsort",\n      "stderr",\n      "strchr",\n      "strcmp",\n      "strcpy",\n      "strlen",\n      "strtok"\n    ],\n    "localsymbols": [\n      "T_FileStream_close",\n      "T_FileStream_open",\n      "T_FileStream_readLine",\n      "_ITM_deregisterTMCloneTable",\n      "_ITM_registerTMCloneTable",\n      "__gmon_start__",\n      "u_errorName_72",\n      "u_getDataDirectory_72",\n      "u_parseArgs",\n      "ucnv_compareNames_72",\n      "ucnv_io_stripASCIIForCompare_72",\n      "udata_create",\n      "udata_finish",\n      "udata_write16",\n      "udata_write32",\n      "udata_writeBlock",\n      "udata_writeString",\n      "uprv_free_72",\n      "uprv_isInvariantString_72",\n      "uprv_malloc_72",\n      "uprv_realloc_72",\n      "uprv_strnicmp_72"\n    ]\n  },\n  "callgraph": [],\n  "relationships": {\n    "libc.so.6": [\n      "__printf_chk",\n      "strchr",\n      "strlen",\n      "memset",\n      "__libc_start_main",\n      "memcpy",\n      "__strcpy_chk",\n      "strcpy",\n      "__ctype_b_loc",\n      "__stack_chk_fail",\n      "exit",\n      "strcmp",\n      "puts",\n      "strtok",\n      "__fprintf_chk",\n      "qsort",\n      "__cxa_finalize",\n      "stderr"\n    ]\n  }\n}\n'}
+# Look at the contents of result
+print (search_results[1]["content"])
+{
+  "metadata": {
+    "docFormat": "BIDS",
+    "specVersion": "1.0",
+    "id": "5424250f-8732-4ea4-ae14-8f7bad435cf5",
+    "version": 1,
+    "timestamp": "2025-02-04T21:52:00Z",
+    "tool": "bids_generator:0.1.0",
+    "binary": {
+      "class": "ELF64",
+      "architecture": "x86_64",
+      "bits": 64,
+      "os": "linux",
+      "filename": "/usr/bin/gencnval",
+      "version": "0.98",
+      "filesize": 27200,
+      "filedate": "Mon Jul  1 18:52:08 2024",
+      "checksum": {
+        "algorithm": "SHA256",
+        "value": "e4f41bdecbaebcf56317d2f7748ab1b9973103ce03e3ea0942231d0f03ffe98a"
+      }
+    }
+  },
+  "components": {
+    "dynamiclibrary": [
+      {
+        "name": "libicutu.so.72",
+        "location": "/usr/lib/x86_64-linux-gnu/libicutu.so.72.1"
+      },
+      {
+        "name": "libicuuc.so.72",
+        "location": "/usr/lib/x86_64-linux-gnu/libicuuc.so.72.1"
+      },
+      {
+        "name": "libc.so.6",
+        "location": "/usr/lib32/libc.so.6",
+        "version": "2.38"
+      }
+    ],
+    "globalsymbol": [
+      "__ctype_b_loc",
+      "__cxa_finalize",
+      "__fprintf_chk",
+      "__libc_start_main",
+      "__printf_chk",
+      "__stack_chk_fail",
+      "__strcpy_chk",
+      "exit",
+      "memcpy",
+      "memset",
+      "puts",
+      "qsort",
+      "stderr",
+      "strchr",
+      "strcmp",
+      "strcpy",
+      "strlen",
+      "strtok"
+    ],
+    "localsymbols": [
+      "T_FileStream_close",
+      "T_FileStream_open",
+      "T_FileStream_readLine",
+      "_ITM_deregisterTMCloneTable",
+      "_ITM_registerTMCloneTable",
+      "__gmon_start__",
+      "u_errorName_72",
+      "u_getDataDirectory_72",
+      "u_parseArgs",
+      "ucnv_compareNames_72",
+      "ucnv_io_stripASCIIForCompare_72",
+      "udata_create",
+      "udata_finish",
+      "udata_write16",
+      "udata_write32",
+      "udata_writeBlock",
+      "udata_writeString",
+      "uprv_free_72",
+      "uprv_isInvariantString_72",
+      "uprv_malloc_72",
+      "uprv_realloc_72",
+      "uprv_strnicmp_72"
+    ]
+  },
+  "callgraph": [],
+  "relationships": {
+    "libc.so.6": [
+      "__printf_chk",
+      "strchr",
+      "strlen",
+      "memset",
+      "__libc_start_main",
+      "memcpy",
+      "__strcpy_chk",
+      "strcpy",
+      "__ctype_b_loc",
+      "__stack_chk_fail",
+      "exit",
+      "strcmp",
+      "puts",
+      "strtok",
+      "__fprintf_chk",
+      "qsort",
+      "__cxa_finalize",
+      "stderr"
+    ]
+  }
+}
+```
+
 ## License
 
 Licensed under the Apache 2.0 License.
