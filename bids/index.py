@@ -157,7 +157,7 @@ class BIDSIndexer:
         return results
 
     def reinitialise_index(self):
-        shutil.rmtree(self.index_path)
+        shutil.rmtree(self.index_path, ignore_errors=True)
         self.create_schema()
         self.initialise_index()
 
