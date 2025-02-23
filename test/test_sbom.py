@@ -112,3 +112,11 @@ class TestSBOM:
         # Check package version is included in output
         assert "PackageVersion: 10.01.2" in captured.out
 
+    def test_localsymbols(self, capsys):
+        # Only for CycloneDX SBOM
+        test_file = f"{self.TEST_PATH}/test_assets/hello.json"
+        with pytest.raises(SystemExit) as e:
+            main([self.SCRIPT_NAME, "--input", test_file, "--sbom", "cyclonedx"])
+        captured = capsys.readouterr()
+        # Check package version is included in output
+        assert "localsymbol_1" in captured.out

@@ -165,6 +165,13 @@ def create_sbom(bids_file, appname):
         )
     if "description" in data["metadata"]["binary"]:
         bids_package.set_description(data["metadata"]["binary"]["description"])
+    # Add local symbols
+    if "localsymbols" in data["components"]:
+        symbol_id = 1
+        for symbol in data["components"]["localsymbols"]:
+            bids_package.set_property(f"localsymbol_{symbol_id}", symbol)
+            symbol_id += 1
+
     sbom_packages[(bids_package.get_name(), bids_package.get_value("version"))] = (
         bids_package.get_package()
     )
