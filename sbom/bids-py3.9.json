@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:1e0b12ae-8f4f-4fcb-95a4-19327ad28812",
+  "serialNumber": "urn:uuid:e5b61bcd-b593-4c14-8763-251d8dcdf7ff",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-16T01:57:28Z",
+    "timestamp": "2025-02-23T01:57:34Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -89,7 +89,7 @@
       "type": "library",
       "bom-ref": "2-pyelftools",
       "name": "pyelftools",
-      "version": "0.31",
+      "version": "0.32",
       "supplier": {
         "name": "Eli Bendersky",
         "contact": [
@@ -98,12 +98,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.31:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*",
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
+          "content": "013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738"
         }
       ],
       "externalReferences": [
@@ -113,16 +113,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyelftools/0.31/#files",
+          "url": "https://pypi.org/project/pyelftools/0.32/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pyelftools@0.31",
+      "purl": "pkg:pypi/pyelftools@0.32",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-03-14T13:28:20Z"
+          "value": "2025-02-19T14:19:59Z"
         },
         {
           "name": "language",
