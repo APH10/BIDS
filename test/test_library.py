@@ -32,6 +32,7 @@ class TestLibrary:
         library_details = lib.get_library("bad_library")
         assert library_details["version"] is None
         assert library_details["location"] is None
+        assert library_details["checksum"] == {}
 
     def test_get_library(self):
         lib = DynamicLibrary(cache=self.CACHE_FILE)
@@ -49,3 +50,4 @@ class TestLibrary:
         lib.show()
         captured = capsys.readouterr()
         assert "libc.so.6" in captured.out
+

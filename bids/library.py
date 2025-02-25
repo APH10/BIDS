@@ -19,15 +19,18 @@ class DynamicLibrary:
         library_name = self.lib_details.get(library)
         if library_name is not None:
             checksum = util.calculate_checksum(library_name)
+            version = self.version([library_name])
         else:
             checksum = {}
+            version = None
         return {
             "location": library_name,
-            "version": self.version([library_name]),
+            "version": version,
             "checksum": checksum,
         }
 
     def _load_cache(self, cache):
+
         # Load cache
         self.lib_details = {}
         if cache is None:

@@ -103,3 +103,17 @@ class TestOutput:
             assert "callgraph" in bids_json
             assert "relationships" in bids_json
         Path(TEST_OUTPUT_FILE).unlink()
+
+    def test_output_missing_library(self, capsys):
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE)
+        output_test.create_metadata({"test": "data"})
+        output_test.create_components(["bad_library"], [], [])
+        # Can't write to a directory so will be redirected to the console
+        output_test.generate_output(filename="/")
+        captured = capsys.readouterr()
+        # Check top level components
+        assert "metadata" in captured.out
+        assert "components" in captured.out
+        assert "callgraph" in captured.out
+        assert "relationships" in captured.out
+
