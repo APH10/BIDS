@@ -54,3 +54,5 @@ def get_version(application):
             return None
     except PermissionError:
         return None
+    except subprocess.TimeoutExpired:
+        return None
