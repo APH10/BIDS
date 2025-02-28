@@ -9,10 +9,11 @@ import bids.util as util
 
 class DynamicLibrary:
 
-    def __init__(self, cache=None):
+    def __init__(self, cache=None, library_path=""):
         self.lib_details = {}
         self.cache = cache
         self._load_cache(self.cache)
+        self.library_path = library_path
 
     def get_library(self, library):
         # Return details of a dynamic library
@@ -20,7 +21,16 @@ class DynamicLibrary:
         if library_name is not None:
             checksum = util.calculate_checksum(library_name)
             version = self.version([library_name])
-        else:
+        elif self.library_path != "":
+            # Check for library in library path
+            for path in self.library_path.split(","):
+                lib_path = os.path.join(path.strip(), library)
+                if os.path.isfile(lib_path):
+                    library_name = os.path.realpath(lib_path)
+                    checksum = util.calculate_checksum(lib_path)
+                    version = self.version([lib_path])
+                    break
+        if library_name is None:
             checksum = {}
             version = None
         return {

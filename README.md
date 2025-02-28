@@ -29,7 +29,7 @@ The tools can also be used as Python libraries.
 ## Usage - Bids-analyser
 
 ```
-usage: bids-analyser [-h] [-f FILE] [--description DESCRIPTION] [--exclude-dependency] [--exclude-symbol] [--exclude-callgraph] [-d] [-o OUTPUT_FILE] [-V]
+usage: bids-analyser [-h] [-f FILE] [--description DESCRIPTION] [--library-path LIBRARY_PATH] [--exclude-dependency] [--exclude-symbol] [--exclude-callgraph] [-d] [-o OUTPUT_FILE] [-V]
 
 bids-analyser analyses a binary application in ELF format and extracts dependency, symbolic and call graph information into a JSON data stream
 
@@ -41,6 +41,8 @@ Input:
   -f FILE, --file FILE  identity of binary file
   --description DESCRIPTION
                         description of file
+  --library-path LIBRARY_PATH
+                        path to search for library files
   --exclude-dependency  suppress reporting of dependencies
   --exclude-symbol      suppress reporting of symbols
   --exclude-callgraph   suppress reporting of call graph
@@ -49,13 +51,17 @@ Output:
   -d, --debug           add debug information
   -o OUTPUT_FILE, --output-file OUTPUT_FILE
                         output filename (default: output to stdout)
+
 ```
 					
 ### Operation
 
 The `--file` option is used to specify the binary file to be processed.
 
-The `--description` option is used to provide a biref description of the binary being processed.
+The `--description` option is used to provide a brief description of the binary being processed.
+
+The `--library-path` option is used to provide the path for library files which are not located with the system library files. Multiple
+locations can be specified as a list of paths spearated by ','. e.g. "/local/lib,/project/lib"
 
 The `--exclude-dependency`, `--exclude-symbol`, and `--exclude-callgraph` option is used to disable
 the capture of dependency, symbol or callgraph information respectively.

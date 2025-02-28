@@ -112,3 +112,45 @@ class TestCLI:
         assert e.value.args[0] == 1
         captured = capsys.readouterr()
         assert "Only ELF files can be analysed" in captured.out
+
+    def test_library_path_command(self):
+        """Test library-path command"""
+        test_file = f"{self.TEST_PATH}/test_assets/hello"
+        test_path = f"{self.TEST_PATH}/test_assets"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--library-path",
+                    test_path,
+                ]
+            )
+        assert e.value.args[0] == 0
+        # Expect one paranter
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--library-path",
+                ]
+            )
+        assert e.value.args[0] == 2
+
+    def test_local_library(self):
+        test_file = f"{self.TEST_PATH}/test_assets/namer_app"
+        test_path = f"{self.TEST_PATH}/test_assets"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--library-path",
+                    test_path,
+                ]
+            )
+        assert e.value.args[0] == 0

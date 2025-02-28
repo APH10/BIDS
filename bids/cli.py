@@ -42,6 +42,12 @@ def main(argv=None):
         help="description of file",
     )
     input_group.add_argument(
+        "--library-path",
+        action="store",
+        default="",
+        help="path to search for library files",
+    )
+    input_group.add_argument(
         "--exclude-dependency",
         action="store_true",
         help="suppress reporting of dependencies",
@@ -80,10 +86,10 @@ def main(argv=None):
     defaults = {
         "file": "",
         "description": "",
+        "library_path": "",
         "exclude_dependency": False,
         "exclude_symbol": False,
         "exclude_callgraph": False,
-        "system": False,
         "output_file": "",
         "debug": False,
     }
@@ -103,6 +109,7 @@ def main(argv=None):
     if args["debug"]:
         print("File", binary_file)
         print("Description", args["description"])
+        print("Library path:", args["library_path"])
         print("Exclude Dependencies:", args["exclude_dependency"])
         print("Exclude Symbols:", args["exclude_symbol"])
         print("Exclude Call Graph:", args["exclude_callgraph"])
@@ -132,7 +139,9 @@ def main(argv=None):
             print(f"Exports: {sorted(analyser.get_local_symbols())}")
 
         # Create report
-        output = BIDSOutput(tool_version=VERSION, cache=cache)
+        output = BIDSOutput(
+            tool_version=VERSION, cache=cache, library_path=args["library_path"]
+        )
         output.create_metadata(analyser.get_file_data())
         output.create_components(
             analyser.get_dependencies(),
