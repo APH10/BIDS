@@ -54,23 +54,9 @@ class BIDSAnalyser:
         if len(self.description) > 0:
             self.application["description"] = self.description
         # Try to find version
-        # app_version = self.app_version(self.filename)
         app_version = util.get_version([self.filename, "--version"])
         if app_version is not None:
             self.application["version"] = app_version
-
-    def app_version(self, application):
-        try:
-            lines = util.run_process([application, "--version"])
-            version = lines.stdout.splitlines()[0].split(" ")[-1].strip()
-            if version[-1] == ".":
-                version = version[:-1]
-            elif version == "--version":
-                version = None
-            return version
-        except Exception:
-            # print(f"[ERROR] Unable to find version for {application}")
-            return None
 
     def analyse(self, filename):
         self.check_file(filename)
