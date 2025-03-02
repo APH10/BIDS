@@ -2,48 +2,48 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-61d627ab-cc38-49fb-9663-0b6abe1ebf65
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-9e1a7bda-23ce-42e1-ad83-855672b4c966
 LicenseListVersion: 3.25
 Creator: Tool: sbom4python-0.12.1
-Created: 2025-02-16T01:57:25Z
+Created: 2025-03-02T01:58:57Z
 CreatorComment: <text>This document has been automatically generated.</text>
 ##### 
 
 PackageName: bids-analyser
 SPDXID: SPDXRef-1-bids-analyser
-PackageVersion: 0.1.0
+PackageVersion: 0.2.0
 PrimaryPackagePurpose: APPLICATION
 PackageSupplier: Person: Anthony Harrison (anthony@aph10.com)
-PackageDownloadLocation: https://pypi.org/project/bids-analyser/0.1.0/#files
+PackageDownloadLocation: https://pypi.org/project/bids-analyser/0.2.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/aph10/BIDS
-PackageChecksum: SHA256: 3c5dc6f9ce9d1ff3a2e799bde04cd8313e6676a6c674026c93b1be5e1b0c266f
+PackageChecksum: SHA256: 3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Analyser for ELF files</text>
-ReleaseDate: 2024-11-19T11:56:22Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/bids-analyser@0.1.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:bids-analyser:0.1.0:*:*:*:*:*:*:*
+ReleaseDate: 2025-02-24T09:06:43Z
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/bids-analyser@0.2.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: pyelftools
 SPDXID: SPDXRef-2-pyelftools
-PackageVersion: 0.31
+PackageVersion: 0.32
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Eli Bendersky (eliben@gmail.com)
-PackageDownloadLocation: https://pypi.org/project/pyelftools/0.31/#files
+PackageDownloadLocation: https://pypi.org/project/pyelftools/0.32/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/eliben/pyelftools
-PackageChecksum: SHA256: f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607
+PackageChecksum: SHA256: 013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageLicenseComments: <text>pyelftools declares Public domain which is not currently a valid SPDX License identifier or expression.</text>
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Library for analyzing ELF files and DWARF debugging information</text>
-ReleaseDate: 2024-03-14T13:28:20Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/pyelftools@0.31
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:eli_bendersky:pyelftools:0.31:*:*:*:*:*:*:*
+ReleaseDate: 2025-02-19T14:19:59Z
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/pyelftools@0.32
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*
 ##### 
 
 PackageName: typecode

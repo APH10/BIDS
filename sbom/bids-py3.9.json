@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:1e0b12ae-8f4f-4fcb-95a4-19327ad28812",
+  "serialNumber": "urn:uuid:99f8ea6e-0ca9-4b0d-a04b-efb75d822d16",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-16T01:57:28Z",
+    "timestamp": "2025-03-02T01:58:59Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -31,7 +31,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -40,12 +40,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3c5dc6f9ce9d1ff3a2e799bde04cd8313e6676a6c674026c93b1be5e1b0c266f"
+          "content": "3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23"
         }
       ],
       "licenses": [
@@ -64,16 +64,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.1.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.1.0",
+      "purl": "pkg:pypi/bids-analyser@0.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-11-19T11:56:22Z"
+          "value": "2025-02-24T09:06:43Z"
         },
         {
           "name": "language",
@@ -89,7 +89,7 @@
       "type": "library",
       "bom-ref": "2-pyelftools",
       "name": "pyelftools",
-      "version": "0.31",
+      "version": "0.32",
       "supplier": {
         "name": "Eli Bendersky",
         "contact": [
@@ -98,12 +98,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.31:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*",
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
+          "content": "013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738"
         }
       ],
       "externalReferences": [
@@ -113,16 +113,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyelftools/0.31/#files",
+          "url": "https://pypi.org/project/pyelftools/0.32/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pyelftools@0.31",
+      "purl": "pkg:pypi/pyelftools@0.32",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-03-14T13:28:20Z"
+          "value": "2025-02-19T14:19:59Z"
         },
         {
           "name": "language",
