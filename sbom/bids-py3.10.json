@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:ded6feaf-1b7a-4901-97a6-fb28826b1561",
+  "serialNumber": "urn:uuid:f94bf709-de90-460e-b481-b6b5d65c2b9e",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-16T01:57:32Z",
+    "timestamp": "2025-03-16T02:02:59Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -15,7 +15,7 @@
       "components": [
         {
           "name": "sbom4python",
-          "version": "0.12.1",
+          "version": "0.12.3",
           "type": "application"
         }
       ]
@@ -31,7 +31,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -40,12 +40,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3c5dc6f9ce9d1ff3a2e799bde04cd8313e6676a6c674026c93b1be5e1b0c266f"
+          "content": "3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23"
         }
       ],
       "licenses": [
@@ -64,16 +64,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.1.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.1.0",
+      "purl": "pkg:pypi/bids-analyser@0.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-11-19T11:56:22Z"
+          "value": "2025-02-24T09:06:43Z"
         },
         {
           "name": "language",
@@ -89,7 +89,7 @@
       "type": "library",
       "bom-ref": "2-pyelftools",
       "name": "pyelftools",
-      "version": "0.31",
+      "version": "0.32",
       "supplier": {
         "name": "Eli Bendersky",
         "contact": [
@@ -98,12 +98,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.31:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*",
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
+          "content": "013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738"
         }
       ],
       "externalReferences": [
@@ -113,16 +113,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyelftools/0.31/#files",
+          "url": "https://pypi.org/project/pyelftools/0.32/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pyelftools@0.31",
+      "purl": "pkg:pypi/pyelftools@0.32",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-03-14T13:28:20Z"
+          "value": "2025-02-19T14:19:59Z"
         },
         {
           "name": "language",
@@ -136,7 +136,56 @@
     },
     {
       "type": "library",
-      "bom-ref": "3-typecode",
+      "bom-ref": "3-typecode-libmagic-system-provided",
+      "name": "typecode-libmagic-system-provided",
+      "version": "33.0.0",
+      "supplier": {
+        "name": "nexB",
+        "contact": [
+          {
+            "email": "info@aboutcode.org"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:nexb:typecode-libmagic-system-provided:33.0.0:*:*:*:*:*:*:*",
+      "description": "A ScanCode path provider plugin to provide a system package provided libmagic binary and database.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "736bdc1a734ac8ee850c2e73f004d0ffba7ab16ef4856f4ebdbb947f1f9c9820"
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/aboutcode-org/scancode-plugins",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/typecode-libmagic-system-provided/33.0.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/typecode-libmagic-system-provided@33.0.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2024-10-31T19:42:26Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.10.16"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "4-typecode",
       "name": "typecode",
       "version": "30.0.2",
       "supplier": {
@@ -194,9 +243,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "4-attrs",
+      "bom-ref": "5-attrs",
       "name": "attrs",
-      "version": "25.1.0",
+      "version": "25.3.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -205,17 +254,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.3.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
+          "content": "427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/25.1.0/#files",
+          "url": "https://pypi.org/project/attrs/25.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -240,11 +289,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@25.1.0",
+      "purl": "pkg:pypi/attrs@25.3.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-01-25T11:30:10Z"
+          "value": "2025-03-13T11:10:21Z"
         },
         {
           "name": "language",
@@ -258,7 +307,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "5-binaryornot",
+      "bom-ref": "6-binaryornot",
       "name": "binaryornot",
       "version": "0.4.4",
       "supplier": {
@@ -316,7 +365,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "6-chardet",
+      "bom-ref": "7-chardet",
       "name": "chardet",
       "version": "5.2.0",
       "supplier": {
@@ -386,9 +435,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "7-commoncode",
+      "bom-ref": "8-commoncode",
       "name": "commoncode",
-      "version": "32.2.0",
+      "version": "32.2.1",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -397,12 +446,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.1:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "2d6ba12556d5e47dbb4f63613bbc8212ddd6b2d83b54776548faa96fef5722b6"
+          "content": "8b668a63f3f51901dceb0b123f492b1c45705dab23fb7999e296ca21613351e5"
         }
       ],
       "licenses": [
@@ -421,16 +470,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/commoncode/32.2.0/#files",
+          "url": "https://pypi.org/project/commoncode/32.2.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/commoncode@32.2.0",
+      "purl": "pkg:pypi/commoncode@32.2.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-02-14T19:49:59Z"
+          "value": "2025-03-06T13:51:38Z"
         },
         {
           "name": "language",
@@ -444,7 +493,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "8-beautifulsoup4",
+      "bom-ref": "9-beautifulsoup4",
       "name": "beautifulsoup4",
       "version": "4.13.3",
       "supplier": {
@@ -506,7 +555,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "9-soupsieve",
+      "bom-ref": "10-soupsieve",
       "name": "soupsieve",
       "version": "2.6",
       "supplier": {
@@ -523,6 +572,15 @@
         {
           "alg": "SHA-256",
           "content": "e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -555,7 +613,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "10-typing-extensions",
+      "bom-ref": "11-typing-extensions",
       "name": "typing-extensions",
       "version": "4.12.2",
       "supplier": {
@@ -572,6 +630,15 @@
         {
           "alg": "SHA-256",
           "content": "04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0",
+            "url": "https://opensource.org/licenses/Python-2.0",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -624,7 +691,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "11-click",
+      "bom-ref": "12-click",
       "name": "click",
       "version": "8.1.8",
       "description": "Composable command line interface toolkit",
@@ -632,6 +699,15 @@
         {
           "alg": "SHA-256",
           "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -679,7 +755,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "12-importlib-metadata",
+      "bom-ref": "13-importlib-metadata",
       "name": "importlib-metadata",
       "version": "8.0.0",
       "supplier": {
@@ -696,6 +772,15 @@
         {
           "alg": "SHA-256",
           "content": "15584cf2b1bf449d98ff8a6ff1abef57bf20f3ac6454f431736cd3e660921b2f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -727,7 +812,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "13-zipp",
+      "bom-ref": "14-zipp",
       "name": "zipp",
       "version": "3.19.2",
       "supplier": {
@@ -744,6 +829,15 @@
         {
           "alg": "SHA-256",
           "content": "f091755f667055f2d02b32c53771a7a6c8b47e1fdbc4b72a8b9072b3eef8015c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -776,7 +870,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "14-requests",
+      "bom-ref": "15-requests",
       "name": "requests",
       "version": "2.32.3",
       "supplier": {
@@ -842,7 +936,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "15-charset-normalizer",
+      "bom-ref": "16-charset-normalizer",
       "name": "charset-normalizer",
       "version": "3.4.1",
       "supplier": {
@@ -911,7 +1005,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "16-idna",
+      "bom-ref": "17-idna",
       "name": "idna",
       "version": "3.10",
       "supplier": {
@@ -928,6 +1022,15 @@
         {
           "alg": "SHA-256",
           "content": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -967,7 +1070,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "17-urllib3",
+      "bom-ref": "18-urllib3",
       "name": "urllib3",
       "version": "2.3.0",
       "supplier": {
@@ -984,6 +1087,15 @@
         {
           "alg": "SHA-256",
           "content": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1027,7 +1139,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "18-certifi",
+      "bom-ref": "19-certifi",
       "name": "certifi",
       "version": "2025.1.31",
       "supplier": {
@@ -1089,7 +1201,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "19-saneyaml",
+      "bom-ref": "20-saneyaml",
       "name": "saneyaml",
       "version": "0.6.1",
       "supplier": {
@@ -1147,7 +1259,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "20-pyyaml",
+      "bom-ref": "21-pyyaml",
       "name": "pyyaml",
       "version": "6.0.2",
       "supplier": {
@@ -1225,7 +1337,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "21-text-unidecode",
+      "bom-ref": "22-text-unidecode",
       "name": "text-unidecode",
       "version": "1.3",
       "supplier": {
@@ -1283,7 +1395,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "22-plugincode",
+      "bom-ref": "23-plugincode",
       "name": "plugincode",
       "version": "32.0.0",
       "supplier": {
@@ -1341,7 +1453,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "23-pluggy",
+      "bom-ref": "24-pluggy",
       "name": "pluggy",
       "version": "1.5.0",
       "supplier": {
@@ -1399,9 +1511,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "24-lib4sbom",
+      "bom-ref": "25-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.8.1",
+      "version": "0.8.2",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1410,12 +1522,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.2:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "7fba7451760c49738911b344fef96a3a274baaef6d34ab61e89284c506f0a343"
+          "content": "a46338154d7daf701f960a49495468f3722ae1845baf88f848c668f79519da8f"
         }
       ],
       "licenses": [
@@ -1434,16 +1546,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.8.1/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.8.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.8.1",
+      "purl": "pkg:pypi/lib4sbom@0.8.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-18T21:54:27Z"
+          "value": "2025-03-03T21:24:16Z"
         },
         {
           "name": "language",
@@ -1457,7 +1569,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "25-semantic-version",
+      "bom-ref": "26-semantic-version",
       "name": "semantic-version",
       "version": "2.10.0",
       "supplier": {
@@ -1515,7 +1627,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "26-defusedxml",
+      "bom-ref": "27-defusedxml",
       "name": "defusedxml",
       "version": "0.7.1",
       "supplier": {
@@ -1573,7 +1685,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "27-tantivy",
+      "bom-ref": "28-tantivy",
       "name": "tantivy",
       "version": "0.22.0",
       "supplier": {
@@ -1635,86 +1747,87 @@
       "ref": "1-bids-analyser",
       "dependsOn": [
         "2-pyelftools",
-        "3-typecode",
-        "24-lib4sbom",
-        "27-tantivy"
+        "3-typecode-libmagic-system-provided",
+        "4-typecode",
+        "25-lib4sbom",
+        "28-tantivy"
       ]
     },
     {
-      "ref": "3-typecode",
+      "ref": "4-typecode",
       "dependsOn": [
-        "4-attrs",
-        "5-binaryornot",
-        "7-commoncode",
-        "22-plugincode"
+        "5-attrs",
+        "6-binaryornot",
+        "8-commoncode",
+        "23-plugincode"
       ]
     },
     {
-      "ref": "5-binaryornot",
+      "ref": "6-binaryornot",
       "dependsOn": [
-        "6-chardet"
+        "7-chardet"
       ]
     },
     {
-      "ref": "7-commoncode",
+      "ref": "8-commoncode",
       "dependsOn": [
-        "4-attrs",
-        "8-beautifulsoup4",
-        "11-click",
-        "14-requests",
-        "19-saneyaml",
-        "21-text-unidecode"
+        "5-attrs",
+        "9-beautifulsoup4",
+        "12-click",
+        "15-requests",
+        "20-saneyaml",
+        "22-text-unidecode"
       ]
     },
     {
-      "ref": "8-beautifulsoup4",
+      "ref": "9-beautifulsoup4",
       "dependsOn": [
-        "9-soupsieve",
-        "10-typing-extensions"
+        "10-soupsieve",
+        "11-typing-extensions"
       ]
     },
     {
-      "ref": "11-click",
+      "ref": "12-click",
       "dependsOn": [
-        "12-importlib-metadata"
+        "13-importlib-metadata"
       ]
     },
     {
-      "ref": "12-importlib-metadata",
+      "ref": "13-importlib-metadata",
       "dependsOn": [
-        "13-zipp",
-        "10-typing-extensions"
+        "14-zipp",
+        "11-typing-extensions"
       ]
     },
     {
-      "ref": "14-requests",
+      "ref": "15-requests",
       "dependsOn": [
-        "15-charset-normalizer",
-        "16-idna",
-        "17-urllib3",
-        "18-certifi"
+        "16-charset-normalizer",
+        "17-idna",
+        "18-urllib3",
+        "19-certifi"
       ]
     },
     {
-      "ref": "19-saneyaml",
+      "ref": "20-saneyaml",
       "dependsOn": [
-        "20-pyyaml"
+        "21-pyyaml"
       ]
     },
     {
-      "ref": "22-plugincode",
+      "ref": "23-plugincode",
       "dependsOn": [
-        "11-click",
-        "7-commoncode",
-        "23-pluggy"
+        "12-click",
+        "8-commoncode",
+        "24-pluggy"
       ]
     },
     {
-      "ref": "24-lib4sbom",
+      "ref": "25-lib4sbom",
       "dependsOn": [
-        "20-pyyaml",
-        "25-semantic-version",
-        "26-defusedxml"
+        "21-pyyaml",
+        "26-semantic-version",
+        "27-defusedxml"
       ]
     }
   ]
