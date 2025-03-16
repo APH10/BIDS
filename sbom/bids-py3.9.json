@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:1e0b12ae-8f4f-4fcb-95a4-19327ad28812",
+  "serialNumber": "urn:uuid:27de3bfd-090a-4a9c-8f67-e4d68a0f3fd0",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-16T01:57:28Z",
+    "timestamp": "2025-03-16T02:02:59Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -15,7 +15,7 @@
       "components": [
         {
           "name": "sbom4python",
-          "version": "0.12.1",
+          "version": "0.12.3",
           "type": "application"
         }
       ]
@@ -31,7 +31,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -40,12 +40,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3c5dc6f9ce9d1ff3a2e799bde04cd8313e6676a6c674026c93b1be5e1b0c266f"
+          "content": "3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23"
         }
       ],
       "licenses": [
@@ -64,16 +64,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.1.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.1.0",
+      "purl": "pkg:pypi/bids-analyser@0.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-11-19T11:56:22Z"
+          "value": "2025-02-24T09:06:43Z"
         },
         {
           "name": "language",
@@ -89,7 +89,7 @@
       "type": "library",
       "bom-ref": "2-pyelftools",
       "name": "pyelftools",
-      "version": "0.31",
+      "version": "0.32",
       "supplier": {
         "name": "Eli Bendersky",
         "contact": [
@@ -98,12 +98,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.31:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*",
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f52de7b3c7e8c64c8abc04a79a1cf37ac5fb0b8a49809827130b858944840607"
+          "content": "013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738"
         }
       ],
       "externalReferences": [
@@ -113,16 +113,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyelftools/0.31/#files",
+          "url": "https://pypi.org/project/pyelftools/0.32/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pyelftools@0.31",
+      "purl": "pkg:pypi/pyelftools@0.32",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-03-14T13:28:20Z"
+          "value": "2025-02-19T14:19:59Z"
         },
         {
           "name": "language",
@@ -196,7 +196,7 @@
       "type": "library",
       "bom-ref": "4-attrs",
       "name": "attrs",
-      "version": "25.1.0",
+      "version": "25.3.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -205,17 +205,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.3.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
+          "content": "427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/25.1.0/#files",
+          "url": "https://pypi.org/project/attrs/25.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -240,11 +240,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@25.1.0",
+      "purl": "pkg:pypi/attrs@25.3.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-01-25T11:30:10Z"
+          "value": "2025-03-13T11:10:21Z"
         },
         {
           "name": "language",
@@ -388,7 +388,7 @@
       "type": "library",
       "bom-ref": "7-commoncode",
       "name": "commoncode",
-      "version": "32.2.0",
+      "version": "32.2.1",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -397,12 +397,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.1:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "2d6ba12556d5e47dbb4f63613bbc8212ddd6b2d83b54776548faa96fef5722b6"
+          "content": "8b668a63f3f51901dceb0b123f492b1c45705dab23fb7999e296ca21613351e5"
         }
       ],
       "licenses": [
@@ -421,16 +421,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/commoncode/32.2.0/#files",
+          "url": "https://pypi.org/project/commoncode/32.2.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/commoncode@32.2.0",
+      "purl": "pkg:pypi/commoncode@32.2.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-02-14T19:49:59Z"
+          "value": "2025-03-06T13:51:38Z"
         },
         {
           "name": "language",
@@ -525,6 +525,15 @@
           "content": "e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/facelessuser/soupsieve",
@@ -572,6 +581,15 @@
         {
           "alg": "SHA-256",
           "content": "04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0",
+            "url": "https://opensource.org/licenses/Python-2.0",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -632,6 +650,15 @@
         {
           "alg": "SHA-256",
           "content": "63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -698,6 +725,15 @@
           "content": "02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://pypi.org/project/importlib-metadata/8.6.1/#files",
@@ -744,6 +780,15 @@
         {
           "alg": "SHA-256",
           "content": "ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -929,6 +974,15 @@
           "content": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://pypi.org/project/idna/3.10/#files",
@@ -983,6 +1037,15 @@
         {
           "alg": "SHA-256",
           "content": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1400,7 +1463,7 @@
       "type": "library",
       "bom-ref": "24-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.8.1",
+      "version": "0.8.2",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1409,12 +1472,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.2:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "7fba7451760c49738911b344fef96a3a274baaef6d34ab61e89284c506f0a343"
+          "content": "a46338154d7daf701f960a49495468f3722ae1845baf88f848c668f79519da8f"
         }
       ],
       "licenses": [
@@ -1433,16 +1496,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.8.1/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.8.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.8.1",
+      "purl": "pkg:pypi/lib4sbom@0.8.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-18T21:54:27Z"
+          "value": "2025-03-03T21:24:16Z"
         },
         {
           "name": "language",
