@@ -60,18 +60,23 @@ class BIDSElf:
             "type": None,
         }
 
-        for section in self.elffile.iter_sections():
-            if isinstance(section, GNUVerSymSection):
-                self._versioninfo["versym"] = section
-            elif isinstance(section, GNUVerDefSection):
-                self._versioninfo["verdef"] = section
-            elif isinstance(section, GNUVerNeedSection):
-                self._versioninfo["verneed"] = section
-            elif isinstance(section, DynamicSection):
-                for tag in section.iter_tags():
-                    if tag["d_tag"] == "DT_VERSYM":
-                        self._versioninfo["type"] = "GNU"
-                        break
+        try:
+            for section in self.elffile.iter_sections():
+                if isinstance(section, GNUVerSymSection):
+                    self._versioninfo["versym"] = section
+                elif isinstance(section, GNUVerDefSection):
+                    self._versioninfo["verdef"] = section
+                elif isinstance(section, GNUVerNeedSection):
+                    self._versioninfo["verneed"] = section
+                elif isinstance(section, DynamicSection):
+                    for tag in section.iter_tags():
+                        if tag["d_tag"] == "DT_VERSYM":
+                            self._versioninfo["type"] = "GNU"
+                            break
+        except OSError:
+            if self.debug:
+                print("OSError - Unable to process versioninfo")
+            pass
 
         if not self._versioninfo["type"] and (
             self._versioninfo["verneed"] or self._versioninfo["verdef"]
@@ -86,16 +91,26 @@ class BIDSElf:
 
         symbol_version = dict.fromkeys(("index", "name", "filename", "hidden"))
 
-        if (
-            not self._versioninfo["versym"]
-            or nsym >= self._versioninfo["versym"].num_symbols()
-        ):
+        try:
+            if (
+                not self._versioninfo["versym"]
+                or nsym >= self._versioninfo["versym"].num_symbols()
+            ):
+                return None
+        except ZeroDivisionError:
+            if self.debug:
+                print("ZeroDivsionError - Unable to process symbol version")
             return None
 
         symbol = self._versioninfo["versym"].get_symbol(nsym)
         index = symbol.entry["ndx"]
         if index not in ("VER_NDX_LOCAL", "VER_NDX_GLOBAL"):
-            index = int(index)
+            try:
+                index = int(index)
+            except TypeError:
+                if self.debug:
+                    print("TypeError - Unable to process symbol")
+                return None
 
             if self._versioninfo["type"] == "GNU":
                 # In GNU versioning mode, the highest bit is used to
@@ -111,9 +126,18 @@ class BIDSElf:
                 _, verdaux_iter = self._versioninfo["verdef"].get_version(index)
                 symbol_version["name"] = next(verdaux_iter).name
             else:
-                verneed, vernaux = self._versioninfo["verneed"].get_version(index)
-                symbol_version["name"] = vernaux.name
-                symbol_version["filename"] = verneed.name
+                try:
+                    verneed, vernaux = self._versioninfo["verneed"].get_version(index)
+                    symbol_version["name"] = vernaux.name
+                    symbol_version["filename"] = verneed.name
+                except AttributeError:
+                    if self.debug:
+                        print("AttributionError - Unable to process symbol name")
+                    pass
+                except TypeError:
+                    if self.debug:
+                        print("TypeError - Unable to process symbol name")
+                    pass
 
         symbol_version["index"] = index
         return symbol_version
@@ -140,22 +164,27 @@ class BIDSElf:
                         version = self._symbol_version(nsym)
                         if self.debug:
                             print(version, symbol.name)
-                        if version["name"] != symbol.name and version["index"] not in (
-                            "VER_NDX_LOCAL",
-                            "VER_NDX_GLOBAL",
-                        ):
-                            # Just external symbols
-                            if version["filename"]:
-                                # external symbol consists of a name
-                                # e.g. GLIBC_2.9 and a filename e.g. libc.so.6
-                                global_symbols.append(
-                                    [version["filename"], version["name"], symbol.name]
-                                )
+                        try:
+                            if version["name"] != symbol.name and version["index"] not in (
+                                "VER_NDX_LOCAL",
+                                "VER_NDX_GLOBAL",
+                            ):
+                                # Just external symbols
+                                if version["filename"]:
+                                    # external symbol consists of a name
+                                    # e.g. GLIBC_2.9 and a filename e.g. libc.so.6
+                                    global_symbols.append(
+                                        [version["filename"], version["name"], symbol.name]
+                                    )
+                                else:
+                                    local_symbols.append(symbol.name)
                             else:
-                                local_symbols.append(symbol.name)
-                        else:
-                            if symbol.name != "":
-                                local_symbols.append(symbol.name)
+                                if symbol.name != "":
+                                    local_symbols.append(symbol.name)
+                        except TypeError:
+                            if self.debug:
+                                print ("TypeError - Unable to process symbols")
+                            return None
                     elif self.debug:
                         print(
                             f"Type: {section['sh_type']} "
