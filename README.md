@@ -1,5 +1,8 @@
 # BIDS
-BIDS (Binary Identification of Dependencies with Search). The BIDS project will deliver tooling to analyse ELF binaries and extract key features for indexing and searching. The tooling to index these binary features in a search engine uses an inverted index.
+BIDS (Binary Identification of Dependencies with Search). The BIDS project will deliver tooling to analyse ELF binaries and extract 
+key features for indexing and searching. The tooling to index these binary features in a search engine uses an inverted index.
+
+**NOTE** that BIDS is not designed to detect the presence of malware; it is intended to help understand the scope of a binary and to support vulnerability analysis activities.
 
 This project is sponsored by NLNET https://nlnet.nl/project/BIDS/.
 
@@ -696,6 +699,8 @@ The tools have the following limitations:
 - Stripped binaries will result in a limited amount of data
 
 - Callgraph processing is not implemented
+
+- BIDS does not attempt to detect or identify anything that is intentionaly obfuscated, malicious or hidden in an ELF binary.
 
 ## Feedback and Contributions
 
