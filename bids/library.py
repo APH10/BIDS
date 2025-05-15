@@ -1,8 +1,9 @@
-# Copyright (C) 2024 APH10 Limited
+# Copyright (C) 2025 APH10 Limited
 # SPDX-License-Identifier: Apache-2.0
 
 import os
 from pathlib import Path
+import shutil
 
 import bids.util as util
 
@@ -44,11 +45,14 @@ class DynamicLibrary:
         # Load cache
         self.lib_details = {}
         if cache is None:
-            lines = util.run_process(["ldconfig", "-p"])
-            for line in lines.stdout.splitlines()[1:]:
-                if "=>" in line.strip():
-                    libname, lib_architecture, _, lib_path = line.strip().split(" ")
-                    self.lib_details[libname] = os.path.realpath(lib_path)
+            full_path = shutil.which("ldconfig")
+            if full_path:
+                # ldconfig found
+                lines = util.run_process([full_path, "-p"])
+                for line in lines.stdout.splitlines()[1:]:
+                    if "=>" in line.strip():
+                        libname, lib_architecture, _, lib_path = line.strip().split(" ")
+                        self.lib_details[libname] = os.path.realpath(lib_path)
         else:
             # read file
             # Check file exists
