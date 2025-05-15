@@ -61,8 +61,8 @@ class DynamicLibrary:
                     and filePath.is_file()
                     and filePath.stat().st_size > 0
                 ):
-                    f = open(cache)
-                    lines = f.readlines()
+                    with open(cache, encoding="utf-8") as f:
+                        lines = f.readlines()
                     for line in lines[1:]:
                         if "=>" in line.strip():
                             libname, lib_architecture, _, lib_path = line.strip().split(
