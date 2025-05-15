@@ -2,10 +2,17 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
+<<<<<<< HEAD
   "serialNumber": "urn:uuid:70f09835-c166-45b8-b776-6cd0fae73ef0",
   "version": 1,
   "metadata": {
     "timestamp": "2025-03-16T02:02:59Z",
+=======
+  "serialNumber": "urn:uuid:555c7c58-a744-4885-8cda-f2f447bda47a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-05-11T02:18:08Z",
+>>>>>>> origin/chore-sbom-py3.12
     "lifecycles": [
       {
         "phase": "build"
@@ -81,7 +88,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
@@ -130,7 +137,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "pyelftools declares Public domain which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -179,7 +190,15 @@
         },
         {
           "name": "python_version",
+<<<<<<< HEAD
           "value": "3.12.9"
+=======
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "typecode-libmagic-system-provided declares apache-2.0 AND bsd-simplified-darwin AND (bsd-simplified AND public-domain AND bsd-new AND isc AND (bsd-new OR gpl-1.0-plus) AND bsd-original) which is not currently a valid SPDX License identifier or expression."
+>>>>>>> origin/chore-sbom-py3.12
         }
       ]
     },
@@ -237,7 +256,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
@@ -301,7 +320,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
@@ -359,7 +378,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "binaryornot declares BSD which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -429,7 +452,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "chardet declares LGPL which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -487,7 +514,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
@@ -495,7 +522,7 @@
       "type": "library",
       "bom-ref": "9-beautifulsoup4",
       "name": "beautifulsoup4",
-      "version": "4.13.3",
+      "version": "4.13.4",
       "supplier": {
         "name": "Leonard Richardson",
         "contact": [
@@ -504,12 +531,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:leonard_richardson:beautifulsoup4:4.13.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:leonard_richardson:beautifulsoup4:4.13.4:*:*:*:*:*:*:*",
       "description": "Screen-scraping library",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"
+          "content": "9bbbb14bfde9d79f38b8cd5f8c7c85f4b8f2523190ebed90e950a8dea4cb1c4b"
         }
       ],
       "licenses": [
@@ -528,7 +555,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/beautifulsoup4/4.13.3/#files",
+          "url": "https://pypi.org/project/beautifulsoup4/4.13.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -537,11 +564,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/beautifulsoup4@4.13.3",
+      "purl": "pkg:pypi/beautifulsoup4@4.13.4",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-02-04T20:05:03Z"
+          "value": "2025-04-15T17:05:12Z"
         },
         {
           "name": "language",
@@ -549,7 +576,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "beautifulsoup4 declares MIT License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -557,7 +588,7 @@
       "type": "library",
       "bom-ref": "10-soupsieve",
       "name": "soupsieve",
-      "version": "2.6",
+      "version": "2.7",
       "supplier": {
         "name": "Isaac Muse",
         "contact": [
@@ -566,12 +597,21 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.6:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.7:*:*:*:*:*:*:*",
       "description": "A modern CSS selector implementation for Beautiful Soup.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9"
+          "content": "6e60cc5c1ffaf1cebcc12e8188320b72071e922c2e897f737cadce79ad5d30c4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "licenses": [
@@ -590,16 +630,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/soupsieve/2.6/#files",
+          "url": "https://pypi.org/project/soupsieve/2.7/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/soupsieve@2.6",
+      "purl": "pkg:pypi/soupsieve@2.7",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-08-13T13:39:10Z"
+          "value": "2025-04-20T18:50:07Z"
         },
         {
           "name": "language",
@@ -607,7 +647,11 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "soupsieve declares MIT License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -615,7 +659,7 @@
       "type": "library",
       "bom-ref": "11-typing-extensions",
       "name": "typing-extensions",
-      "version": "4.12.2",
+      "version": "4.13.2",
       "supplier": {
         "name": "Guido van Jukka ukasz Michael",
         "contact": [
@@ -624,12 +668,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-extensions:4.12.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-extensions:4.13.2:*:*:*:*:*:*:*",
       "description": "Backported and Experimental Type Hints for Python 3.8+",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"
+          "content": "a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"
         }
       ],
       "licenses": [
@@ -648,7 +692,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/typing-extensions/4.12.2/#files",
+          "url": "https://pypi.org/project/typing-extensions/4.13.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -673,11 +717,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/typing-extensions@4.12.2",
+      "purl": "pkg:pypi/typing-extensions@4.13.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-06-07T18:52:13Z"
+          "value": "2025-04-10T14:19:03Z"
         },
         {
           "name": "language",
@@ -685,7 +729,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
@@ -693,8 +737,9 @@
       "type": "library",
       "bom-ref": "12-click",
       "name": "click",
-      "version": "8.1.8",
+      "version": "8.2.0",
       "description": "Composable command line interface toolkit",
+<<<<<<< HEAD
       "hashes": [
         {
           "alg": "SHA-256",
@@ -710,9 +755,11 @@
           }
         }
       ],
+=======
+>>>>>>> origin/chore-sbom-py3.12
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/click/8.1.8/#files",
+          "url": "https://pypi.org/project/click/8.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -737,11 +784,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/click@8.1.8",
+      "purl": "pkg:pypi/click@8.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-21T18:38:41Z"
+          "value": "2025-04-10T14:19:03Z"
         },
         {
           "name": "language",
@@ -749,12 +796,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "13-importlib-metadata",
       "name": "importlib-metadata",
       "version": "8.0.0",
@@ -871,6 +919,9 @@
     {
       "type": "library",
       "bom-ref": "15-requests",
+=======
+      "bom-ref": "13-requests",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "requests",
       "version": "2.32.3",
       "supplier": {
@@ -930,15 +981,19 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "16-charset-normalizer",
+=======
+      "bom-ref": "14-charset-normalizer",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "charset-normalizer",
-      "version": "3.4.1",
+      "version": "3.4.2",
       "supplier": {
         "name": "Ahmed R .",
         "contact": [
@@ -947,12 +1002,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.2:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "91b36a978b5ae0ee86c394f5a54d6ef44db1de0815eb43de826d41d21e4af3de"
+          "content": "7c48ed483eb946e6c04ccbe02c6b4d1d48e51944b6db70f697e089c193404941"
         }
       ],
       "licenses": [
@@ -966,7 +1021,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.1/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -987,11 +1042,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.1",
+      "purl": "pkg:pypi/charset-normalizer@3.4.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-24T18:09:43Z"
+          "value": "2025-05-02T08:31:46Z"
         },
         {
           "name": "language",
@@ -999,13 +1054,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "17-idna",
+=======
+      "bom-ref": "15-idna",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "idna",
       "version": "3.10",
       "supplier": {
@@ -1064,15 +1123,23 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "idna declares BSD License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "18-urllib3",
+=======
+      "bom-ref": "16-urllib3",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "urllib3",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "supplier": {
         "name": "Andrey Petrov",
         "contact": [
@@ -1081,12 +1148,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.4.0:*:*:*:*:*:*:*",
       "description": "HTTP library with thread-safe connection pooling, file post, and more.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
+          "content": "4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"
         }
       ],
       "licenses": [
@@ -1100,7 +1167,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/urllib3/2.3.0/#files",
+          "url": "https://pypi.org/project/urllib3/2.4.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1121,11 +1188,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/urllib3@2.3.0",
+      "purl": "pkg:pypi/urllib3@2.4.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-12-22T07:47:28Z"
+          "value": "2025-04-10T15:23:37Z"
         },
         {
           "name": "language",
@@ -1133,15 +1200,19 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "19-certifi",
+=======
+      "bom-ref": "17-certifi",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "certifi",
-      "version": "2025.1.31",
+      "version": "2025.4.26",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -1150,12 +1221,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2025.1.31:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2025.4.26:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe"
+          "content": "30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3"
         }
       ],
       "licenses": [
@@ -1174,7 +1245,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2025.1.31/#files",
+          "url": "https://pypi.org/project/certifi/2025.4.26/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1183,11 +1254,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2025.1.31",
+      "purl": "pkg:pypi/certifi@2025.4.26",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-01-31T02:16:45Z"
+          "value": "2025-04-26T02:12:27Z"
         },
         {
           "name": "language",
@@ -1195,13 +1266,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "20-saneyaml",
+=======
+      "bom-ref": "18-saneyaml",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "saneyaml",
       "version": "0.6.1",
       "supplier": {
@@ -1253,13 +1328,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "21-pyyaml",
+=======
+      "bom-ref": "19-pyyaml",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "pyyaml",
       "version": "6.0.2",
       "supplier": {
@@ -1331,13 +1410,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "22-text-unidecode",
+=======
+      "bom-ref": "20-text-unidecode",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "text-unidecode",
       "version": "1.3",
       "supplier": {
@@ -1389,13 +1472,21 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "text-unidecode declares Artistic License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "23-plugincode",
+=======
+      "bom-ref": "21-plugincode",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "plugincode",
       "version": "32.0.0",
       "supplier": {
@@ -1447,13 +1538,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "24-pluggy",
+=======
+      "bom-ref": "22-pluggy",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "pluggy",
       "version": "1.5.0",
       "supplier": {
@@ -1505,15 +1600,21 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "25-lib4sbom",
       "name": "lib4sbom",
       "version": "0.8.2",
+=======
+      "bom-ref": "23-lib4sbom",
+      "name": "lib4sbom",
+      "version": "0.8.4",
+>>>>>>> origin/chore-sbom-py3.12
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1522,12 +1623,20 @@
           }
         ]
       },
+<<<<<<< HEAD
       "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.2:*:*:*:*:*:*:*",
+=======
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.4:*:*:*:*:*:*:*",
+>>>>>>> origin/chore-sbom-py3.12
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "hashes": [
         {
           "alg": "SHA-256",
+<<<<<<< HEAD
           "content": "a46338154d7daf701f960a49495468f3722ae1845baf88f848c668f79519da8f"
+=======
+          "content": "380d123426348ece43cae8976b49e6ebc4e85bccd6db02dc394a2fa97cf6776c"
+>>>>>>> origin/chore-sbom-py3.12
         }
       ],
       "licenses": [
@@ -1546,16 +1655,28 @@
           "comment": "Home page for project"
         },
         {
+<<<<<<< HEAD
           "url": "https://pypi.org/project/lib4sbom/0.8.2/#files",
+=======
+          "url": "https://pypi.org/project/lib4sbom/0.8.4/#files",
+>>>>>>> origin/chore-sbom-py3.12
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
+<<<<<<< HEAD
       "purl": "pkg:pypi/lib4sbom@0.8.2",
       "properties": [
         {
           "name": "release_date",
           "value": "2025-03-03T21:24:16Z"
+=======
+      "purl": "pkg:pypi/lib4sbom@0.8.4",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2025-04-21T18:38:06Z"
+>>>>>>> origin/chore-sbom-py3.12
         },
         {
           "name": "language",
@@ -1563,13 +1684,17 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "26-semantic-version",
+=======
+      "bom-ref": "24-semantic-version",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "semantic-version",
       "version": "2.10.0",
       "supplier": {
@@ -1621,13 +1746,21 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "semantic-version declares BSD which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "27-defusedxml",
+=======
+      "bom-ref": "25-defusedxml",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "defusedxml",
       "version": "0.7.1",
       "supplier": {
@@ -1679,30 +1812,33 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
+        },
+        {
+          "name": "License Comments",
+          "value": "defusedxml declares PSFL which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
     {
       "type": "library",
+<<<<<<< HEAD
       "bom-ref": "28-tantivy",
+=======
+      "bom-ref": "26-tantivy",
+>>>>>>> origin/chore-sbom-py3.12
       "name": "tantivy",
-      "version": "0.22.0",
+      "version": "0.24.0",
       "supplier": {
-        "name": "Damir Jelic Damir Jelic",
+        "name": "Damir Jelic Damir Jelic Caleb Hattingh Cam Parry",
         "contact": [
           {
-            "email": "poljar@termina.org.uk"
+            "email": "cam.parry@kapiche.com"
           }
         ]
       },
-      "cpe": "cpe:2.3:a:damir_jelic_damir_jelic:tantivy:0.22.0:*:*:*:*:*:*:*",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "732ec74c4dd531253af4c14756b7650527f22c7fab244e83b42d76a0a1437219"
-        }
-      ],
+      "cpe": "cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh_cam_parry:tantivy:0.24.0:*:*:*:*:*:*:*",
+      "description": "Official Python bindings for the Tantivy search engine",
       "licenses": [
         {
           "license": {
@@ -1714,16 +1850,16 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/tantivy/0.22.0/#files",
+          "url": "https://pypi.org/project/tantivy/0.24.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/tantivy@0.22.0",
+      "purl": "pkg:pypi/tantivy@0.24.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-05-05T14:11:29Z"
+          "value": "2021-03-08T10:59:24Z"
         },
         {
           "name": "language",
@@ -1731,7 +1867,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.9"
+          "value": "3.12.10"
         }
       ]
     }
@@ -1749,8 +1885,13 @@
         "2-pyelftools",
         "3-typecode-libmagic-system-provided",
         "4-typecode",
+<<<<<<< HEAD
         "25-lib4sbom",
         "28-tantivy"
+=======
+        "23-lib4sbom",
+        "26-tantivy"
+>>>>>>> origin/chore-sbom-py3.12
       ]
     },
     {
@@ -1759,7 +1900,11 @@
         "5-attrs",
         "6-binaryornot",
         "8-commoncode",
+<<<<<<< HEAD
         "23-plugincode"
+=======
+        "21-plugincode"
+>>>>>>> origin/chore-sbom-py3.12
       ]
     },
     {
@@ -1774,9 +1919,15 @@
         "5-attrs",
         "9-beautifulsoup4",
         "12-click",
+<<<<<<< HEAD
         "15-requests",
         "20-saneyaml",
         "22-text-unidecode"
+=======
+        "13-requests",
+        "18-saneyaml",
+        "20-text-unidecode"
+>>>>>>> origin/chore-sbom-py3.12
       ]
     },
     {
@@ -1787,6 +1938,7 @@
       ]
     },
     {
+<<<<<<< HEAD
       "ref": "12-click",
       "dependsOn": [
         "13-importlib-metadata"
@@ -1828,6 +1980,36 @@
         "21-pyyaml",
         "26-semantic-version",
         "27-defusedxml"
+=======
+      "ref": "13-requests",
+      "dependsOn": [
+        "14-charset-normalizer",
+        "15-idna",
+        "16-urllib3",
+        "17-certifi"
+      ]
+    },
+    {
+      "ref": "18-saneyaml",
+      "dependsOn": [
+        "19-pyyaml"
+      ]
+    },
+    {
+      "ref": "21-plugincode",
+      "dependsOn": [
+        "12-click",
+        "8-commoncode",
+        "22-pluggy"
+      ]
+    },
+    {
+      "ref": "23-lib4sbom",
+      "dependsOn": [
+        "19-pyyaml",
+        "24-semantic-version",
+        "25-defusedxml"
+>>>>>>> origin/chore-sbom-py3.12
       ]
     }
   ]
