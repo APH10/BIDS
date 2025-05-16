@@ -21,12 +21,12 @@ jobs:
         python: ['3.9', '3.10', '3.11', '3.12', '3.13']
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c # v2.9.0
+        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
         with:
           egress-policy: audit
 
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5.1.1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: ${{ matrix.python }}
           cache: 'pip'
@@ -61,7 +61,7 @@ jobs:
           cp bids-py${{ matrix.python }}.json sbom/bids-py${{ matrix.python }}.json
       - name: Create Pull Request
         if: ${{ steps.diff-sbom.outputs.changed }}
-        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
+        uses: peter-evans/create-pull-request@67ccf781d68cd99b580ae25a5c18a1cc84ffff1f # v7.0.6
         with:
           commit-message: "chore: update SBOM for Python ${{ matrix.python }}"
           title: "chore: update SBOM for Python ${{ matrix.python }}"
