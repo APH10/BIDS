@@ -166,6 +166,7 @@ cython_debug/
 
 report/
 samples/
-# For testing
-
+# For testing - don't save
+test/test_assets/index
+# For testing - allow files
 !test/test_assets/*.so
