@@ -7,10 +7,10 @@ import sys
 import textwrap
 from collections import ChainMap
 
+import bids.util as util
 from bids.analyser import BIDSAnalyser
 from bids.output import BIDSOutput
 from bids.version import VERSION
-import bids.util as util
 
 # CLI processing
 
@@ -134,12 +134,12 @@ def main(argv=None):
         "dependency": args["exclude_dependency"],
         "symbol": args["exclude_symbol"],
         "callgraph": args["exclude_callgraph"],
-        "detect_version": args["detect_version"]
+        "detect_version": args["detect_version"],
     }
 
     # Wanr if no sandbox detected when detecting component versions
     if args["detect_version"] and util.check_sandbox() is None:
-            print ("[WARNING] Sandbox not available.")
+        print("[WARNING] Sandbox not available.")
 
     analyser = BIDSAnalyser(
         options, description=args["description"], debug=args["debug"]
@@ -155,7 +155,10 @@ def main(argv=None):
 
         # Create report
         output = BIDSOutput(
-            tool_version=VERSION, cache=cache, library_path=args["library_path"], detect_version = args["detect_version"]
+            tool_version=VERSION,
+            cache=cache,
+            library_path=args["library_path"],
+            detect_version=args["detect_version"],
         )
         output.create_metadata(analyser.get_file_data())
         output.create_components(

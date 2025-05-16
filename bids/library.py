@@ -2,15 +2,15 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import os
-from pathlib import Path
 import shutil
+from pathlib import Path
 
 import bids.util as util
 
 
 class DynamicLibrary:
 
-    def __init__(self, cache=None, library_path="", detect_version = False):
+    def __init__(self, cache=None, library_path="", detect_version=False):
         self.lib_details = {}
         self.cache = cache
         self._load_cache(self.cache)

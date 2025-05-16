@@ -165,7 +165,9 @@ class BIDSElf:
                         if self.debug:
                             print(version, symbol.name)
                         try:
-                            if version["name"] != symbol.name and version["index"] not in (
+                            if version["name"] != symbol.name and version[
+                                "index"
+                            ] not in (
                                 "VER_NDX_LOCAL",
                                 "VER_NDX_GLOBAL",
                             ):
@@ -174,7 +176,11 @@ class BIDSElf:
                                     # external symbol consists of a name
                                     # e.g. GLIBC_2.9 and a filename e.g. libc.so.6
                                     global_symbols.append(
-                                        [version["filename"], version["name"], symbol.name]
+                                        [
+                                            version["filename"],
+                                            version["name"],
+                                            symbol.name,
+                                        ]
                                     )
                                 else:
                                     local_symbols.append(symbol.name)
@@ -183,7 +189,7 @@ class BIDSElf:
                                     local_symbols.append(symbol.name)
                         except TypeError:
                             if self.debug:
-                                print ("TypeError - Unable to process symbols")
+                                print("TypeError - Unable to process symbols")
                             return None
                     elif self.debug:
                         print(

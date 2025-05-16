@@ -33,10 +33,12 @@ def calculate_checksum(filename):
         checksum["sha3-512"] = hashlib.sha3_512(contents).hexdigest()
     return checksum
 
+
 def check_sandbox():
     # Check that sandbox exists
     sandbox = os.getenv("BIDS_SANDBOX") or "firejail"
     return shutil.which(sandbox) if sandbox is not None else None
+
 
 def run_process(command):
     sandbox_path = check_sandbox()

@@ -49,7 +49,12 @@ class _OutputManager:
 class BIDSOutput:
 
     def __init__(
-        self, tool="bids_generator", tool_version="1.0", cache=None, library_path="", detect_version = False
+        self,
+        tool="bids_generator",
+        tool_version="1.0",
+        cache=None,
+        library_path="",
+        detect_version=False,
     ):
         self.bids_document = {}
         self.tool = tool

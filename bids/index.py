@@ -6,8 +6,8 @@
 import json
 import os
 import shutil
-from pathlib import Path
 import zipfile
+from pathlib import Path
 
 import tantivy
 
@@ -164,7 +164,7 @@ class BIDSIndexer:
 
     def _is_zip_file(self, file_path):
         try:
-            with zipfile.ZipFile(file_path, 'r') as zip_ref:
+            with zipfile.ZipFile(file_path, "r") as _:
                 return True
         except zipfile.BadZipFile:
             return False
