@@ -7,6 +7,7 @@ import json
 import os
 import shutil
 from pathlib import Path
+import zipfile
 
 import tantivy
 
@@ -161,12 +162,21 @@ class BIDSIndexer:
         self.create_schema()
         self.initialise_index()
 
+    def _is_zip_file(self, file_path):
+        try:
+            with zipfile.ZipFile(file_path, 'r') as zip_ref:
+                return True
+        except zipfile.BadZipFile:
+            return False
+        except FileNotFoundError:
+            return False
+
     def import_data(self, filename):
         # Extract data into index
         if self.debug:
             print(f"Import file {filename}")
         # Check file exists
-        if Path(filename).exists():
+        if Path(filename).exists() and self._is_zip_file(filename):
             # Remove existing data
             self.reinitialise_index()
             shutil.unpack_archive(filename, self.index_path, "zip")

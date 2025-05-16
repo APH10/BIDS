@@ -61,6 +61,22 @@ class TestIndex:
         # Check if the index has been reset
         assert "bids_index" in str(index_file.get_index_path())
 
+    def test_import_data(self):
+        # Create an inded
+        index_file = BIDSIndexer()
+        # Check not valid ZIP file
+        file_path = f"{self.TEST_PATH}/test_assets/hello.json"
+        index_file.import_data(file_path)
+        assert index_file.import_data(file_path) == False
+        # Check missing file
+        file_path = f"{self.TEST_PATH}/test_assets/missing_file"
+        index_file.import_data(file_path)
+        assert index_file.import_data(file_path) == False
+        # Check not a zip
+        file_path = f"{self.TEST_PATH}/test_assets/hello.zip"
+        index_file.import_data(file_path)
+        assert index_file.import_data(file_path) == False
+
 
 
 
