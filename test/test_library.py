@@ -5,6 +5,8 @@
 BIDS Library tests
 """
 from pathlib import Path
+import pytest
+import shutil
 
 from bids.library import DynamicLibrary
 
@@ -66,6 +68,7 @@ class TestLibrary:
         library_details = lib.version(["libc.so.6"])
         assert library_details is None
 
+    @pytest.mark.skipif(shutil.which("firejail") is None, reason="Requires sandbox")
     def test_detect_version(self):
         lib = DynamicLibrary(detect_version=True)
         library_details = lib.version(["libc.so.6"])

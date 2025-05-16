@@ -5,6 +5,8 @@
 BIDS Analyser tests
 """
 from pathlib import Path
+import pytest
+import shutil
 
 from bids.analyser import BIDSAnalyser
 
@@ -63,6 +65,7 @@ class TestAnalyser:
         data = analyser_test.get_file_data()
         assert data.get("version") is None
 
+    @pytest.mark.skipif(shutil.which("firejail") is None, reason="Requires sandbox")
     def test_detect_version(self):
         filename = f"{self.TEST_PATH}/test_assets/libflutter_linux_gtk.so"
         analyser_test = BIDSAnalyser(options={"detect_version": True})
