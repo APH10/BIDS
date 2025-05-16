@@ -117,3 +117,27 @@ class TestOutput:
         assert "callgraph" in captured.out
         assert "relationships" in captured.out
 
+    def test_output_with_version_disabled(self, capsys):
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE, detect_version=False)
+        output_test.create_metadata({"test": "data"})
+        output_test.create_components([], [], [])
+        output_test.generate_output(filename="")
+        captured = capsys.readouterr()
+        # Check top level components
+        assert "metadata" in captured.out
+        assert "components" in captured.out
+        assert "callgraph" in captured.out
+        assert "relationships" in captured.out
+
+    def test_output_with_version_enabled(self, capsys):
+        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE, detect_version=True)
+        output_test.create_metadata({"test": "data"})
+        output_test.create_components([], [], [])
+        output_test.generate_output(filename="")
+        captured = capsys.readouterr()
+        # Check top level components
+        assert "metadata" in captured.out
+        assert "components" in captured.out
+        assert "callgraph" in captured.out
+        assert "relationships" in captured.out
+

@@ -5,8 +5,10 @@
 BIDS CLI tests
 """
 from pathlib import Path
-
+import os
 import pytest
+
+from unittest import mock
 
 from bids.cli import main
 
@@ -128,7 +130,7 @@ class TestCLI:
                 ]
             )
         assert e.value.args[0] == 0
-        # Expect one paranter
+        # Expect one parameter
         with pytest.raises(SystemExit) as e:
             main(
                 [
@@ -154,3 +156,49 @@ class TestCLI:
                 ]
             )
         assert e.value.args[0] == 0
+
+    @mock.patch.dict(os.environ, {"BIDS_CACHE": f"{TEST_PATH}/test_assets/cache"})
+    def test_cache(self):
+        """Test cache """
+        test_file = f"{self.TEST_PATH}/test_assets/hello"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file
+                ]
+            )
+        assert e.value.args[0] == 0
+    def test_detect_version_command(self):
+        """Test detect-version command"""
+        test_file = f"{self.TEST_PATH}/test_assets/hello"
+        test_path = f"{self.TEST_PATH}/test_assets"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--detect-version",
+                ]
+            )
+        assert e.value.args[0] == 0
+
+    @mock.patch.dict(os.environ, {"BIDS_SANDBOX": "/tmp/missing_file"})
+    def test_missing_sandbox(self, capsys):
+        """Test detect-version command"""
+        test_file = f"{self.TEST_PATH}/test_assets/hello"
+        test_path = f"{self.TEST_PATH}/test_assets"
+        with pytest.raises(SystemExit) as e:
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--file",
+                    test_file,
+                    "--detect-version",
+                ]
+            )
+        assert e.value.args[0] == 0
+        captured = capsys.readouterr()
+        assert "[WARNING] Sandbox not available." in captured.out

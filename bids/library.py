@@ -10,11 +10,12 @@ import bids.util as util
 
 class DynamicLibrary:
 
-    def __init__(self, cache=None, library_path=""):
+    def __init__(self, cache=None, library_path="", detect_version = False):
         self.lib_details = {}
         self.cache = cache
         self._load_cache(self.cache)
         self.library_path = library_path
+        self.detect_version = detect_version
 
     def get_library(self, library):
         # Return details of a dynamic library
@@ -82,7 +83,7 @@ class DynamicLibrary:
     def version(self, library):
         if library is None:
             return None
-        if self.cache is None:
+        if self.detect_version and self.cache is None:
             return util.get_version(library)
         # No version if cache used
         return None

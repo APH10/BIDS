@@ -49,12 +49,12 @@ class _OutputManager:
 class BIDSOutput:
 
     def __init__(
-        self, tool="bids_generator", tool_version="1.0", cache=None, library_path=""
+        self, tool="bids_generator", tool_version="1.0", cache=None, library_path="", detect_version = False
     ):
         self.bids_document = {}
         self.tool = tool
         self.tool_version = tool_version
-        self.dl = DynamicLibrary(cache, library_path)
+        self.dl = DynamicLibrary(cache, library_path, detect_version)
 
     def generateTime(self):
         # Generate data/time label in format YYYY-MM-DDThh:mm:ssZ

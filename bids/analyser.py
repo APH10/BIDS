@@ -53,10 +53,11 @@ class BIDSAnalyser:
         self.application["checksum"] = checksum
         if len(self.description) > 0:
             self.application["description"] = self.description
-        # Try to find version
-        app_version = util.get_version([self.filename, "--version"])
-        if app_version is not None:
-            self.application["version"] = app_version
+        if self.options.get("detect_version", False):
+            # Try to find version
+            app_version = util.get_version([self.filename, "--version"])
+            if app_version is not None:
+                self.application["version"] = app_version
 
     def analyse(self, filename):
         self.check_file(filename)

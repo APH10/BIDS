@@ -48,3 +48,24 @@ class TestAnalyser:
         analyser_test.analyse(filename)
         data = analyser_test.get_header()
         assert len(data) > 0
+
+    def test_version(self):
+        filename = f"{self.TEST_PATH}/test_assets/hello"
+        analyser_test = BIDSAnalyser()
+        analyser_test.analyse(filename)
+        data = analyser_test.get_header()
+        assert len(data) > 0
+
+    def test_detect_version_disabled(self):
+        filename = f"{self.TEST_PATH}/test_assets/hello"
+        analyser_test = BIDSAnalyser(options={"detect_version": False})
+        analyser_test.analyse(filename)
+        data = analyser_test.get_file_data()
+        assert data.get("version") is None
+
+    def test_detect_version(self):
+        filename = f"{self.TEST_PATH}/test_assets/libflutter_linux_gtk.so"
+        analyser_test = BIDSAnalyser(options={"detect_version": True})
+        analyser_test.analyse(filename)
+        data = analyser_test.get_file_data()
+        assert data.get("version") is not None

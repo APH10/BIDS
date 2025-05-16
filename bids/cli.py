@@ -10,6 +10,7 @@ from collections import ChainMap
 from bids.analyser import BIDSAnalyser
 from bids.output import BIDSOutput
 from bids.version import VERSION
+import bids.util as util
 
 # CLI processing
 
@@ -64,6 +65,12 @@ def main(argv=None):
         default=False,
         help="suppress reporting of call graph",
     )
+    input_group.add_argument(
+        "--detect-version",
+        action="store_true",
+        default=False,
+        help="detect version of component",
+    )
 
     output_group = parser.add_argument_group("Output")
     output_group.add_argument(
@@ -90,6 +97,7 @@ def main(argv=None):
         "exclude_dependency": False,
         "exclude_symbol": False,
         "exclude_callgraph": False,
+        "detect_version": False,
         "output_file": "",
         "debug": False,
     }
@@ -113,6 +121,7 @@ def main(argv=None):
         print("Exclude Dependencies:", args["exclude_dependency"])
         print("Exclude Symbols:", args["exclude_symbol"])
         print("Exclude Call Graph:", args["exclude_callgraph"])
+        print("Detect Version:", args["detect_version"])
         print("Output file:", args["output_file"])
 
     # Use cache if provided in environment variable
@@ -125,7 +134,13 @@ def main(argv=None):
         "dependency": args["exclude_dependency"],
         "symbol": args["exclude_symbol"],
         "callgraph": args["exclude_callgraph"],
+        "detect_version": args["detect_version"]
     }
+
+    # Wanr if no sandbox detected when detecting component versions
+    if args["detect_version"] and util.check_sandbox() is None:
+            print ("[WARNING] Sandbox not available.")
+
     analyser = BIDSAnalyser(
         options, description=args["description"], debug=args["debug"]
     )
@@ -140,7 +155,7 @@ def main(argv=None):
 
         # Create report
         output = BIDSOutput(
-            tool_version=VERSION, cache=cache, library_path=args["library_path"]
+            tool_version=VERSION, cache=cache, library_path=args["library_path"], detect_version = args["detect_version"]
         )
         output.create_metadata(analyser.get_file_data())
         output.create_components(

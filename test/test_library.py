@@ -42,7 +42,12 @@ class TestLibrary:
 
     def test_get_version(self):
         lib = DynamicLibrary(cache=self.CACHE_FILE)
-        library_details = lib.version("libc.so.6")
+        library_details = lib.version(["libc.so.6"])
+        assert library_details is None
+
+    def test_get_version_null_library(self):
+        lib = DynamicLibrary(cache=self.CACHE_FILE)
+        library_details = lib.version(None)
         assert library_details is None
 
     def test_show(self, capsys):
@@ -51,4 +56,18 @@ class TestLibrary:
         captured = capsys.readouterr()
         assert "libc.so.6" in captured.out
 
+    def test_no_detect_version(self):
+        lib = DynamicLibrary(cache=self.CACHE_FILE, detect_version=False)
+        library_details = lib.version(["libc.so.6"])
+        assert library_details is None
+
+    def test_detect_version_with_cache(self):
+        lib = DynamicLibrary(cache=self.CACHE_FILE, detect_version=True)
+        library_details = lib.version(["libc.so.6"])
+        assert library_details is None
+
+    def test_detect_version(self):
+        lib = DynamicLibrary(detect_version=True)
+        library_details = lib.version(["libc.so.6"])
+        assert library_details is not None
 

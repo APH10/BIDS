@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import hashlib
+import os
+import shutil
 import subprocess
 import time
 from pathlib import Path
@@ -31,10 +33,20 @@ def calculate_checksum(filename):
         checksum["sha3-512"] = hashlib.sha3_512(contents).hexdigest()
     return checksum
 
+def check_sandbox():
+    # Check that sandbox exists
+    sandbox = os.getenv("BIDS_SANDBOX") or "firejail"
+    return shutil.which(sandbox) if sandbox is not None else None
 
 def run_process(command):
+    sandbox_path = check_sandbox()
+    # Use sandbox if available
+    if sandbox_path:
+        run_command = [sandbox_path] + command
+    else:
+        run_command = command
     return subprocess.run(
-        command,
+        run_command,
         capture_output=True,
         text=True,
         timeout=COMMAND_TIMEOUT,
