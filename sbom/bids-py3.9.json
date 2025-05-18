@@ -2,17 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-<<<<<<< HEAD
-  "serialNumber": "urn:uuid:27de3bfd-090a-4a9c-8f67-e4d68a0f3fd0",
+  "serialNumber": "urn:uuid:0d80cdd5-10e2-4dd2-92ff-2c7c5cc93338",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-03-16T02:02:59Z",
-=======
-  "serialNumber": "urn:uuid:c001f232-5285-4c0d-9609-d8ac9089709b",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-05-11T02:17:55Z",
->>>>>>> origin/chore-sbom-py3.9
+    "timestamp": "2025-05-18T02:19:09Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -38,7 +31,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -47,14 +40,8 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -71,17 +58,13 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.2.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.2.0",
+      "purl": "pkg:pypi/bids-analyser@0.3.0",
       "properties": [
-        {
-          "name": "release_date",
-          "value": "2025-02-24T09:06:43Z"
-        },
         {
           "name": "language",
           "value": "Python"
@@ -557,15 +540,6 @@
           }
         }
       ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
       "externalReferences": [
         {
           "url": "https://github.com/facelessuser/soupsieve",
@@ -617,15 +591,6 @@
         {
           "alg": "SHA-256",
           "content": "a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "PSF-2.0",
-            "url": "https://opensource.org/licenses/Python-2.0",
-            "acknowledgement": "concluded"
-          }
         }
       ],
       "externalReferences": [
@@ -763,15 +728,6 @@
         {
           "alg": "SHA-256",
           "content": "e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "url": "https://www.apache.org/licenses/LICENSE-2.0",
-            "acknowledgement": "concluded"
-          }
         }
       ],
       "licenses": [
@@ -1098,15 +1054,6 @@
         {
           "alg": "SHA-256",
           "content": "4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
         }
       ],
       "externalReferences": [
@@ -1470,7 +1417,7 @@
       "type": "library",
       "bom-ref": "23-pluggy",
       "name": "pluggy",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "supplier": {
         "name": "Holger Krekel",
         "contact": [
@@ -1479,12 +1426,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:holger_krekel:pluggy:1.5.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:holger_krekel:pluggy:1.6.0:*:*:*:*:*:*:*",
       "description": "plugin and hook calling mechanisms for python",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669"
+          "content": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
         }
       ],
       "licenses": [
@@ -1498,21 +1445,16 @@
       ],
       "externalReferences": [
         {
-          "url": "https://github.com/pytest-dev/pluggy",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/pluggy/1.5.0/#files",
+          "url": "https://pypi.org/project/pluggy/1.6.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pluggy@1.5.0",
+      "purl": "pkg:pypi/pluggy@1.6.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-04-20T21:34:40Z"
+          "value": "2025-05-15T12:30:06Z"
         },
         {
           "name": "language",
@@ -1528,11 +1470,7 @@
       "type": "library",
       "bom-ref": "24-lib4sbom",
       "name": "lib4sbom",
-<<<<<<< HEAD
-      "version": "0.8.2",
-=======
       "version": "0.8.4",
->>>>>>> origin/chore-sbom-py3.9
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1541,20 +1479,12 @@
           }
         ]
       },
-<<<<<<< HEAD
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.2:*:*:*:*:*:*:*",
-=======
       "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.4:*:*:*:*:*:*:*",
->>>>>>> origin/chore-sbom-py3.9
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "hashes": [
         {
           "alg": "SHA-256",
-<<<<<<< HEAD
-          "content": "a46338154d7daf701f960a49495468f3722ae1845baf88f848c668f79519da8f"
-=======
           "content": "380d123426348ece43cae8976b49e6ebc4e85bccd6db02dc394a2fa97cf6776c"
->>>>>>> origin/chore-sbom-py3.9
         }
       ],
       "licenses": [
@@ -1573,28 +1503,16 @@
           "comment": "Home page for project"
         },
         {
-<<<<<<< HEAD
-          "url": "https://pypi.org/project/lib4sbom/0.8.2/#files",
-=======
           "url": "https://pypi.org/project/lib4sbom/0.8.4/#files",
->>>>>>> origin/chore-sbom-py3.9
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-<<<<<<< HEAD
-      "purl": "pkg:pypi/lib4sbom@0.8.2",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2025-03-03T21:24:16Z"
-=======
       "purl": "pkg:pypi/lib4sbom@0.8.4",
       "properties": [
         {
           "name": "release_date",
           "value": "2025-04-21T18:38:06Z"
->>>>>>> origin/chore-sbom-py3.9
         },
         {
           "name": "language",
@@ -1745,6 +1663,12 @@
       },
       "cpe": "cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh_cam_parry:tantivy:0.24.0:*:*:*:*:*:*:*",
       "description": "Official Python bindings for the Tantivy search engine",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1ebb01b1d54b9034d86b9ba73f395e99a4395df0ac375a3bc4c894895755e803"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1765,7 +1689,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2021-03-08T10:59:24Z"
+          "value": "2025-05-06T08:42:49Z"
         },
         {
           "name": "language",
