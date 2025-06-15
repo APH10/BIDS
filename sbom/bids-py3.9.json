@@ -2,17 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-<<<<<<< HEAD
-  "serialNumber": "urn:uuid:27de3bfd-090a-4a9c-8f67-e4d68a0f3fd0",
+  "serialNumber": "urn:uuid:dc03a92b-c5e9-4a1c-b20a-3795ef2ea591",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-03-16T02:02:59Z",
-=======
-  "serialNumber": "urn:uuid:c001f232-5285-4c0d-9609-d8ac9089709b",
-  "version": 1,
-  "metadata": {
-    "timestamp": "2025-05-11T02:17:55Z",
->>>>>>> origin/chore-sbom-py3.9
+    "timestamp": "2025-06-15T02:26:43Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -38,7 +31,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -47,14 +40,8 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.2.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.0:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "3d30a910eff8728bca7a32916d00268a163995e6daff37e0265f7699b60f9c23"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -71,24 +58,20 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.2.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.2.0",
+      "purl": "pkg:pypi/bids-analyser@0.3.0",
       "properties": [
-        {
-          "name": "release_date",
-          "value": "2025-02-24T09:06:43Z"
-        },
         {
           "name": "language",
           "value": "Python"
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -137,7 +120,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -199,7 +182,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -263,7 +246,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -321,7 +304,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -395,7 +378,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -407,7 +390,7 @@
       "type": "library",
       "bom-ref": "7-commoncode",
       "name": "commoncode",
-      "version": "32.2.1",
+      "version": "32.3.0",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -416,14 +399,8 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.2.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:commoncode:32.3.0:*:*:*:*:*:*:*",
       "description": "Set of common utilities, originally split from ScanCode",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "8b668a63f3f51901dceb0b123f492b1c45705dab23fb7999e296ca21613351e5"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -440,16 +417,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/commoncode/32.2.1/#files",
+          "url": "https://pypi.org/project/commoncode/32.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/commoncode@32.2.1",
+      "purl": "pkg:pypi/commoncode@32.3.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-03-06T13:51:38Z"
+          "value": "2023-08-01T19:23:00Z"
         },
         {
           "name": "language",
@@ -457,7 +434,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -519,7 +496,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -557,15 +534,6 @@
           }
         }
       ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
       "externalReferences": [
         {
           "url": "https://github.com/facelessuser/soupsieve",
@@ -590,7 +558,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -602,7 +570,7 @@
       "type": "library",
       "bom-ref": "10-typing-extensions",
       "name": "typing-extensions",
-      "version": "4.13.2",
+      "version": "4.14.0",
       "supplier": {
         "name": "Guido van Jukka ukasz Michael",
         "contact": [
@@ -611,21 +579,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-extensions:4.13.2:*:*:*:*:*:*:*",
-      "description": "Backported and Experimental Type Hints for Python 3.8+",
+      "cpe": "cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-extensions:4.14.0:*:*:*:*:*:*:*",
+      "description": "Backported and Experimental Type Hints for Python 3.9+",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "PSF-2.0",
-            "url": "https://opensource.org/licenses/Python-2.0",
-            "acknowledgement": "concluded"
-          }
+          "content": "a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af"
         }
       ],
       "externalReferences": [
@@ -635,7 +594,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/typing-extensions/4.13.2/#files",
+          "url": "https://pypi.org/project/typing-extensions/4.14.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -660,11 +619,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/typing-extensions@4.13.2",
+      "purl": "pkg:pypi/typing-extensions@4.14.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-04-10T14:19:03Z"
+          "value": "2025-06-02T14:52:10Z"
         },
         {
           "name": "language",
@@ -672,7 +631,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -736,7 +695,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -774,15 +733,6 @@
           }
         }
       ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0",
-            "url": "https://www.apache.org/licenses/LICENSE-2.0",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
       "externalReferences": [
         {
           "url": "https://pypi.org/project/importlib-metadata/8.7.0/#files",
@@ -806,7 +756,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -818,7 +768,7 @@
       "type": "library",
       "bom-ref": "13-zipp",
       "name": "zipp",
-      "version": "3.21.0",
+      "version": "3.23.0",
       "supplier": {
         "name": "Jason R .",
         "contact": [
@@ -827,26 +777,17 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:jason_r.:zipp:3.21.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:jason_r.:zipp:3.23.0:*:*:*:*:*:*:*",
       "description": "Backport of pathlib-compatible object wrapper for zip files",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
+          "content": "071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/zipp/3.21.0/#files",
+          "url": "https://pypi.org/project/zipp/3.23.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -855,11 +796,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/zipp@3.21.0",
+      "purl": "pkg:pypi/zipp@3.23.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-11-10T15:05:19Z"
+          "value": "2025-06-08T17:06:38Z"
         },
         {
           "name": "language",
@@ -867,11 +808,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
-        },
-        {
-          "name": "License Comments",
-          "value": "zipp declares MIT License which is not currently a valid SPDX License identifier or expression."
+          "value": "3.9.23"
         }
       ]
     },
@@ -879,7 +816,7 @@
       "type": "library",
       "bom-ref": "14-requests",
       "name": "requests",
-      "version": "2.32.3",
+      "version": "2.32.4",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -888,12 +825,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.32.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.32.4:*:*:*:*:*:*:*",
       "description": "Python HTTP for Humans.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
+          "content": "27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c"
         }
       ],
       "licenses": [
@@ -912,7 +849,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/requests/2.32.3/#files",
+          "url": "https://pypi.org/project/requests/2.32.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -925,11 +862,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/requests@2.32.3",
+      "purl": "pkg:pypi/requests@2.32.4",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-05-29T15:37:47Z"
+          "value": "2025-06-09T16:43:05Z"
         },
         {
           "name": "language",
@@ -937,7 +874,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1006,7 +943,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1071,7 +1008,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -1098,15 +1035,6 @@
         {
           "alg": "SHA-256",
           "content": "4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
         }
       ],
       "externalReferences": [
@@ -1144,7 +1072,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1206,7 +1134,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1264,7 +1192,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1342,7 +1270,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1400,7 +1328,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -1462,7 +1390,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1470,7 +1398,7 @@
       "type": "library",
       "bom-ref": "23-pluggy",
       "name": "pluggy",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "supplier": {
         "name": "Holger Krekel",
         "contact": [
@@ -1479,12 +1407,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:holger_krekel:pluggy:1.5.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:holger_krekel:pluggy:1.6.0:*:*:*:*:*:*:*",
       "description": "plugin and hook calling mechanisms for python",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669"
+          "content": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
         }
       ],
       "licenses": [
@@ -1498,21 +1426,16 @@
       ],
       "externalReferences": [
         {
-          "url": "https://github.com/pytest-dev/pluggy",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/pluggy/1.5.0/#files",
+          "url": "https://pypi.org/project/pluggy/1.6.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/pluggy@1.5.0",
+      "purl": "pkg:pypi/pluggy@1.6.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-04-20T21:34:40Z"
+          "value": "2025-05-15T12:30:06Z"
         },
         {
           "name": "language",
@@ -1520,7 +1443,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1528,11 +1451,7 @@
       "type": "library",
       "bom-ref": "24-lib4sbom",
       "name": "lib4sbom",
-<<<<<<< HEAD
-      "version": "0.8.2",
-=======
       "version": "0.8.4",
->>>>>>> origin/chore-sbom-py3.9
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1541,20 +1460,12 @@
           }
         ]
       },
-<<<<<<< HEAD
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.2:*:*:*:*:*:*:*",
-=======
       "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.8.4:*:*:*:*:*:*:*",
->>>>>>> origin/chore-sbom-py3.9
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "hashes": [
         {
           "alg": "SHA-256",
-<<<<<<< HEAD
-          "content": "a46338154d7daf701f960a49495468f3722ae1845baf88f848c668f79519da8f"
-=======
           "content": "380d123426348ece43cae8976b49e6ebc4e85bccd6db02dc394a2fa97cf6776c"
->>>>>>> origin/chore-sbom-py3.9
         }
       ],
       "licenses": [
@@ -1573,28 +1484,16 @@
           "comment": "Home page for project"
         },
         {
-<<<<<<< HEAD
-          "url": "https://pypi.org/project/lib4sbom/0.8.2/#files",
-=======
           "url": "https://pypi.org/project/lib4sbom/0.8.4/#files",
->>>>>>> origin/chore-sbom-py3.9
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-<<<<<<< HEAD
-      "purl": "pkg:pypi/lib4sbom@0.8.2",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2025-03-03T21:24:16Z"
-=======
       "purl": "pkg:pypi/lib4sbom@0.8.4",
       "properties": [
         {
           "name": "release_date",
           "value": "2025-04-21T18:38:06Z"
->>>>>>> origin/chore-sbom-py3.9
         },
         {
           "name": "language",
@@ -1602,7 +1501,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     },
@@ -1660,7 +1559,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -1722,7 +1621,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         },
         {
           "name": "License Comments",
@@ -1745,6 +1644,12 @@
       },
       "cpe": "cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh_cam_parry:tantivy:0.24.0:*:*:*:*:*:*:*",
       "description": "Official Python bindings for the Tantivy search engine",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1ebb01b1d54b9034d86b9ba73f395e99a4395df0ac375a3bc4c894895755e803"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1765,7 +1670,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2021-03-08T10:59:24Z"
+          "value": "2025-05-06T08:42:49Z"
         },
         {
           "name": "language",
@@ -1773,7 +1678,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.9.22"
+          "value": "3.9.23"
         }
       ]
     }
