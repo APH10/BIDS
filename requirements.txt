@@ -6,3 +6,4 @@ typecode; python_version >= "3.10"
 typecode[full]; python_version < "3.10"
 lib4sbom
 tantivy
+textual

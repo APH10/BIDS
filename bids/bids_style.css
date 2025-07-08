@@ -1,0 +1,80 @@
+/* bids_style.css */
+
+Screen {
+    layout: vertical;
+}
+
+MainScreen > Container {
+    layout: horizontal;
+    height: 1fr;
+}
+
+#tree-view {
+    width: 60%;
+    height: 100%;
+    border: solid $accent;
+}
+
+#actions-pane {
+    width: 40%;
+    padding: 0 1;
+    border: solid $accent;
+}
+
+#selected-label {
+    padding: 1;
+    width: 100%;
+    background: $boost;
+    text-align: center;
+    margin-bottom: 1;
+}
+
+Button {
+    width: 100%;
+    margin: 1 0;
+}
+
+/* Styles for new SBOM Screen */
+#sbom_options_container {
+    width: 80%;
+    max-width: 60;
+    height: auto;
+    background: $surface;
+    padding: 1 2;
+    border: thick $primary;
+    align: center middle;
+}
+
+.label {
+    margin-top: 1;
+}
+
+.action_buttons {
+    margin-top: 1;
+    align: center middle;
+    width: 100%;
+}
+
+.action_buttons Button {
+    margin: 0 1;
+}
+
+/* Styles for new Display Screen */
+#display_container {
+    width: 90%;
+    height: 90%;
+    background: $surface;
+    border: thick $primary;
+    padding: 1;
+    overflow-y: scroll;
+}
+
+#display_content {
+    height: auto;
+    width: auto;
+}
+
+#close_button {
+    margin-top: 1;
+    width: 100%;
+}
