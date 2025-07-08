@@ -104,10 +104,16 @@ def main(argv=None):
         sys.exit(1)
 
     # Generate SBOM
-    _ = create_sbom(sbom_type = args["sbom"], sbom_format = args["format"], packages = sbom_packages, relationships = sbom_relationships, output_file = args["output_file"])
-
+    _ = create_sbom(
+        sbom_type=args["sbom"],
+        sbom_format=args["format"],
+        packages=sbom_packages,
+        relationships=sbom_relationships,
+        output_file=args["output_file"],
+    )
 
     sys.exit(0)
+
 
 def create_sbom(sbom_type, sbom_format, packages, relationships, output_file):
     # Generate SBOM
@@ -131,6 +137,7 @@ def create_sbom(sbom_type, sbom_format, packages, relationships, output_file):
         filename=output_file,
     )
     return bids_sbom.get_sbom()
+
 
 def process_file(bids_file, appname):
     # Check file exists
