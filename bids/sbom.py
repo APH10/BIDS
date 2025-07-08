@@ -95,7 +95,7 @@ def main(argv=None):
 
     if len(args["input"]) > 0:
         try:
-            sbom_packages, sbom_relationships = create_sbom(args["input"], "binary")
+            sbom_packages, sbom_relationships = process_file(args["input"], "binary")
         except FileNotFoundError:
             print(f"[ERROR] {args['input']} not found.")
             sys.exit(1)
@@ -104,30 +104,35 @@ def main(argv=None):
         sys.exit(1)
 
     # Generate SBOM
+    _ = create_sbom(sbom_type = args["sbom"], sbom_format = args["format"], packages = sbom_packages, relationships = sbom_relationships, output_file = args["output_file"])
+
+
+    sys.exit(0)
+
+def create_sbom(sbom_type, sbom_format, packages, relationships, output_file):
+    # Generate SBOM
     bids_sbom = SBOM()
-    bids_sbom.set_type(sbom_type=args["sbom"])
+    bids_sbom.set_type(sbom_type)
     bids_doc = SBOMDocument()
     bids_doc.set_value("lifecycle", "build")
     bids_sbom.add_document(bids_doc.get_document())
-    bids_sbom.add_packages(sbom_packages)
-    bids_sbom.add_relationships(sbom_relationships)
+    bids_sbom.add_packages(packages)
+    bids_sbom.add_relationships(relationships)
     sbom_generator = SBOMGenerator(
         False,
-        sbom_type=args["sbom"],
-        format=args["format"],
-        application=app_name,
+        sbom_type,
+        sbom_format,
+        application="sbom4bids",
         version=VERSION,
     )
     sbom_generator.generate(
         project_name="BIDS_Application",
         sbom_data=bids_sbom.get_sbom(),
-        filename=args["output_file"],
+        filename=output_file,
     )
+    return bids_sbom.get_sbom()
 
-    sys.exit(0)
-
-
-def create_sbom(bids_file, appname):
+def process_file(bids_file, appname):
     # Check file exists
     invalid_file = True
     if len(bids_file) > 0:
