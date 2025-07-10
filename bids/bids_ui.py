@@ -23,6 +23,9 @@ from textual.widgets import (
 )
 
 import bids.sbom
+from bids.analyser import BIDSAnalyser
+from bids.index import BIDSIndexer
+from bids.output import BIDSOutput
 
 # --- Data for Dynamic Forms ---
 SPDX_FORMATS = [("JSON", "json"), ("Tag-Value", "tag"), ("YAML", "yaml")]
@@ -60,41 +63,6 @@ class DisplayScreen(ModalScreen):
 
 class SaveAsScreen(ModalScreen[Path]):  # ModalScreen[Path] indicates it returns a Path
     """A modal screen to allow the user to select a directory and filename for saving."""
-
-    DEFAULT_CSS = """
-    SaveAsScreen {
-        align: center middle;
-    }
-    #save_as_dialog {
-        width: 80%;
-        height: 80%;
-        background: $panel;
-        border: thick $accent;
-        padding: 2;
-    }
-    #save_as_dialog DirectoryTree {
-        border: round $surface-darken-1;
-        margin-bottom: 1;
-        height: 1fr; /* Takes up available vertical space */
-    }
-    #filename_input_container {
-        height: auto;
-    }
-    #filename_input_container Label {
-        width: auto;
-        margin-right: 1;
-    }
-
-    #save_as_buttons {
-        height: auto;
-        margin-top: 1;
-        align-horizontal: center;
-    }
-    #save_as_buttons Button {
-        margin-left: 1;
-        margin-right: 1;
-    }
-    """
 
     def __init__(
         self,
@@ -268,36 +236,6 @@ class SbomScreen(ModalScreen):
 class AnalyseScreen(ModalScreen):
     """A modal screen for selecting analysis options."""
 
-    DEFAULT_CSS = """
-    AnalyseScreen {
-        align: center middle;
-    }
-    #analyse_options_container {
-        width: 70%;
-        height: auto;
-        max-height: 85%;
-        background: $panel;
-        border: thick $primary;
-        padding: 2;
-    }
-    #analyse_options_container Label {
-        margin-top: 1;
-        margin-bottom: 0;
-        color: $text-muted;
-    }
-    #analyse_options_container Input {
-        margin-bottom: 1;
-    }
-    #analyse_buttons {
-        margin-top: 2;
-        align-horizontal: center;
-    }
-    #analyse_buttons Button {
-        margin-left: 1;
-        margin-right: 1;
-    }
-    """
-
     def __init__(
         self,
         target_path: Path,
@@ -331,11 +269,9 @@ class AnalyseScreen(ModalScreen):
                 placeholder="Leave empty to display", id="output_filename_input"
             )
 
-            with Horizontal(id="analyse_buttons"):
-                yield Button(
-                    "Run Analysis", variant="primary", id="run_analysis_button"
-                )
-                yield Button("Cancel", id="cancel_button")
+            # with Horizontal(id="analyse_buttons"):
+            yield Button("Run Analysis", variant="primary", id="run_analysis_button")
+            yield Button("Cancel", id="cancel_button")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "run_analysis_button":
@@ -348,51 +284,45 @@ class AnalyseScreen(ModalScreen):
         library_paths_str = self.query_one("#library_path_input", Input).value.strip()
         output_filename = self.query_one("#output_filename_input", Input).value.strip()
 
-        library_paths = [
-            Path(p.strip()) for p in library_paths_str.split(",") if p.strip()
-        ]
+        # library_paths = [
+        #     Path(p.strip()) for p in library_paths_str.split(",") if p.strip()
+        # ]
 
-        # --- TODO: Replace with your actual analysis function ---
-        # For now, a dummy analysis result
-        analysis_report_data = {
-            "target": str(self.target_path),
-            "description": description if description else "No description provided",
-            "library_paths": (
-                [str(p) for p in library_paths] if library_paths else "None"
-            ),
-            "timestamp": "2025-07-08T16:30:00Z",
-            "findings": [
-                {
-                    "id": "F001",
-                    "severity": "High",
-                    "description": "Example buffer overflow vulnerability",
-                },
-                {
-                    "id": "F002",
-                    "severity": "Medium",
-                    "description": "Unused dependency found",
-                },
-            ],
-            "summary": "Dummy analysis completed.",
+        options = {
+            "dependency": False,
+            "symbol": False,
+            "callgraph": False,
+            "detect_version": False,
         }
-        self._analysis_output_content = json.dumps(analysis_report_data, indent=2)
-        # --- END TODO ---
 
+        analyser = BIDSAnalyser(options=options, description=description)
+        try:
+            analyser.analyse(str(self.target_path))
+
+        except TypeError:
+            print("[ERROR] Only ELF files can be analysed.")
+        except FileNotFoundError:
+            print(f"[ERROR] {self.target_path} not found.")
+
+        output = BIDSOutput(
+            library_path=library_paths_str,
+            detect_version=False,
+        )
+        output.create_metadata(analyser.get_file_data())
+        output.create_components(
+            analyser.get_dependencies(),
+            analyser.get_global_symbols(),
+            analyser.get_callgraph(),
+            local=analyser.get_local_symbols(),
+        )
         if output_filename:
-            # Use the existing SaveAsScreen logic for output file
-            # We'll pass the analysis output to it later via a callback
-            default_output_path = self.target_path.parent / output_filename
-            self.app.push_screen(
-                SaveAsScreen(
-                    initial_path=default_output_path, suggested_filename=output_filename
-                ),
-                self._handle_analysis_save_result,  # New callback for analysis output
-            )
+            output.generate_output(output_filename)
+
         else:
             # Display output on screen
             self.app.pop_screen()
             self.app.push_screen(
-                DisplayScreen(self._analysis_output_content, "Analysis Report")
+                DisplayScreen(output.get_document(), "Analysis Report")
             )
 
     def _handle_analysis_save_result(self, selected_path: Path | None) -> None:
@@ -425,37 +355,6 @@ class AnalyseScreen(ModalScreen):
 class QueryResultScreen(Screen):
     """A screen to display query results with pagination."""
 
-    DEFAULT_CSS = """
-    QueryResultScreen {
-        layout: vertical;
-    }
-    #results_container {
-        margin: 1;
-        padding: 1;
-    }
-    #pagination_controls {
-        height: auto;
-        dock: bottom;
-        background: $surface-darken-1;
-        padding: 0 1;
-        align-horizontal: center;
-    }
-    #pagination_controls Button, #pagination_controls Input, #pagination_controls Label {
-        margin: 0 1;
-    }
-    #page_input {
-        width: 6; /* Small width for page number input */
-        text-align: center;
-    }
-    .result_item {
-        margin-bottom: 1;
-    }
-
-    .result_item Static {
-        margin-left: 2;
-    }
-    """
-
     results: list[dict]  # Store all results
     page_size: int = 10
     current_page: int = 0
@@ -484,15 +383,16 @@ class QueryResultScreen(Screen):
             yield Static(
                 "No results to display yet.", id="no_results_message"
             )  # Hidden if results exist
-        with Horizontal(id="pagination_controls"):
-            yield Button("First", id="first_page_button", disabled=True)
-            yield Button("Previous", id="prev_page_button", disabled=True)
-            yield Label("Page:")
-            yield Input("1", id="page_input", classes="small_input")
-            yield Label(f"of {self.total_pages}", id="total_pages_label")
-            yield Button("Next", id="next_page_button", disabled=True)
-            yield Button("Last", id="last_page_button", disabled=True)
-            yield Button("Go", id="go_page_button")
+        # with Horizontal(id="pagination_controls"):
+        # TODO Make horizontal
+        yield Button("First", id="first_page_button", disabled=True)
+        yield Button("Previous", id="prev_page_button", disabled=True)
+        yield Label("Page:")
+        yield Input("1", id="page_input", classes="small_input")
+        yield Label(f"of {self.total_pages}", id="total_pages_label")
+        yield Button("Next", id="next_page_button", disabled=True)
+        yield Button("Last", id="last_page_button", disabled=True)
+        yield Button("Go", id="go_page_button")
         yield Footer()
 
     @property
@@ -507,7 +407,7 @@ class QueryResultScreen(Screen):
     def display_current_page(self) -> None:
         results_container = self.query_one("#results_container", VerticalScroll)
         # TODO
-        # results_container.clear() # Clear existing results
+        results_container.mount(Static("", classes="result_item"))
 
         if not self.results:
             results_container.mount(
@@ -518,6 +418,7 @@ class QueryResultScreen(Screen):
             self.query_one("#total_pages_label", Label).update(f"of {self.total_pages}")
             return
 
+        # results_container.mount(Static("", id="no_results_message"))
         start_index = self.current_page * self.page_size
         end_index = min(start_index + self.page_size, len(self.results))
         current_page_results = self.results[start_index:end_index]
@@ -528,20 +429,31 @@ class QueryResultScreen(Screen):
             self.display_current_page()  # Recurse to first page
             return
 
-        for i, result in enumerate(current_page_results):
-            # Display each result as a Static or Pretty widget
-            # You'll need to format `result` into a displayable string
-            result_text = f"Result {start_index + i + 1}:\n"
+        for i, result in enumerate(current_page_results, 1):
+            result_text = f"{i}. Score: {result['score']:.4f}"
+            json_data = json.loads(result["content"])
+            result_text += f'   File: {json_data["metadata"]["binary"]["filename"]}\n'
+            if "description" in json_data["metadata"]["binary"]:
+                result_text += f'   Description: {json_data["metadata"]["binary"]["description"]}\n'
             if self.verbose:
-                result_text += json.dumps(result, indent=2)  # Pretty print full result
-            else:
-                # Example: display specific fields
-                result_text += f"  Name: {result.get('name', 'N/A')}\n"
-                result_text += f"  Type: {result.get('type', 'N/A')}\n"
-                result_text += f"  Path: {result.get('path', 'N/A').split('/')[-1]}\n"  # Just filename for brevity
-                # Add more fields as needed
-
+                result_text += f"   Content: {json.dumps(json_data,indent=2)}\n"
+            result_text += "----------------------------\n"
             results_container.mount(Static(result_text, classes="result_item"))
+
+        # for i, result in enumerate(current_page_results):
+        #     # Display each result as a Static or Pretty widget
+        #     # You'll need to format `result` into a displayable string
+        #     result_text = f"Result {start_index + i + 1}:\n"
+        #     if self.verbose:
+        #         result_text += json.dumps(result, indent=2)  # Pretty print full result
+        #     else:
+        #         # Example: display specific fields
+        #         result_text += f"  Name: {result.get('name', 'N/A')}\n"
+        #         result_text += f"  Type: {result.get('type', 'N/A')}\n"
+        #         result_text += f"  Path: {result.get('path', 'N/A').split('/')[-1]}\n"  # Just filename for brevity
+        #         # Add more fields as needed
+
+        #     results_container.mount(Static(result_text, classes="result_item"))
 
         self._update_pagination_buttons()
         self.query_one("#page_input", Input).value = str(
@@ -599,39 +511,6 @@ class QueryResultScreen(Screen):
 class QueryScreen(ModalScreen):  # Could be a regular Screen too
     """A modal screen for entering database query parameters."""
 
-    DEFAULT_CSS = """
-    QueryScreen {
-        align: center middle;
-    }
-    #query_options_container {
-        width: 60%;
-        height: auto;
-        max-height: 70%;
-        background: $panel;
-        border: thick $success;
-        padding: 2;
-    }
-    #query_options_container Label {
-        margin-top: 1;
-        margin-bottom: 0;
-        color: $text-muted;
-    }
-    #query_options_container Input {
-        margin-bottom: 1;
-    }
-    #query_options_container Checkbox {
-        margin-bottom: 1;
-    }
-    #query_buttons {
-        margin-top: 2;
-        align-horizontal: center;
-    }
-    #query_buttons Button {
-        margin-left: 1;
-        margin-right: 1;
-    }
-    """
-
     def compose(self) -> ComposeResult:
         with Container(id="query_options_container"):
             yield Label("Database Query")
@@ -647,9 +526,9 @@ class QueryScreen(ModalScreen):  # Could be a regular Screen too
 
             yield Checkbox("Verbose Reporting", id="verbose_checkbox")
 
-            with Horizontal(id="query_buttons"):
-                yield Button("Run Query", variant="primary", id="run_query_button")
-                yield Button("Cancel", id="cancel_button")
+            # with Horizontal(id="query_buttons"):
+            yield Button("Run Query", variant="primary", id="run_query_button")
+            yield Button("Cancel", id="cancel_button")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "run_query_button":
@@ -677,17 +556,14 @@ class QueryScreen(ModalScreen):  # Could be a regular Screen too
             self.app.notify("Invalid number of results.", severity="error")
             return
 
-        # --- TODO: Replace with your actual database query logic ---
-        # Simulate fetching data from a database
-        dummy_db_results = self._generate_dummy_results(search_term, num_results)
-        # --- END TODO ---
+        indexer = BIDSIndexer()
+        # Get Data
+        results = indexer.search(search_term, num_results)
 
         # Pop the QueryScreen and push the results screen
         self.app.pop_screen()
         self.app.push_screen(
-            QueryResultScreen(
-                dummy_db_results, search_term, page_size=10, verbose=verbose
-            )
+            QueryResultScreen(results, search_term, page_size=10, verbose=verbose)
         )  # Always use page_size=10 for pagination here
 
     def _generate_dummy_results(self, search_term: str, count: int) -> list[dict]:
