@@ -18,6 +18,7 @@ import bids.util as util
 from bids.version import VERSION
 
 
+PROJECT_NAME = "Bids_Application"
 def main(argv=None):
 
     argv = argv or sys.argv
@@ -95,7 +96,10 @@ def main(argv=None):
 
     if len(args["input"]) > 0:
         try:
-            sbom_packages, sbom_relationships = process_file(args["input"], "binary")
+            sbom_packages, sbom_relationships = process_file(args["input"])
+            if args["debug"]:
+                print("Packages", sbom_packages)
+                print("Relationships", sbom_relationships)
         except FileNotFoundError:
             print(f"[ERROR] {args['input']} not found.")
             sys.exit(1)
@@ -104,7 +108,7 @@ def main(argv=None):
         sys.exit(1)
 
     # Generate SBOM
-    _ = create_sbom(
+    create_sbom(
         sbom_type=args["sbom"],
         sbom_format=args["format"],
         packages=sbom_packages,
@@ -132,14 +136,13 @@ def create_sbom(sbom_type, sbom_format, packages, relationships, output_file):
         version=VERSION,
     )
     sbom_generator.generate(
-        project_name="BIDS_Application",
+        project_name=PROJECT_NAME,
         sbom_data=bids_sbom.get_sbom(),
         filename=output_file,
     )
-    return bids_sbom.get_sbom()
 
 
-def process_file(bids_file, appname):
+def process_file(bids_file):
     # Check file exists
     invalid_file = True
     if len(bids_file) > 0:
@@ -190,7 +193,7 @@ def process_file(bids_file, appname):
 
     dependency_relationship = SBOMRelationship()
     dependency_relationship.set_relationship(
-        appname, "DESCRIBES", bids_package.get_name()
+        PROJECT_NAME, "DESCRIBES", bids_package.get_name()
     )
     sbom_relationships.append(dependency_relationship.get_relationship())
 
@@ -221,7 +224,8 @@ def process_file(bids_file, appname):
             ] = dependency_package.get_package()
 
         # Create relationship with parent application
-        dependency_relationship = SBOMRelationship()
+        #dependency_relationship = SBOMRelationship()
+        dependency_relationship.initialise()
         dependency_relationship.set_relationship(
             bids_package.get_name(), "DEPENDS_ON", dependency_package.get_name()
         )
@@ -229,13 +233,6 @@ def process_file(bids_file, appname):
         sbom_packages[
             (dependency_package.get_name(), dependency_package.get_value("version"))
         ] = dependency_package.get_package()
-
-        # Create relationship with parent application
-        dependency_relationship = SBOMRelationship()
-        dependency_relationship.set_relationship(
-            bids_package.get_name(), "DEPENDS_ON", dependency_package.get_name()
-        )
-        sbom_relationships.append(dependency_relationship.get_relationship())
 
     return sbom_packages, sbom_relationships
 
