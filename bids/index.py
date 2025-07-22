@@ -18,6 +18,8 @@ class BIDSIndexer:
 
     INDEX_SIZE = 30000000
 
+    PAGE_SIZE = 10
+
     def __init__(self, index_path=None, debug=False):
         self.debug = debug
         if index_path is None:
@@ -140,21 +142,44 @@ class BIDSIndexer:
         except Exception as e:
             raise Exception(f"Failed to index files: {str(e)}")
 
-    def search(self, query, limit=10):
+    def search(self, query, limit=PAGE_SIZE):
         self.index.reload()
         parsed_query = self.index.parse_query(query, ["content"])
         searcher = self.index.searcher()
 
         results = []
-        for score, doc_address in searcher.search(parsed_query, limit=limit).hits:
+        index = 1
+        # If duplicated entries are identified, the number of results will be less than the required
+        # number of results. By returning an extra number of results (PAGE_SIZE), we try and ensure
+        # that the required number of results are returned.
+        for score, doc_address in searcher.search(
+            parsed_query, limit=limit + self.PAGE_SIZE
+        ).hits:
             doc = searcher.doc(doc_address)
             element = {
                 "file_path": doc["file_path"][0],
                 "score": score,
                 "content": doc["content"][0],
             }
-            if element not in results:
+            add_entry = True
+            for result in results:
+                # Check for a duplicated entry
+                if result["content"] == element["content"]:
+                    add_entry = False
+                    break
+            if add_entry:
+                if self.debug:
+                    print(f"{index} Add element.")
                 results.append(element)
+            elif self.debug:
+                print(
+                    f"{index} Already found: {element['file_path']}. Score: {element['score']}"
+                )
+            index += 1
+            # Exit once we have the requested number of results
+            if len(results) == limit:
+                break
+
         return results
 
     def reinitialise_index(self):
