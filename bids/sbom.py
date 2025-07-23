@@ -17,8 +17,9 @@ from lib4sbom.sbom import SBOM
 import bids.util as util
 from bids.version import VERSION
 
-
 PROJECT_NAME = "Bids_Application"
+
+
 def main(argv=None):
 
     argv = argv or sys.argv
@@ -224,7 +225,7 @@ def process_file(bids_file):
             ] = dependency_package.get_package()
 
         # Create relationship with parent application
-        #dependency_relationship = SBOMRelationship()
+        # dependency_relationship = SBOMRelationship()
         dependency_relationship.initialise()
         dependency_relationship.set_relationship(
             bids_package.get_name(), "DEPENDS_ON", dependency_package.get_name()
