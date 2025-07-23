@@ -47,7 +47,13 @@ setup_kwargs = dict(
             "bids-analyser = bids.cli:main",
             "sbom4bids = bids.sbom:main",
             "bids-search = bids.search:main",
-            "bids-scan = bids.scan:main"
+            "bids-scan = bids.scan:main",
+            "bids-ui = bids.gui:main"
+        ],
+    },
+    package_data={
+        "bids": [
+            "bids_style.tcss",
         ],
     },
 )

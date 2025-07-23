@@ -9,6 +9,18 @@ MainScreen > Container {
     height: 1fr;
 }
 
+Header {
+    height: auto;
+}
+Footer {
+    height: auto;
+}
+
+Container { /* This refers to the main content container in compose */
+    layout: vertical; /* Make the main content container use vertical layout */
+    height: 1fr; /* Make this container fill available vertical space */
+}
+
 #tree-view {
     width: 60%;
     height: 100%;
@@ -30,17 +42,23 @@ MainScreen > Container {
 }
 
 Button {
-    width: 100%;
+    width: 90%;
     margin: 1 0;
 }
 
 /* Styles for new SBOM Screen */
+
+SbomScreen {
+    align: center middle;
+}
+
 #sbom_options_container {
     width: 80%;
-    max-width: 60;
+    /* max-width: 60; */
     height: auto;
-    background: $surface;
-    padding: 1 2;
+    max-height: 70%;
+    background: $panel;
+    padding: 2;
     border: thick $primary;
     align: center middle;
 }
@@ -56,9 +74,13 @@ Button {
 }
 
 .action_buttons Button {
+    width: auto;
     margin: 0 1;
 }
 
+DisplayScreen{
+    align: center middle;
+}
 /* Styles for new Display Screen */
 #display_container {
     width: 90%;
@@ -66,17 +88,25 @@ Button {
     background: $surface;
     border: thick $primary;
     padding: 1;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    layout: vertical
 }
 
-#display_content {
-    height: auto;
-    width: auto;
+#display_scroller {
+    /* This tells the scroller to expand and fill available space */
+    height: 1fr;
+    width: 100%;
+    margin-bottom: 1;
 }
+
+/* #display_content {
+/*     height: auto;
+/*     width: auto;
+/* }
 
 #close_button {
     margin-top: 1;
-    width: 100%;
+    width: 90%;
 }
 
 /* Save As */
@@ -140,6 +170,7 @@ AnalyseScreen {
     align-horizontal: center;
 }
 #analyse_buttons Button {
+    width: auto;
     margin-left: 1;
     margin-right: 1;
 }
@@ -152,6 +183,8 @@ QueryResultScreen {
 #results_container {
     margin: 1;
     padding: 1;
+    background: $panel;
+    border: thick $primary;
 }
 #pagination_controls {
     height: auto;
@@ -161,6 +194,7 @@ QueryResultScreen {
     align-horizontal: center;
 }
 #pagination_controls Button, #pagination_controls Input, #pagination_controls Label {
+    width: auto;
     margin: 0 1;
 }
 #page_input {
@@ -175,6 +209,21 @@ QueryResultScreen {
     margin-left: 2;
 }
 
+/* Query Search */
+
+#log_display_container {
+    height: 1fr; /* Log scroll view takes all available fractional height */
+}
+#log_display {
+    height: auto;
+    width: 100%; /* Ensure it fills the scroll view horizontally */
+}
+
+#search_input {
+    height: auto; /* Allow input to size naturally */
+    margin-top: 1; /* Add a little space above it */
+}
+
 /* Query screen */
 
 QueryScreen {
@@ -185,7 +234,7 @@ QueryScreen {
     height: auto;
     max-height: 70%;
     background: $panel;
-    border: thick $success;
+    border: thick $primary;
     padding: 2;
 }
 #query_options_container Label {
@@ -204,6 +253,7 @@ QueryScreen {
     align-horizontal: center;
 }
 #query_buttons Button {
+    width: auto;
     margin-left: 1;
     margin-right: 1;
 }
