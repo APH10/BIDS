@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:d451780a-d71e-4ad6-b2a4-69f3f919d84f",
+  "serialNumber": "urn:uuid:5330880c-0759-4fa3-892a-0dfd9d5e227d",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-07-20T02:37:09Z",
+    "timestamp": "2025-07-27T02:39:54Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -2018,7 +2018,7 @@
       "type": "library",
       "bom-ref": "33-textual",
       "name": "textual",
-      "version": "4.0.0",
+      "version": "5.0.1",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2027,12 +2027,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:4.0.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "214051640f890676a670aa7d29cd2a37d27cfe6b2cf866e9d5abc3b6c89c5800"
+          "content": "816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa"
         }
       ],
       "licenses": [
@@ -2051,7 +2051,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/4.0.0/#files",
+          "url": "https://pypi.org/project/textual/5.0.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2068,11 +2068,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@4.0.0",
+      "purl": "pkg:pypi/textual@5.0.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-12T09:41:18Z"
+          "value": "2025-07-25T19:50:57Z"
         },
         {
           "name": "language",
@@ -2283,69 +2283,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "37-rich",
-      "name": "rich",
-      "version": "14.0.0",
-      "supplier": {
-        "name": "Will McGugan",
-        "contact": [
-          {
-            "email": "willmcgugan@gmail.com"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.0.0:*:*:*:*:*:*:*",
-      "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "1c9491e1951aac09caffd42f448ee3d04e58923ffe14993f6e83068dc395d7e0"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/Textualize/rich",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/rich/14.0.0/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        },
-        {
-          "url": "https://rich.readthedocs.io/en/latest/",
-          "type": "documentation"
-        }
-      ],
-      "purl": "pkg:pypi/rich@14.0.0",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2025-03-30T14:15:12Z"
-        },
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.10.18"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "38-pygments",
+      "bom-ref": "37-pygments",
       "name": "pygments",
       "version": "2.19.2",
       "supplier": {
@@ -2406,6 +2344,68 @@
         {
           "name": "release_date",
           "value": "2025-06-21T13:39:07Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.10.18"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "38-rich",
+      "name": "rich",
+      "version": "14.1.0",
+      "supplier": {
+        "name": "Will McGugan",
+        "contact": [
+          {
+            "email": "willmcgugan@gmail.com"
+          }
+        ]
+      },
+      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.1.0:*:*:*:*:*:*:*",
+      "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "536f5f1785986d6dbdea3c75205c473f970777b4a0d6c6dd1b696aa05a3fa04f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/Textualize/rich",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/rich/14.1.0/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        },
+        {
+          "url": "https://rich.readthedocs.io/en/latest/",
+          "type": "documentation"
+        }
+      ],
+      "purl": "pkg:pypi/rich@14.1.0",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2025-07-25T07:32:56Z"
         },
         {
           "name": "language",
@@ -2536,7 +2536,8 @@
       "dependsOn": [
         "34-markdown-it-py",
         "36-platformdirs",
-        "37-rich",
+        "37-pygments",
+        "38-rich",
         "11-typing-extensions"
       ]
     },
@@ -2547,11 +2548,10 @@
       ]
     },
     {
-      "ref": "37-rich",
+      "ref": "38-rich",
       "dependsOn": [
         "34-markdown-it-py",
-        "38-pygments",
-        "11-typing-extensions"
+        "37-pygments"
       ]
     }
   ]
