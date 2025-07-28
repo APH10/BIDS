@@ -1,3 +1,6 @@
+# Copyright (C) 2025 APH10 Limited
+# SPDX-License-Identifier: Apache-2.0
+
 import json
 import re
 from unittest.mock import patch

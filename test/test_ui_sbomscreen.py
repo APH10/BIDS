@@ -1,3 +1,6 @@
+# Copyright (C) 2025 APH10 Limited
+# SPDX-License-Identifier: Apache-2.0
+
 from pathlib import Path
 from unittest.mock import MagicMock, mock_open, patch
 
