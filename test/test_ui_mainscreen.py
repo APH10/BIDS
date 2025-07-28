@@ -61,7 +61,7 @@ class TestMainScreen:
             assert label.renderable == f"Selected: {test_dir.name}"
 
     @pytest.mark.asyncio
-    async def test_directory_tree_selection_enables_buttons(slf, tmp_path):
+    async def test_directory_tree_selection_enables_buttons(self, tmp_path):
         # Create a dummy file for testing
         test_file = tmp_path / "test.txt"
         test_file.write_text("dummy content")
@@ -130,7 +130,7 @@ class TestMainScreen:
             assert isinstance(top_screen, SbomScreen)
 
     @pytest.mark.asyncio
-    async def test_press_analyse_pushes_screen(slf):
+    async def test_press_analyse_pushes_screen(self):
         async with BidsUI().run_test() as pilot:
             screen = pilot.app.screen
             assert isinstance(screen, MainScreen)
