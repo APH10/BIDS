@@ -25,5 +25,3 @@ class DisplayScreen(ModalScreen):
     def on_button_pressed(self, event):
         if event.button.id == "close_button":
             self.app.pop_screen()
-        elif event.button.id == "cancel":
-            self.app.pop_screen()

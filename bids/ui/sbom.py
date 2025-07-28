@@ -31,8 +31,8 @@ class SbomScreen(ModalScreen):
             yield Label(f"Generate SBOM for: {self.target_path}")
             yield Static("SBOM Type:", classes="label")
             with RadioSet(id="sbom_type"):
-                yield RadioButton("SPDX", value=True)
-                yield RadioButton("CycloneDX")
+                yield RadioButton("SPDX", value=True, id="sbom_spdx")
+                yield RadioButton("CycloneDX", id="sbom_cyclonedx")
             yield Static("SBOM Format:", classes="label")
             with RadioSet(id="sbom_format"):
                 # SPDX is the default, so populate its formats initially
