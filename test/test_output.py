@@ -91,11 +91,8 @@ class TestOutput:
         output_test.generate_output(filename=TEST_OUTPUT_FILE)
         # Now check contents of file
         # bids_json = json.load(open(TEST_OUTPUT_FILE, "r", encoding="utf-8"))
-        print(f"Open {TEST_OUTPUT_FILE}")
         with open(TEST_OUTPUT_FILE) as f:
-            print(f)
             bids_json = json.load(f)
-
             # bids_json = json.load(open(TEST_OUTPUT_FILE, "r"))
             # Check top level components
             assert "metadata" in bids_json
@@ -118,7 +115,9 @@ class TestOutput:
         assert "relationships" in captured.out
 
     def test_output_with_version_disabled(self, capsys):
-        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE, detect_version=False)
+        output_test = BIDSOutput(
+            tool_version="1.0", cache=self.CACHE_FILE, detect_version=False
+        )
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         output_test.generate_output(filename="")
@@ -130,7 +129,9 @@ class TestOutput:
         assert "relationships" in captured.out
 
     def test_output_with_version_enabled(self, capsys):
-        output_test = BIDSOutput(tool_version="1.0", cache=self.CACHE_FILE, detect_version=True)
+        output_test = BIDSOutput(
+            tool_version="1.0", cache=self.CACHE_FILE, detect_version=True
+        )
         output_test.create_metadata({"test": "data"})
         output_test.create_components([], [], [])
         output_test.generate_output(filename="")
@@ -140,4 +141,3 @@ class TestOutput:
         assert "components" in captured.out
         assert "callgraph" in captured.out
         assert "relationships" in captured.out
-

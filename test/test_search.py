@@ -6,8 +6,11 @@ BIDS Search tests
 """
 
 from pathlib import Path
+
 import pytest
+
 from bids.search import main
+
 
 class TestSearch:
     """Tests the BIDS Search module"""

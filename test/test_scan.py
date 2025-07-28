@@ -6,8 +6,11 @@ BIDS Scan tests
 """
 
 from pathlib import Path
+
 import pytest
+
 from bids.scan import main
+
 
 class TestScan:
     """Tests the BIDS Scan module"""
@@ -87,7 +90,16 @@ class TestScan:
         test_file = f"{self.TEST_PATH}/test_assets"
         output_dir = "/tmp"
         with pytest.raises(SystemExit) as e:
-            main([self.SCRIPT_NAME, "--directory", test_file, "--debug", "--output", output_dir])
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--directory",
+                    test_file,
+                    "--debug",
+                    "--output",
+                    output_dir,
+                ]
+            )
         assert e.value.args[0] == 0
 
     def test_not_elf_file(self):

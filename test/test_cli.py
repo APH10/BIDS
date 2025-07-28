@@ -4,11 +4,11 @@
 """
 BIDS CLI tests
 """
-from pathlib import Path
 import os
-import pytest
-
+from pathlib import Path
 from unittest import mock
+
+import pytest
 
 from bids.cli import main
 
@@ -159,21 +159,15 @@ class TestCLI:
 
     @mock.patch.dict(os.environ, {"BIDS_CACHE": f"{TEST_PATH}/test_assets/cache"})
     def test_cache(self):
-        """Test cache """
+        """Test cache"""
         test_file = f"{self.TEST_PATH}/test_assets/hello"
         with pytest.raises(SystemExit) as e:
-            main(
-                [
-                    self.SCRIPT_NAME,
-                    "--file",
-                    test_file
-                ]
-            )
+            main([self.SCRIPT_NAME, "--file", test_file])
         assert e.value.args[0] == 0
+
     def test_detect_version_command(self):
         """Test detect-version command"""
         test_file = f"{self.TEST_PATH}/test_assets/hello"
-        test_path = f"{self.TEST_PATH}/test_assets"
         with pytest.raises(SystemExit) as e:
             main(
                 [
@@ -189,7 +183,6 @@ class TestCLI:
     def test_missing_sandbox(self, capsys):
         """Test detect-version command"""
         test_file = f"{self.TEST_PATH}/test_assets/hello"
-        test_path = f"{self.TEST_PATH}/test_assets"
         with pytest.raises(SystemExit) as e:
             main(
                 [

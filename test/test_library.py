@@ -4,9 +4,10 @@
 """
 BIDS Library tests
 """
-from pathlib import Path
-import pytest
 import shutil
+from pathlib import Path
+
+import pytest
 
 from bids.library import DynamicLibrary
 
@@ -73,4 +74,3 @@ class TestLibrary:
         lib = DynamicLibrary(detect_version=True)
         library_details = lib.version(["libc.so.6"])
         assert library_details is not None
-

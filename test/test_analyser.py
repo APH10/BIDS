@@ -1,12 +1,10 @@
 # Copyright (C) 2024 APH10 Limited
 # SPDX-License-Identifier: Apache-2.0
 
-"""
-BIDS Analyser tests
-"""
-from pathlib import Path
-import pytest
 import shutil
+from pathlib import Path
+
+import pytest
 
 from bids.analyser import BIDSAnalyser
 

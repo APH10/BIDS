@@ -6,7 +6,6 @@ BIDS Index tests
 """
 import os
 from pathlib import Path
-
 from unittest import mock
 
 from bids.index import BIDSIndexer
@@ -19,7 +18,7 @@ class TestIndex:
     # Cache file used to ensure constant test results
     # deployed library will have dynamic values
     INDEX_FILE = f"{TEST_PATH}/test_assets/index"
-    ENV_INDEX_FILE = f"/tmp"
+    ENV_INDEX_FILE = "/tmp"
     BAD_INDEX_FILE = f"{TEST_PATH}/test_assets/badindex"
 
     def test_check_init(self):
@@ -47,11 +46,11 @@ class TestIndex:
     def test_check_if_bids_file(self):
         index_file = BIDSIndexer()
         file_path = f"{self.TEST_PATH}/test_assets/hello.json"
-        assert index_file.is_bids_file(file_path) == True
+        assert index_file.is_bids_file(file_path) is True
         file_path = f"{self.TEST_PATH}/test_assets/badfile.json"
-        assert index_file.is_bids_file(file_path) == False
+        assert index_file.is_bids_file(file_path) is False
         file_path = f"{self.TEST_PATH}/test_assets/hello.c"
-        assert index_file.is_bids_file(file_path) == False
+        assert index_file.is_bids_file(file_path) is False
 
     def test_reinitialise(self):
         # Create an inded
@@ -67,16 +66,12 @@ class TestIndex:
         # Check not valid ZIP file
         file_path = f"{self.TEST_PATH}/test_assets/hello.json"
         index_file.import_data(file_path)
-        assert index_file.import_data(file_path) == False
+        assert index_file.import_data(file_path) is False
         # Check missing file
         file_path = f"{self.TEST_PATH}/test_assets/missing_file"
         index_file.import_data(file_path)
-        assert index_file.import_data(file_path) == False
+        assert index_file.import_data(file_path) is False
         # Check not a zip
         file_path = f"{self.TEST_PATH}/test_assets/hello.zip"
         index_file.import_data(file_path)
-        assert index_file.import_data(file_path) == False
-
-
-
-
+        assert index_file.import_data(file_path) is False

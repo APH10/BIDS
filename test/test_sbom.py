@@ -6,8 +6,11 @@ BIDS SBOM tests
 """
 
 from pathlib import Path
+
 import pytest
+
 from bids.sbom import main
+
 
 class TestSBOM:
     """Tests the BIDS SBOM module"""
@@ -86,7 +89,17 @@ class TestSBOM:
         test_file = f"{self.TEST_PATH}/test_assets/hello.json"
         with pytest.raises(SystemExit) as e:
             # Format shoould get changed to Json
-            main([self.SCRIPT_NAME, "--input", test_file, "--sbom", "cyclonedx", "--format", "tag"])
+            main(
+                [
+                    self.SCRIPT_NAME,
+                    "--input",
+                    test_file,
+                    "--sbom",
+                    "cyclonedx",
+                    "--format",
+                    "tag",
+                ]
+            )
         assert e.value.args[0] == 0
 
     def test_debug_command(self):
@@ -111,6 +124,7 @@ class TestSBOM:
         captured = capsys.readouterr()
         # Check package version is included in output
         assert "PackageVersion: 10.01.2" in captured.out
+        assert e.value.args[0] == 0
 
     def test_localsymbols(self, capsys):
         # Only for CycloneDX SBOM
@@ -120,3 +134,4 @@ class TestSBOM:
         captured = capsys.readouterr()
         # Check package version is included in output
         assert "localsymbol_1" in captured.out
+        assert e.value.args[0] == 0
