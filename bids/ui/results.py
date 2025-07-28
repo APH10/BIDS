@@ -44,12 +44,12 @@ class SearchHighlighter:
 
 # A custom widget to contain and manage lines within a container
 class LogContainer(Container):
-    search_term: Reactive[str] = reactive("", always_update=True)
-    current_match_line: Reactive[int | None] = reactive(None)
+    search_term = reactive("", always_update=True)
+    current_match_line = reactive(None)
 
     def __init__(
         self,
-        *children: Widget,
+        *children,
         name=None,
         id=None,
         classes=None,
@@ -71,7 +71,7 @@ class LogContainer(Container):
         # Re-initialize highlighter to update its internal current_match_line
         self._current_highlighter = SearchHighlighter(self.search_term, new_line)
 
-    def render_log_lines(self, all_messages: list[str]) -> None:
+    def render_log_lines(self, all_messages):
         """Renders all log messages as Static widgets with the current highlighter."""
         self.remove_children()  # Clear existing log lines
         for line_no, msg in enumerate(all_messages):
@@ -104,16 +104,14 @@ class SearchCleared(Message):
 class QueryResultScreen(Screen):
     """A screen to display query results with pagination."""
 
-    results: list[dict]  # Store all results
+    results = []  # Store all results
     page_size = 10
     current_page = 0
     _all_log = []
     # Control search box visibility
-    show_search_input: Reactive[bool] = reactive(False)
+    show_search_input = reactive(False)
     _match_indices = []  # Stores line numbers indices in _all_log of all matches
-    current_match_index: Reactive[int | None] = reactive(
-        None
-    )  # Index within _match_indices list
+    current_match_index = reactive(None) # Index within _match_indices list
 
     def __init__(
         self,
@@ -124,7 +122,7 @@ class QueryResultScreen(Screen):
         name=None,
         id=None,
         classes=None,
-    ) -> None:
+    ):
         super().__init__(name, id, classes)
         self.results = results
         self.search_term = search_term
@@ -316,7 +314,7 @@ class QueryResultScreen(Screen):
         else:
             self.notify("No active search or no matches found.", timeout=1)
 
-    def action_manage_escape(self) -> None:
+    def action_manage_escape(self):
         search_input = self.query_one("#search_input", Input)
         on_display = search_input.styles.display
         if on_display == "block":

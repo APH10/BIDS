@@ -21,7 +21,7 @@ class AnalyseScreen(ModalScreen):
         name=None,
         id=None,
         classes=None,
-    ) -> None:
+    ):
         super().__init__(name, id, classes)
         self.target_path = target_path
         self._analysis_output_content = None
