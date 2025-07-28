@@ -97,6 +97,7 @@ class SearchInput(Input):
 
 class SearchCleared(Message):
     """Posted when the search is cleared."""
+
     pass
 
 
