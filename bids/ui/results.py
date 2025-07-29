@@ -7,9 +7,8 @@ from rich.text import Text
 from textual import on
 from textual.containers import Container, Horizontal, VerticalScroll
 from textual.message import Message
-from textual.reactive import Reactive, reactive
+from textual.reactive import reactive
 from textual.screen import Screen
-from textual.widget import Widget
 from textual.widgets import Button, Footer, Header, Input, Label, Static
 
 
