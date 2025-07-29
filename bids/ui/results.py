@@ -111,7 +111,7 @@ class QueryResultScreen(Screen):
     # Control search box visibility
     show_search_input = reactive(False)
     _match_indices = []  # Stores line numbers indices in _all_log of all matches
-    current_match_index = reactive(None) # Index within _match_indices list
+    current_match_index = reactive(None)  # Index within _match_indices list
 
     def __init__(
         self,
