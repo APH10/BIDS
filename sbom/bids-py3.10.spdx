@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-4c2d3ab9-a779-469d-bd3b-36f09448eac9
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-8118f5c7-0ef3-4692-9636-00299645694d
 LicenseListVersion: 3.26
 Creator: Tool: sbom4python-0.12.4
-Created: 2025-07-20T02:37:02Z
+Created: 2025-07-27T02:39:36Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
@@ -648,23 +648,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh
 
 PackageName: textual
 SPDXID: SPDXRef-33-textual
-PackageVersion: 4.0.0
+PackageVersion: 5.0.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (will@textualize.io)
-PackageDownloadLocation: https://pypi.org/project/textual/4.0.0/#files
+PackageDownloadLocation: https://pypi.org/project/textual/5.0.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/textual
-PackageChecksum: SHA256: 214051640f890676a670aa7d29cd2a37d27cfe6b2cf866e9d5abc3b6c89c5800
+PackageChecksum: SHA256: 816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Modern Text User Interface framework</text>
-ReleaseDate: 2025-07-12T09:41:18Z
+ReleaseDate: 2025-07-25T19:50:57Z
 ExternalRef: OTHER issue-tracker https://github.com/Textualize/textual/issues
 ExternalRef: OTHER documentation https://textual.textualize.io/
 ExternalRef: OTHER vcs https://github.com/Textualize/textual
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@4.0.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:4.0.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@5.0.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: markdown-it-py
@@ -728,27 +728,8 @@ ExternalRef: OTHER issue-tracker https://github.com/tox-dev/platformdirs/issues
 ExternalRef: PACKAGE-MANAGER purl pkg:pypi/platformdirs@4.3.8
 ##### 
 
-PackageName: rich
-SPDXID: SPDXRef-37-rich
-PackageVersion: 14.0.0
-PrimaryPackagePurpose: LIBRARY
-PackageSupplier: Person: Will McGugan (willmcgugan@gmail.com)
-PackageDownloadLocation: https://pypi.org/project/rich/14.0.0/#files
-FilesAnalyzed: false
-PackageHomePage: https://github.com/Textualize/rich
-PackageChecksum: SHA256: 1c9491e1951aac09caffd42f448ee3d04e58923ffe14993f6e83068dc395d7e0
-PackageLicenseDeclared: MIT
-PackageLicenseConcluded: MIT
-PackageCopyrightText: NOASSERTION
-PackageSummary: <text>Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal</text>
-ReleaseDate: 2025-03-30T14:15:12Z
-ExternalRef: OTHER documentation https://rich.readthedocs.io/en/latest/
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rich@14.0.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:rich:14.0.0:*:*:*:*:*:*:*
-##### 
-
 PackageName: pygments
-SPDXID: SPDXRef-38-pygments
+SPDXID: SPDXRef-37-pygments
 PackageVersion: 2.19.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Georg Brandl (georg@python.org)
@@ -767,6 +748,25 @@ ExternalRef: OTHER issue-tracker https://github.com/pygments/pygments/issues
 ExternalRef: OTHER log https://github.com/pygments/pygments/blob/master/CHANGES
 ExternalRef: PACKAGE-MANAGER purl pkg:pypi/pygments@2.19.2
 ExternalRef: SECURITY cpe23Type cpe:2.3:a:georg_brandl:pygments:2.19.2:*:*:*:*:*:*:*
+##### 
+
+PackageName: rich
+SPDXID: SPDXRef-38-rich
+PackageVersion: 14.1.0
+PrimaryPackagePurpose: LIBRARY
+PackageSupplier: Person: Will McGugan (willmcgugan@gmail.com)
+PackageDownloadLocation: https://pypi.org/project/rich/14.1.0/#files
+FilesAnalyzed: false
+PackageHomePage: https://github.com/Textualize/rich
+PackageChecksum: SHA256: 536f5f1785986d6dbdea3c75205c473f970777b4a0d6c6dd1b696aa05a3fa04f
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageCopyrightText: NOASSERTION
+PackageSummary: <text>Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal</text>
+ReleaseDate: 2025-07-25T07:32:56Z
+ExternalRef: OTHER documentation https://rich.readthedocs.io/en/latest/
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rich@14.1.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:rich:14.1.0:*:*:*:*:*:*:*
 ##### 
 
 Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-2-pyelftools
@@ -800,11 +800,11 @@ Relationship: SPDXRef-30-xmlschema DEPENDS_ON SPDXRef-31-elementpath
 Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-11-typing-extensions
 Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-34-markdown-it-py
 Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-36-platformdirs
-Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-37-rich
+Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-37-pygments
+Relationship: SPDXRef-33-textual DEPENDS_ON SPDXRef-38-rich
 Relationship: SPDXRef-34-markdown-it-py DEPENDS_ON SPDXRef-35-mdurl
-Relationship: SPDXRef-37-rich DEPENDS_ON SPDXRef-11-typing-extensions
-Relationship: SPDXRef-37-rich DEPENDS_ON SPDXRef-34-markdown-it-py
-Relationship: SPDXRef-37-rich DEPENDS_ON SPDXRef-38-pygments
+Relationship: SPDXRef-38-rich DEPENDS_ON SPDXRef-34-markdown-it-py
+Relationship: SPDXRef-38-rich DEPENDS_ON SPDXRef-37-pygments
 Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-21-plugincode
 Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-5-attrs
 Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-6-binaryornot
