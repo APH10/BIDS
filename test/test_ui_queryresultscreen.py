@@ -41,7 +41,10 @@ class TestQueryResulsScreen:
 
     def extract_static_text(self, static_widget):
         renderable = static_widget.renderable
-        raw = repr(renderable)
+        if hasattr(renderable, "__str__"):
+            raw = str(renderable)
+        else:
+            raw = repr(renderable)
         # Strip ANSI if present
         return re.sub(r"\x1b\[[0-9;]*m", "", raw).strip()
 
