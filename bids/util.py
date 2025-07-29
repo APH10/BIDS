@@ -10,6 +10,8 @@ from pathlib import Path
 
 COMMAND_TIMEOUT = 5  # Seconds
 CHECKSUM_ALGORITHMS = ["sha256", "sha384", "sha512", "sha3-256", "sha3-384", "sha3-512"]
+SANDBOX_DEFAULT = "firejail"
+SANDBOX_OPTIONS = "--quiet"
 
 
 def get_checksum_algorithms():
@@ -34,9 +36,14 @@ def calculate_checksum(filename):
     return checksum
 
 
+def is_sandbox():
+    sandbox = os.getenv("BIDS_SANDBOX") or SANDBOX_DEFAULT
+    return sandbox if sandbox is not None else None
+
+
 def check_sandbox():
     # Check that sandbox exists
-    sandbox = os.getenv("BIDS_SANDBOX") or "firejail"
+    sandbox = is_sandbox()
     return shutil.which(sandbox) if sandbox is not None else None
 
 
@@ -44,7 +51,11 @@ def run_process(command):
     sandbox_path = check_sandbox()
     # Use sandbox if available
     if sandbox_path:
-        run_command = [sandbox_path] + command
+        # Add options if using default sandbox
+        if is_sandbox() == SANDBOX_DEFAULT:
+            run_command = [sandbox_path, SANDBOX_OPTIONS] + command
+        else:
+            run_command = [sandbox_path] + command
     else:
         run_command = command
     return subprocess.run(
