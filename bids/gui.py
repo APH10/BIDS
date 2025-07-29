@@ -16,7 +16,7 @@ from bids.ui.sbom import SbomScreen
 
 
 class MainScreen(Screen):
-    selected_path: var[Path | None] = var(None)
+    selected_path = var(None)
 
     def compose(self):
         yield Header(id="head_panel", name="BIDS - Binary Analysis")
