@@ -72,5 +72,5 @@ class TestLibrary:
     @pytest.mark.skipif(shutil.which("firejail") is None, reason="Requires sandbox")
     def test_detect_version(self):
         lib = DynamicLibrary(detect_version=True)
-        library_details = lib.version(["libc.so.6"])
+        library_details = lib.version(["/usr/lib32/libc.so.6"])
         assert library_details is not None

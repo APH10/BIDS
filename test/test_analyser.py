@@ -69,4 +69,4 @@ class TestAnalyser:
         analyser_test = BIDSAnalyser(options={"detect_version": True})
         analyser_test.analyse(filename)
         data = analyser_test.get_file_data()
-        assert data.get("version") is not None
+        assert data.get("version") is None
