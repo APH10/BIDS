@@ -129,6 +129,7 @@ class TestQueryResulsScreen:
                 goto_btn.focus()
                 await pilot.press("enter")
 
+            mock_notify.assert_called()
             assert "Invalid page number." in mock_notify.call_args[0][0]
 
     @pytest.mark.asyncio
