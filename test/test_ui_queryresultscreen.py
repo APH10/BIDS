@@ -128,8 +128,9 @@ class TestQueryResulsScreen:
                 page_input.value = "A big number"
                 goto_btn.focus()
                 await pilot.press("enter")
+                assert "A big number" in str(screen.query_one("#page_input", Input).value)
 
-            mock_notify.assert_called()
+            mock_notify.assert_called_once()
             assert "Invalid page number." in mock_notify.call_args[0][0]
 
     @pytest.mark.asyncio
