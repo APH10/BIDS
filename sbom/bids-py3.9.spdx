@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-5bc7339b-0f42-47cd-9df2-4d2784efbbee
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-f276332a-f71d-4220-af4e-1113709bdaea
 LicenseListVersion: 3.26
 Creator: Tool: sbom4python-0.12.4
-Created: 2025-07-27T02:39:33Z
+Created: 2025-08-03T02:39:34Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
@@ -667,23 +667,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh
 
 PackageName: textual
 SPDXID: SPDXRef-34-textual
-PackageVersion: 5.0.1
+PackageVersion: 5.2.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (will@textualize.io)
-PackageDownloadLocation: https://pypi.org/project/textual/5.0.1/#files
+PackageDownloadLocation: https://pypi.org/project/textual/5.2.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/textual
-PackageChecksum: SHA256: 816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa
+PackageChecksum: SHA256: 5df1ef970a88ac9a266cbcace098f595f22706990f2506f6e545d9bb55983f1d
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Modern Text User Interface framework</text>
-ReleaseDate: 2025-07-25T19:50:57Z
+ReleaseDate: 2025-08-01T18:45:31Z
 ExternalRef: OTHER issue-tracker https://github.com/Textualize/textual/issues
 ExternalRef: OTHER documentation https://textual.textualize.io/
 ExternalRef: OTHER vcs https://github.com/Textualize/textual
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@5.0.1
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@5.2.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:5.2.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: markdown-it-py

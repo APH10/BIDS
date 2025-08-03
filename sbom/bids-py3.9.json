@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:59b8bd2f-5a44-4382-8ed0-7470ff701fae",
+  "serialNumber": "urn:uuid:72af38f9-d168-4e3b-8aa7-cb90c944718b",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-07-27T02:39:37Z",
+    "timestamp": "2025-08-03T02:39:38Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -2087,7 +2087,7 @@
       "type": "library",
       "bom-ref": "34-textual",
       "name": "textual",
-      "version": "5.0.1",
+      "version": "5.2.0",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2096,12 +2096,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:5.2.0:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa"
+          "content": "5df1ef970a88ac9a266cbcace098f595f22706990f2506f6e545d9bb55983f1d"
         }
       ],
       "licenses": [
@@ -2120,7 +2120,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/5.0.1/#files",
+          "url": "https://pypi.org/project/textual/5.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2137,11 +2137,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@5.0.1",
+      "purl": "pkg:pypi/textual@5.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-25T19:50:57Z"
+          "value": "2025-08-01T18:45:31Z"
         },
         {
           "name": "language",
