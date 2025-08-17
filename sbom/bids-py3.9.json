@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:59b8bd2f-5a44-4382-8ed0-7470ff701fae",
+  "serialNumber": "urn:uuid:0015ec2c-b636-4902-b30e-b127ab2fffb0",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-07-27T02:39:37Z",
+    "timestamp": "2025-08-17T02:26:23Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -888,7 +888,7 @@
       "type": "library",
       "bom-ref": "15-charset-normalizer",
       "name": "charset-normalizer",
-      "version": "3.4.2",
+      "version": "3.4.3",
       "supplier": {
         "name": "Ahmed R .",
         "contact": [
@@ -897,12 +897,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.3:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "7c48ed483eb946e6c04ccbe02c6b4d1d48e51944b6db70f697e089c193404941"
+          "content": "fb7f67a1bfa6e40b438170ebdc8158b78dc465a5a67b6dde178a46987b244a72"
         }
       ],
       "licenses": [
@@ -916,7 +916,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.2/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -937,11 +937,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.2",
+      "purl": "pkg:pypi/charset-normalizer@3.4.3",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-05-02T08:31:46Z"
+          "value": "2025-08-09T07:55:36Z"
         },
         {
           "name": "language",
@@ -1086,7 +1086,7 @@
       "type": "library",
       "bom-ref": "18-certifi",
       "name": "certifi",
-      "version": "2025.7.14",
+      "version": "2025.8.3",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -1095,12 +1095,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2025.7.14:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2025.8.3:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "6b31f564a415d79ee77df69d757bb49a5bb53bd9f756cbbe24394ffd6fc1f4b2"
+          "content": "f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5"
         }
       ],
       "licenses": [
@@ -1119,7 +1119,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2025.7.14/#files",
+          "url": "https://pypi.org/project/certifi/2025.8.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1128,11 +1128,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2025.7.14",
+      "purl": "pkg:pypi/certifi@2025.8.3",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-14T03:29:26Z"
+          "value": "2025-08-03T03:07:45Z"
         },
         {
           "name": "language",
@@ -1854,7 +1854,7 @@
       "type": "library",
       "bom-ref": "30-rpds-py",
       "name": "rpds-py",
-      "version": "0.26.0",
+      "version": "0.27.0",
       "supplier": {
         "name": "Julian Berman",
         "contact": [
@@ -1863,21 +1863,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:julian_berman:rpds-py:0.26.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:julian_berman:rpds-py:0.27.0:*:*:*:*:*:*:*",
       "description": "Python bindings to Rust's persistent data structures (rpds)",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "4c70c70f9169692b36307a95f3d8c0a9fcd79f7b4a383aad5eaa0e9718b79b37"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "MIT",
-            "url": "https://opensource.org/license/mit/",
-            "acknowledgement": "concluded"
-          }
+          "content": "130c1ffa5039a333f5926b09e346ab335f0d4ec393b030a18549a7c7e7c2cea4"
         }
       ],
       "externalReferences": [
@@ -1887,7 +1878,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/rpds-py/0.26.0/#files",
+          "url": "https://pypi.org/project/rpds-py/0.27.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1916,11 +1907,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/rpds-py@0.26.0",
+      "purl": "pkg:pypi/rpds-py@0.27.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-01T15:53:40Z"
+          "value": "2025-08-07T08:23:06Z"
         },
         {
           "name": "language",
@@ -1985,7 +1976,7 @@
       "type": "library",
       "bom-ref": "32-elementpath",
       "name": "elementpath",
-      "version": "5.0.3",
+      "version": "5.0.4",
       "supplier": {
         "name": "Davide Brunato",
         "contact": [
@@ -1994,12 +1985,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:davide_brunato:elementpath:5.0.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:davide_brunato:elementpath:5.0.4:*:*:*:*:*:*:*",
       "description": "XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8c93540556f743835b3c682a7bdb2d97371ee1e151430ff35498b59f2c14e5a0"
+          "content": "75d6f31c614d57e50eb749fc50806e3102880cd1f6552da3f2265f8eb8d3bbc6"
         }
       ],
       "externalReferences": [
@@ -2009,16 +2000,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/elementpath/5.0.3/#files",
+          "url": "https://pypi.org/project/elementpath/5.0.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/elementpath@5.0.3",
+      "purl": "pkg:pypi/elementpath@5.0.4",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-06-28T06:20:35Z"
+          "value": "2025-08-16T18:19:52Z"
         },
         {
           "name": "language",
@@ -2087,7 +2078,7 @@
       "type": "library",
       "bom-ref": "34-textual",
       "name": "textual",
-      "version": "5.0.1",
+      "version": "5.3.0",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2096,12 +2087,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:5.3.0:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa"
+          "content": "02a6abc065514c4e21f94e79aaecea1f78a28a85d11d7bfc64abf3392d399890"
         }
       ],
       "licenses": [
@@ -2120,7 +2111,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/5.0.1/#files",
+          "url": "https://pypi.org/project/textual/5.3.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2137,11 +2128,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@5.0.1",
+      "purl": "pkg:pypi/textual@5.3.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-25T19:50:57Z"
+          "value": "2025-08-07T12:36:48Z"
         },
         {
           "name": "language",
