@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-8118f5c7-0ef3-4692-9636-00299645694d
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-6528935c-f685-4e38-a5d9-97f47b9aeed6
 LicenseListVersion: 3.26
 Creator: Tool: sbom4python-0.12.4
-Created: 2025-07-27T02:39:36Z
+Created: 2025-08-17T02:26:20Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
@@ -267,23 +267,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:requests:2.32.4:*:*:*:*:
 
 PackageName: charset-normalizer
 SPDXID: SPDXRef-14-charset-normalizer
-PackageVersion: 3.4.2
+PackageVersion: 3.4.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: Ahmed R. (tahri.ahmed@proton.me)
-PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.2/#files
+PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.3/#files
 FilesAnalyzed: false
-PackageChecksum: SHA256: 7c48ed483eb946e6c04ccbe02c6b4d1d48e51944b6db70f697e089c193404941
+PackageChecksum: SHA256: fb7f67a1bfa6e40b438170ebdc8158b78dc465a5a67b6dde178a46987b244a72
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.</text>
-ReleaseDate: 2025-05-02T08:31:46Z
+ReleaseDate: 2025-08-09T07:55:36Z
 ExternalRef: OTHER log https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md
 ExternalRef: OTHER documentation https://charset-normalizer.readthedocs.io/
 ExternalRef: OTHER vcs https://github.com/jawah/charset_normalizer
 ExternalRef: OTHER issue-tracker https://github.com/jawah/charset_normalizer/issues
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.2
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.2:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.3
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.3:*:*:*:*:*:*:*
 ##### 
 
 PackageName: idna
@@ -330,21 +330,21 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:andrey_petrov:urllib3:2.5.0:*:*:*:*:*:
 
 PackageName: certifi
 SPDXID: SPDXRef-17-certifi
-PackageVersion: 2025.7.14
+PackageVersion: 2025.8.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kenneth Reitz (me@kennethreitz.com)
-PackageDownloadLocation: https://pypi.org/project/certifi/2025.7.14/#files
+PackageDownloadLocation: https://pypi.org/project/certifi/2025.8.3/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/certifi/python-certifi
-PackageChecksum: SHA256: 6b31f564a415d79ee77df69d757bb49a5bb53bd9f756cbbe24394ffd6fc1f4b2
+PackageChecksum: SHA256: f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5
 PackageLicenseDeclared: MPL-2.0
 PackageLicenseConcluded: MPL-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Python package for providing Mozilla's CA Bundle.</text>
-ReleaseDate: 2025-07-14T03:29:26Z
+ReleaseDate: 2025-08-03T03:07:45Z
 ExternalRef: OTHER vcs https://github.com/certifi/python-certifi
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/certifi@2025.7.14
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:certifi:2025.7.14:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/certifi@2025.8.3
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:certifi:2025.8.3:*:*:*:*:*:*:*
 ##### 
 
 PackageName: saneyaml
@@ -571,26 +571,26 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:referencing:0.36.2:*:*:*
 
 PackageName: rpds-py
 SPDXID: SPDXRef-29-rpds-py
-PackageVersion: 0.26.0
+PackageVersion: 0.27.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+rpds@GrayVines.com)
-PackageDownloadLocation: https://pypi.org/project/rpds-py/0.26.0/#files
+PackageDownloadLocation: https://pypi.org/project/rpds-py/0.27.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/crate-py/rpds
-PackageChecksum: SHA256: 4c70c70f9169692b36307a95f3d8c0a9fcd79f7b4a383aad5eaa0e9718b79b37
-PackageLicenseDeclared: MIT
-PackageLicenseConcluded: MIT
+PackageChecksum: SHA256: 130c1ffa5039a333f5926b09e346ab335f0d4ec393b030a18549a7c7e7c2cea4
+PackageLicenseDeclared: NOASSERTION
+PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Python bindings to Rust's persistent data structures (rpds)</text>
-ReleaseDate: 2025-07-01T15:53:40Z
+ReleaseDate: 2025-08-07T08:23:06Z
 ExternalRef: OTHER documentation https://rpds.readthedocs.io/
 ExternalRef: OTHER issue-tracker https://github.com/crate-py/rpds/issues/
 ExternalRef: OTHER other https://github.com/sponsors/Julian
 ExternalRef: OTHER other https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link
 ExternalRef: OTHER vcs https://github.com/crate-py/rpds
 ExternalRef: OTHER other https://github.com/orium/rpds
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rpds-py@0.26.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:rpds-py:0.26.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rpds-py@0.27.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:rpds-py:0.27.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: xmlschema
@@ -613,20 +613,20 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:davide_brunato:xmlschema:4.1.0:*:*:*:*
 
 PackageName: elementpath
 SPDXID: SPDXRef-31-elementpath
-PackageVersion: 5.0.3
+PackageVersion: 5.0.4
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Davide Brunato (brunato@sissa.it)
-PackageDownloadLocation: https://pypi.org/project/elementpath/5.0.3/#files
+PackageDownloadLocation: https://pypi.org/project/elementpath/5.0.4/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/sissaschool/elementpath
-PackageChecksum: SHA256: 8c93540556f743835b3c682a7bdb2d97371ee1e151430ff35498b59f2c14e5a0
+PackageChecksum: SHA256: 75d6f31c614d57e50eb749fc50806e3102880cd1f6552da3f2265f8eb8d3bbc6
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml</text>
-ReleaseDate: 2025-06-28T06:20:35Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/elementpath@5.0.3
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:davide_brunato:elementpath:5.0.3:*:*:*:*:*:*:*
+ReleaseDate: 2025-08-16T18:19:52Z
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/elementpath@5.0.4
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:davide_brunato:elementpath:5.0.4:*:*:*:*:*:*:*
 ##### 
 
 PackageName: tantivy
@@ -648,43 +648,43 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:damir_jelic_damir_jelic_caleb_hattingh
 
 PackageName: textual
 SPDXID: SPDXRef-33-textual
-PackageVersion: 5.0.1
+PackageVersion: 5.3.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (will@textualize.io)
-PackageDownloadLocation: https://pypi.org/project/textual/5.0.1/#files
+PackageDownloadLocation: https://pypi.org/project/textual/5.3.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/textual
-PackageChecksum: SHA256: 816eab21d22a702b3858ee23615abccaf157c05d386e82968000084c3c2c26aa
+PackageChecksum: SHA256: 02a6abc065514c4e21f94e79aaecea1f78a28a85d11d7bfc64abf3392d399890
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Modern Text User Interface framework</text>
-ReleaseDate: 2025-07-25T19:50:57Z
+ReleaseDate: 2025-08-07T12:36:48Z
 ExternalRef: OTHER issue-tracker https://github.com/Textualize/textual/issues
 ExternalRef: OTHER documentation https://textual.textualize.io/
 ExternalRef: OTHER vcs https://github.com/Textualize/textual
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@5.0.1
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:5.0.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@5.3.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:5.3.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: markdown-it-py
 SPDXID: SPDXRef-34-markdown-it-py
-PackageVersion: 3.0.0
+PackageVersion: 4.0.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Chris Sewell (chrisj_sewell@hotmail.com)
-PackageDownloadLocation: https://pypi.org/project/markdown-it-py/3.0.0/#files
+PackageDownloadLocation: https://pypi.org/project/markdown-it-py/4.0.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/executablebooks/markdown-it-py
-PackageChecksum: SHA256: 355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1
+PackageChecksum: SHA256: 87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: MIT
 PackageLicenseComments: <text>markdown-it-py declares MIT License which is not currently a valid SPDX License identifier or expression.</text>
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Python port of markdown-it. Markdown parsing, done right!</text>
-ReleaseDate: 2023-06-03T06:41:11Z
+ReleaseDate: 2025-08-11T12:57:51Z
 ExternalRef: OTHER documentation https://markdown-it-py.readthedocs.io
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/markdown-it-py@3.0.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:chris_sewell:markdown-it-py:3.0.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/markdown-it-py@4.0.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:chris_sewell:markdown-it-py:4.0.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: mdurl
