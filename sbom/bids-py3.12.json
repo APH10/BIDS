@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:cf63fbce-1a89-4881-8cd0-b0fe63180c79",
+  "serialNumber": "urn:uuid:bc9f9057-4cd0-4437-9806-fac386f14cfd",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-08-17T02:26:23Z",
+    "timestamp": "2025-08-24T02:21:39Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -753,7 +753,7 @@
       "type": "library",
       "bom-ref": "13-requests",
       "name": "requests",
-      "version": "2.32.4",
+      "version": "2.32.5",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -762,12 +762,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.32.4:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.32.5:*:*:*:*:*:*:*",
       "description": "Python HTTP for Humans.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c"
+          "content": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
         }
       ],
       "licenses": [
@@ -786,7 +786,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/requests/2.32.4/#files",
+          "url": "https://pypi.org/project/requests/2.32.5/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -799,11 +799,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/requests@2.32.4",
+      "purl": "pkg:pypi/requests@2.32.5",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-06-09T16:43:05Z"
+          "value": "2025-08-18T20:46:00Z"
         },
         {
           "name": "language",
@@ -1570,7 +1570,7 @@
       "type": "library",
       "bom-ref": "26-jsonschema",
       "name": "jsonschema",
-      "version": "4.25.0",
+      "version": "4.25.1",
       "supplier": {
         "name": "Julian Berman",
         "contact": [
@@ -1579,12 +1579,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:julian_berman:jsonschema:4.25.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:julian_berman:jsonschema:4.25.1:*:*:*:*:*:*:*",
       "description": "An implementation of JSON Schema validation for Python",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "24c2e8da302de79c8b9382fee3e76b355e44d2a4364bb207159ce10b517bd716"
+          "content": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63"
         }
       ],
       "externalReferences": [
@@ -1594,7 +1594,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/jsonschema/4.25.0/#files",
+          "url": "https://pypi.org/project/jsonschema/4.25.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1623,11 +1623,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/jsonschema@4.25.0",
+      "purl": "pkg:pypi/jsonschema@4.25.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-07-18T15:39:42Z"
+          "value": "2025-08-18T17:03:48Z"
         },
         {
           "name": "language",
