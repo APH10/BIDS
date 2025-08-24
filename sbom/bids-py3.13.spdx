@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-965d77f1-ce13-4a55-a7ea-f2135c20e8fb
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-8ecd4f75-1081-4ae2-8df8-01e35796fd71
 LicenseListVersion: 3.26
 Creator: Tool: sbom4python-0.12.4
-Created: 2025-08-17T02:26:20Z
+Created: 2025-08-24T02:21:28Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
@@ -247,22 +247,22 @@ ExternalRef: PACKAGE-MANAGER purl pkg:pypi/click@8.2.1
 
 PackageName: requests
 SPDXID: SPDXRef-13-requests
-PackageVersion: 2.32.4
+PackageVersion: 2.32.5
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kenneth Reitz (me@kennethreitz.org)
-PackageDownloadLocation: https://pypi.org/project/requests/2.32.4/#files
+PackageDownloadLocation: https://pypi.org/project/requests/2.32.5/#files
 FilesAnalyzed: false
 PackageHomePage: https://requests.readthedocs.io
-PackageChecksum: SHA256: 27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c
+PackageChecksum: SHA256: 2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Python HTTP for Humans.</text>
-ReleaseDate: 2025-06-09T16:43:05Z
+ReleaseDate: 2025-08-18T20:46:00Z
 ExternalRef: OTHER documentation https://requests.readthedocs.io
 ExternalRef: OTHER vcs https://github.com/psf/requests
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/requests@2.32.4
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:requests:2.32.4:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/requests@2.32.5
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:requests:2.32.5:*:*:*:*:*:*:*
 ##### 
 
 PackageName: charset-normalizer
@@ -500,26 +500,26 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:christian_heimes:defusedxml:0.7.1:*:*:
 
 PackageName: jsonschema
 SPDXID: SPDXRef-26-jsonschema
-PackageVersion: 4.25.0
+PackageVersion: 4.25.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+jsonschema@GrayVines.com)
-PackageDownloadLocation: https://pypi.org/project/jsonschema/4.25.0/#files
+PackageDownloadLocation: https://pypi.org/project/jsonschema/4.25.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/python-jsonschema/jsonschema
-PackageChecksum: SHA256: 24c2e8da302de79c8b9382fee3e76b355e44d2a4364bb207159ce10b517bd716
+PackageChecksum: SHA256: 3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: NOASSERTION
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>An implementation of JSON Schema validation for Python</text>
-ReleaseDate: 2025-07-18T15:39:42Z
+ReleaseDate: 2025-08-18T17:03:48Z
 ExternalRef: OTHER documentation https://python-jsonschema.readthedocs.io/
 ExternalRef: OTHER issue-tracker https://github.com/python-jsonschema/jsonschema/issues/
 ExternalRef: OTHER other https://github.com/sponsors/Julian
 ExternalRef: OTHER other https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link
 ExternalRef: OTHER log https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst
 ExternalRef: OTHER vcs https://github.com/python-jsonschema/jsonschema
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/jsonschema@4.25.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:jsonschema:4.25.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/jsonschema@4.25.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:jsonschema:4.25.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: jsonschema-specifications
