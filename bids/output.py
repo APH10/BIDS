@@ -80,7 +80,7 @@ class BIDSOutput:
         component = {}
         component["class"] = "ELF64" if sys.maxsize > 2**32 else "ELF32"
         component["architecture"] = platform.machine()
-        component["bits"] = 64 if sys.maxsize > 2**32 else 32
+        component["bits"] = "64" if sys.maxsize > 2**32 else "32"
         component["os"] = sys.platform
         if application.get("location") is not None:
             component["filename"] = application["location"]
