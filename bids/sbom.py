@@ -204,10 +204,12 @@ def process_file(bids_file):
         dependency_package = SBOMPackage()
         dependency_package.set_type("library")
         dependency_package.set_name(library["name"])
-        dependency_package.set_evidence(library["location"])
+        if "location" in library:
+            dependency_package.set_evidence(library["location"])
         if "version" in library:
             dependency_package.set_value("version", library["version"])
-        dependency_package.set_value("release_date", library["filedate"])
+        if "filedate" in library:
+            dependency_package.set_value("release_date", library["filedate"])
         for checksum_data in library["checksum"]:
             for algorithm in util.get_checksum_algorithms():
                 if algorithm in checksum_data["algorithm"]:
