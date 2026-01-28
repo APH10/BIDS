@@ -23,7 +23,10 @@ For a good introduction on readelf and ELF see:
 class BIDSElf:
 
     def __init__(self, file, debug=False):
-        T = contenttype.get_type(file)
+        try:
+            T = contenttype.get_type(file)
+        except:
+            raise TypeError("Unsupported Operating System")
         if not T.is_elf:
             raise TypeError("Not an ELF file")
         f = open(file, "rb")
