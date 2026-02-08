@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:b569b1ac-a7f8-439f-bdbf-ac201764a22b",
+  "serialNumber": "urn:uuid:2031534a-5a01-4fbe-873d-65c5759b05ed",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-01-25T02:38:45Z",
+    "timestamp": "2026-02-08T03:30:08Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -34,7 +34,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -43,7 +43,7 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.1:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
       "licenses": [
         {
@@ -61,12 +61,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.3.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.3.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.3.0",
+      "purl": "pkg:pypi/bids-analyser@0.3.1",
       "properties": [
         {
           "name": "language",
@@ -199,6 +199,12 @@
       },
       "cpe": "cpe:2.3:a:nexb._inc._and_others:typecode:30.1.0:*:*:*:*:*:*:*",
       "description": "Comprehensive filetype and mimetype detection using libmagic and Pygments.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d61a9cc8dfb22712c15f83936564cc034429b81f66e24058b89ce5169af39b34"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -224,7 +230,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-10-31T19:42:26Z"
+          "value": "2026-01-09T06:19:44Z"
         },
         {
           "name": "language",
@@ -575,6 +581,12 @@
       },
       "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.8.3:*:*:*:*:*:*:*",
       "description": "A modern CSS selector implementation for Beautiful Soup.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -600,7 +612,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-11-30T15:08:24Z"
+          "value": "2026-01-20T04:27:01Z"
         },
         {
           "name": "language",
@@ -1366,7 +1378,7 @@
       "type": "library",
       "bom-ref": "23-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.9.3",
+      "version": "0.9.4",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1375,7 +1387,7 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.9.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.9.4:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "licenses": [
         {
@@ -1393,12 +1405,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.9.3/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.9.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.9.3",
+      "purl": "pkg:pypi/lib4sbom@0.9.4",
       "properties": [
         {
           "name": "release_date",
@@ -2028,7 +2040,7 @@
       "type": "library",
       "bom-ref": "34-textual",
       "name": "textual",
-      "version": "7.3.0",
+      "version": "7.5.0",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2037,12 +2049,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:7.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:7.5.0:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "db235cecf969c87fe5a9c04d83595f506affc9db81f3a53ab849534d726d330a"
+          "content": "849dfee9d705eab3b2d07b33152b7bd74fb1f5056e002873cc448bce500c6374"
         }
       ],
       "licenses": [
@@ -2061,7 +2073,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/7.3.0/#files",
+          "url": "https://pypi.org/project/textual/7.5.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2078,11 +2090,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@7.3.0",
+      "purl": "pkg:pypi/textual@7.5.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-15T16:31:58Z"
+          "value": "2026-01-30T13:46:37Z"
         },
         {
           "name": "language",
@@ -2435,7 +2447,7 @@
       "type": "library",
       "bom-ref": "40-rich",
       "name": "rich",
-      "version": "14.3.1",
+      "version": "14.3.2",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2444,8 +2456,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.3.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.3.2:*:*:*:*:*:*:*",
       "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "08e67c3e90884651da3239ea668222d19bea7b589149d8014a21c633420dbb69"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -2462,7 +2480,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/rich/14.3.1/#files",
+          "url": "https://pypi.org/project/rich/14.3.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2471,11 +2489,11 @@
           "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/rich@14.3.1",
+      "purl": "pkg:pypi/rich@14.3.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-06-21T13:39:07Z"
+          "value": "2026-02-01T16:20:46Z"
         },
         {
           "name": "language",
