@@ -2,27 +2,27 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-5da424b0-bb13-447a-9b48-22a575ebfbbf
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-dbb49f06-e4e3-4282-8614-31e59788151c
 LicenseListVersion: 3.27
 Creator: Tool: sbom4python-0.12.4
-Created: 2026-01-25T02:38:40Z
+Created: 2026-02-08T03:31:06Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
 PackageName: bids-analyser
 SPDXID: SPDXRef-1-bids-analyser
-PackageVersion: 0.3.0
+PackageVersion: 0.3.1
 PrimaryPackagePurpose: APPLICATION
 PackageSupplier: Person: Anthony Harrison (anthony@aph10.com)
-PackageDownloadLocation: https://pypi.org/project/bids-analyser/0.3.0/#files
+PackageDownloadLocation: https://pypi.org/project/bids-analyser/0.3.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/aph10/BIDS
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Analyser for ELF files</text>
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/bids-analyser@0.3.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:bids-analyser:0.3.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/bids-analyser@0.3.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:bids-analyser:0.3.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: pyelftools
@@ -133,12 +133,11 @@ PackageSupplier: Organization: nexB. Inc. and others (info@aboutcode.org)
 PackageDownloadLocation: https://pypi.org/project/commoncode/32.3.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/aboutcode-org/commoncode
-PackageChecksum: SHA256: 992e502e6b68016247c16b7cbe3b6d741e5a75c075194763bff443b8a5fc75b7
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Set of common utilities, originally split from ScanCode</text>
-ReleaseDate: 2025-06-11T15:17:04Z
+ReleaseDate: 2023-08-01T19:23:00Z
 ExternalRef: PACKAGE-MANAGER purl pkg:pypi/commoncode@32.3.0
 ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:commoncode:32.3.0:*:*:*:*:*:*:*
 ##### 
@@ -171,12 +170,13 @@ PackageSupplier: Person: Isaac Muse (Isaac.Muse@gmail.com)
 PackageDownloadLocation: https://pypi.org/project/soupsieve/2.8.3/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/facelessuser/soupsieve
+PackageChecksum: SHA256: ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95
 PackageLicenseDeclared: NOASSERTION
 PackageLicenseConcluded: MIT
 PackageLicenseComments: <text>soupsieve declares MIT License which is not currently a valid SPDX License identifier or expression.</text>
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>A modern CSS selector implementation for Beautiful Soup.</text>
-ReleaseDate: 2025-11-30T15:08:24Z
+ReleaseDate: 2026-01-20T04:27:01Z
 ExternalRef: PACKAGE-MANAGER purl pkg:pypi/soupsieve@2.8.3
 ExternalRef: SECURITY cpe23Type cpe:2.3:a:isaac_muse:soupsieve:2.8.3:*:*:*:*:*:*:*
 ##### 
@@ -460,10 +460,10 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:holger_krekel:pluggy:1.6.0:*:*:*:*:*:*
 
 PackageName: lib4sbom
 SPDXID: SPDXRef-24-lib4sbom
-PackageVersion: 0.9.3
+PackageVersion: 0.9.4
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Anthony Harrison (anthony.p.harrison@gmail.com)
-PackageDownloadLocation: https://pypi.org/project/lib4sbom/0.9.3/#files
+PackageDownloadLocation: https://pypi.org/project/lib4sbom/0.9.4/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/anthonyharrison/lib4sbom
 PackageLicenseDeclared: Apache-2.0
@@ -471,8 +471,8 @@ PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Software Bill of Material (SBOM) generator and consumer library</text>
 ReleaseDate: 2025-05-15T12:30:06Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/lib4sbom@0.9.3
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:lib4sbom:0.9.3:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/lib4sbom@0.9.4
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:lib4sbom:0.9.4:*:*:*:*:*:*:*
 ##### 
 
 PackageName: semantic-version
@@ -682,23 +682,23 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:damir_jelic_caleb_hattingh_cam_parry:t
 
 PackageName: textual
 SPDXID: SPDXRef-35-textual
-PackageVersion: 7.3.0
+PackageVersion: 7.5.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (will@textualize.io)
-PackageDownloadLocation: https://pypi.org/project/textual/7.3.0/#files
+PackageDownloadLocation: https://pypi.org/project/textual/7.5.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/textual
-PackageChecksum: SHA256: db235cecf969c87fe5a9c04d83595f506affc9db81f3a53ab849534d726d330a
+PackageChecksum: SHA256: 849dfee9d705eab3b2d07b33152b7bd74fb1f5056e002873cc448bce500c6374
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Modern Text User Interface framework</text>
-ReleaseDate: 2026-01-15T16:31:58Z
+ReleaseDate: 2026-01-30T13:46:37Z
 ExternalRef: OTHER issue-tracker https://github.com/Textualize/textual/issues
 ExternalRef: OTHER documentation https://textual.textualize.io/
 ExternalRef: OTHER vcs https://github.com/Textualize/textual
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@7.3.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:7.3.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@7.5.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:7.5.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: markdown-it-py
@@ -806,20 +806,21 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:georg_brandl:pygments:2.19.2:*:*:*:*:*
 
 PackageName: rich
 SPDXID: SPDXRef-41-rich
-PackageVersion: 14.3.1
+PackageVersion: 14.3.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (willmcgugan@gmail.com)
-PackageDownloadLocation: https://pypi.org/project/rich/14.3.1/#files
+PackageDownloadLocation: https://pypi.org/project/rich/14.3.2/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/rich
+PackageChecksum: SHA256: 08e67c3e90884651da3239ea668222d19bea7b589149d8014a21c633420dbb69
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal</text>
-ReleaseDate: 2025-06-21T13:39:07Z
+ReleaseDate: 2026-02-01T16:20:46Z
 ExternalRef: OTHER documentation https://rich.readthedocs.io/en/latest/
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rich@14.3.1
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:rich:14.3.1:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/rich@14.3.2
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:rich:14.3.2:*:*:*:*:*:*:*
 ##### 
 
 Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-1-bids-analyser
