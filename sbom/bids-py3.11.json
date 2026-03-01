@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:de1e497e-fcbb-41af-af47-f3c148f57e86",
+  "serialNumber": "urn:uuid:518e93c9-ebf3-48c4-b1dd-8136d68efe9b",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-01-25T02:38:45Z",
+    "timestamp": "2026-03-01T03:20:31Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -34,7 +34,7 @@
       "type": "application",
       "bom-ref": "1-bids-analyser",
       "name": "bids-analyser",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -43,8 +43,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:bids-analyser:0.3.1:*:*:*:*:*:*:*",
       "description": "Analyser for ELF files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "726ebd280a5b762acfb4e0f1f02be597b1ef56a6954b3ecf7177ac80ec829258"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -61,13 +67,17 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/bids-analyser/0.3.0/#files",
+          "url": "https://pypi.org/project/bids-analyser/0.3.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/bids-analyser@0.3.0",
+      "purl": "pkg:pypi/bids-analyser@0.3.1",
       "properties": [
+        {
+          "name": "release_date",
+          "value": "2026-01-28T19:49:31Z"
+        },
         {
           "name": "language",
           "value": "Python"
@@ -199,6 +209,12 @@
       },
       "cpe": "cpe:2.3:a:nexb._inc._and_others:typecode:30.1.0:*:*:*:*:*:*:*",
       "description": "Comprehensive filetype and mimetype detection using libmagic and Pygments.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d61a9cc8dfb22712c15f83936564cc034429b81f66e24058b89ce5169af39b34"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -224,7 +240,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2024-10-31T19:42:26Z"
+          "value": "2026-01-09T06:19:44Z"
         },
         {
           "name": "language",
@@ -575,6 +591,12 @@
       },
       "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.8.3:*:*:*:*:*:*:*",
       "description": "A modern CSS selector implementation for Beautiful Soup.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -600,7 +622,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-11-30T15:08:24Z"
+          "value": "2026-01-20T04:27:01Z"
         },
         {
           "name": "language",
@@ -995,7 +1017,7 @@
       "type": "library",
       "bom-ref": "17-certifi",
       "name": "certifi",
-      "version": "2026.1.4",
+      "version": "2026.2.25",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -1004,12 +1026,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2026.1.4:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2026.2.25:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c"
+          "content": "027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"
         }
       ],
       "licenses": [
@@ -1028,7 +1050,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2026.1.4/#files",
+          "url": "https://pypi.org/project/certifi/2026.2.25/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1037,11 +1059,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2026.1.4",
+      "purl": "pkg:pypi/certifi@2026.2.25",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-04T02:42:40Z"
+          "value": "2026-02-25T02:54:15Z"
         },
         {
           "name": "language",
@@ -1366,7 +1388,7 @@
       "type": "library",
       "bom-ref": "23-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.9.3",
+      "version": "0.10.0",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1375,7 +1397,7 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.9.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.10.0:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
       "licenses": [
         {
@@ -1393,12 +1415,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.9.3/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.10.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.9.3",
+      "purl": "pkg:pypi/lib4sbom@0.10.0",
       "properties": [
         {
           "name": "release_date",
@@ -1952,6 +1974,12 @@
       },
       "cpe": "cpe:2.3:a:davide_brunato:elementpath:5.1.1:*:*:*:*:*:*:*",
       "description": "XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "57637359065e60654422d8474c1749b09bb21348012b7197f868027e3c09c9b9"
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/sissaschool/elementpath",
@@ -1968,7 +1996,7 @@
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-17T23:01:00Z"
+          "value": "2026-01-20T21:42:24Z"
         },
         {
           "name": "language",
@@ -1982,7 +2010,60 @@
     },
     {
       "type": "library",
-      "bom-ref": "33-tantivy",
+      "bom-ref": "33-packageurl-python",
+      "name": "packageurl-python",
+      "version": "0.17.6",
+      "supplier": {
+        "name": "the purl authors"
+      },
+      "cpe": "cpe:2.3:a:the_purl_authors:packageurl-python:0.17.6:*:*:*:*:*:*:*",
+      "description": "A purl aka. Package URL parser and builder",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31a85c2717bc41dd818f3c62908685ff9eebcb68588213745b14a6ee9e7df7c9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
+      "externalReferences": [
+        {
+          "url": "https://github.com/package-url/packageurl-python",
+          "type": "website",
+          "comment": "Home page for project"
+        },
+        {
+          "url": "https://pypi.org/project/packageurl-python/0.17.6/#files",
+          "type": "distribution",
+          "comment": "Download location for component"
+        }
+      ],
+      "purl": "pkg:pypi/packageurl-python@0.17.6",
+      "properties": [
+        {
+          "name": "release_date",
+          "value": "2025-11-24T15:20:16Z"
+        },
+        {
+          "name": "language",
+          "value": "Python"
+        },
+        {
+          "name": "python_version",
+          "value": "3.11.14"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "34-tantivy",
       "name": "tantivy",
       "version": "0.25.1",
       "supplier": {
@@ -2026,9 +2107,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "34-textual",
+      "bom-ref": "35-textual",
       "name": "textual",
-      "version": "7.3.0",
+      "version": "8.0.0",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2037,12 +2118,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:7.3.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:8.0.0:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "db235cecf969c87fe5a9c04d83595f506affc9db81f3a53ab849534d726d330a"
+          "content": "8908f4ebe93a6b4f77ca7262197784a52162bc88b05f4ecf50ac93a92d49bb8f"
         }
       ],
       "licenses": [
@@ -2061,7 +2142,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/7.3.0/#files",
+          "url": "https://pypi.org/project/textual/8.0.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2078,11 +2159,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@7.3.0",
+      "purl": "pkg:pypi/textual@8.0.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-15T16:31:58Z"
+          "value": "2026-02-16T17:12:11Z"
         },
         {
           "name": "language",
@@ -2096,7 +2177,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "35-markdown-it-py",
+      "bom-ref": "36-markdown-it-py",
       "name": "markdown-it-py",
       "version": "4.0.0",
       "supplier": {
@@ -2162,7 +2243,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "36-mdurl",
+      "bom-ref": "37-mdurl",
       "name": "mdurl",
       "version": "0.1.2",
       "supplier": {
@@ -2224,7 +2305,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "37-mdit-py-plugins",
+      "bom-ref": "38-mdit-py-plugins",
       "name": "mdit-py-plugins",
       "version": "0.5.0",
       "supplier": {
@@ -2290,14 +2371,14 @@
     },
     {
       "type": "library",
-      "bom-ref": "38-platformdirs",
+      "bom-ref": "39-platformdirs",
       "name": "platformdirs",
-      "version": "4.5.1",
+      "version": "4.9.2",
       "description": "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "d03afa3963c806a9bed9d5125c8f4cb2fdaf74a55ab60e5d59b3fde758104d31"
+          "content": "9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd"
         }
       ],
       "licenses": [
@@ -2316,12 +2397,12 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/platformdirs/4.5.1/#files",
+          "url": "https://pypi.org/project/platformdirs/4.9.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
         {
-          "url": "https://github.com/tox-dev/platformdirs/releases",
+          "url": "https://platformdirs.readthedocs.io/en/latest/changelog.html",
           "type": "log"
         },
         {
@@ -2337,11 +2418,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/platformdirs@4.5.1",
+      "purl": "pkg:pypi/platformdirs@4.9.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-12-05T13:52:56Z"
+          "value": "2026-02-16T03:56:08Z"
         },
         {
           "name": "language",
@@ -2359,7 +2440,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "39-pygments",
+      "bom-ref": "40-pygments",
       "name": "pygments",
       "version": "2.19.2",
       "supplier": {
@@ -2433,9 +2514,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "40-rich",
+      "bom-ref": "41-rich",
       "name": "rich",
-      "version": "14.3.1",
+      "version": "14.3.3",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2444,8 +2525,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.3.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.3.3:*:*:*:*:*:*:*",
       "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "793431c1f8619afa7d3b52b2cdec859562b950ea0d4b6b505397612db8d5362d"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -2462,7 +2549,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/rich/14.3.1/#files",
+          "url": "https://pypi.org/project/rich/14.3.3/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2471,11 +2558,11 @@
           "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/rich@14.3.1",
+      "purl": "pkg:pypi/rich@14.3.3",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-06-21T13:39:07Z"
+          "value": "2026-02-19T17:23:13Z"
         },
         {
           "name": "language",
@@ -2502,8 +2589,8 @@
         "3-typecode-libmagic-system-provided",
         "4-typecode",
         "23-lib4sbom",
-        "33-tantivy",
-        "34-textual"
+        "34-tantivy",
+        "35-textual"
       ]
     },
     {
@@ -2570,7 +2657,8 @@
         "25-defusedxml",
         "26-fastjsonschema",
         "27-jsonschema",
-        "31-xmlschema"
+        "31-xmlschema",
+        "33-packageurl-python"
       ]
     },
     {
@@ -2603,33 +2691,33 @@
       ]
     },
     {
-      "ref": "34-textual",
+      "ref": "35-textual",
       "dependsOn": [
-        "35-markdown-it-py",
-        "37-mdit-py-plugins",
-        "38-platformdirs",
-        "39-pygments",
-        "40-rich",
+        "36-markdown-it-py",
+        "38-mdit-py-plugins",
+        "39-platformdirs",
+        "40-pygments",
+        "41-rich",
         "11-typing-extensions"
       ]
     },
     {
-      "ref": "35-markdown-it-py",
+      "ref": "36-markdown-it-py",
       "dependsOn": [
-        "36-mdurl"
+        "37-mdurl"
       ]
     },
     {
-      "ref": "37-mdit-py-plugins",
+      "ref": "38-mdit-py-plugins",
       "dependsOn": [
-        "35-markdown-it-py"
+        "36-markdown-it-py"
       ]
     },
     {
-      "ref": "40-rich",
+      "ref": "41-rich",
       "dependsOn": [
-        "35-markdown-it-py",
-        "39-pygments"
+        "36-markdown-it-py",
+        "40-pygments"
       ]
     }
   ]
