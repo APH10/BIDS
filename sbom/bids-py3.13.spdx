@@ -2,10 +2,10 @@ SPDXVersion: SPDX-2.3
 DataLicense: CC0-1.0
 SPDXID: SPDXRef-DOCUMENT
 DocumentName: Python-bids-analyser
-DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-bb5f5c74-8c94-4da9-a194-fd4c42405179
+DocumentNamespace: http://spdx.org/spdxdocs/Python-bids-analyser-a9d13151-6c75-4324-a3b2-9dc2469ccda3
 LicenseListVersion: 3.28.0
-Creator: Tool: sbom4python-0.12.4
-Created: 2026-03-01T03:20:27Z
+Creator: Tool: sbom4python-0.12.5
+Created: 2026-03-15T03:26:33Z
 CreatorComment: <text>SBOM Type: Build - This document has been automatically generated.</text>
 ##### 
 
@@ -91,8 +91,8 @@ PackageSupplier: Person: Hynek Schlawack (hs@ox.cx)
 PackageDownloadLocation: https://pypi.org/project/attrs/25.4.0/#files
 FilesAnalyzed: false
 PackageChecksum: SHA256: adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Classes Without Boilerplate</text>
 ReleaseDate: 2025-10-06T13:54:43Z
@@ -107,47 +107,27 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:hynek_schlawack:attrs:25.4.0:*:*:*:*:*
 
 PackageName: binaryornot
 SPDXID: SPDXRef-6-binaryornot
-PackageVersion: 0.4.4
+PackageVersion: 0.6.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: Audrey Roy Greenfeld (aroy@alum.mit.edu)
-PackageDownloadLocation: https://pypi.org/project/binaryornot/0.4.4/#files
+PackageDownloadLocation: https://pypi.org/project/binaryornot/0.6.0/#files
 FilesAnalyzed: false
-PackageHomePage: https://github.com/audreyr/binaryornot
-PackageChecksum: SHA256: b8b71173c917bddcd2c16070412e369c3ed7f0528926f70cac18a6c97fd563e4
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: BSD-3-Clause
-PackageLicenseComments: <text>binaryornot declares BSD which is not currently a valid SPDX License identifier or expression.</text>
+PackageHomePage: https://github.com/binaryornot/binaryornot
+PackageChecksum: SHA256: 900adfd5e1b821255ba7e63139b0396b14c88b9286e74e03b6f51e0200331337
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Ultra-lightweight pure Python package to check if a file is binary or text.</text>
-ReleaseDate: 2017-08-03T15:55:31Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/binaryornot@0.4.4
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:audrey_roy_greenfeld:binaryornot:0.4.4:*:*:*:*:*:*:*
-##### 
-
-PackageName: chardet
-SPDXID: SPDXRef-7-chardet
-PackageVersion: 5.2.0
-PrimaryPackagePurpose: LIBRARY
-PackageSupplier: Person: Mark Pilgrim (mark@diveintomark.org)
-PackageDownloadLocation: https://pypi.org/project/chardet/5.2.0/#files
-FilesAnalyzed: false
-PackageHomePage: https://github.com/chardet/chardet
-PackageChecksum: SHA256: e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: LGPL-2.0-or-later
-PackageLicenseComments: <text>chardet declares LGPL which is not currently a valid SPDX License identifier or expression.</text>
-PackageCopyrightText: NOASSERTION
-PackageSummary: <text>Universal encoding detector for Python 3</text>
-ReleaseDate: 2023-08-01T19:23:00Z
-ExternalRef: OTHER documentation https://chardet.readthedocs.io/
-ExternalRef: OTHER other https://github.com/chardet/chardet
-ExternalRef: OTHER issue-tracker https://github.com/chardet/chardet/issues
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/chardet@5.2.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:mark_pilgrim:chardet:5.2.0:*:*:*:*:*:*:*
+ReleaseDate: 2026-03-08T16:26:27Z
+ExternalRef: OTHER issue-tracker https://github.com/binaryornot/binaryornot/issues
+ExternalRef: OTHER log https://github.com/binaryornot/binaryornot/releases
+ExternalRef: OTHER documentation https://binaryornot.github.io/binaryornot/
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/binaryornot@0.6.0
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:audrey_roy_greenfeld:binaryornot:0.6.0:*:*:*:*:*:*:*
 ##### 
 
 PackageName: commoncode
-SPDXID: SPDXRef-8-commoncode
+SPDXID: SPDXRef-7-commoncode
 PackageVersion: 32.4.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: nexB. Inc. and others (info@aboutcode.org)
@@ -165,7 +145,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:commoncode:32.4.
 ##### 
 
 PackageName: beautifulsoup4
-SPDXID: SPDXRef-9-beautifulsoup4
+SPDXID: SPDXRef-8-beautifulsoup4
 PackageVersion: 4.14.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Leonard Richardson (leonardr@segfault.org)
@@ -185,7 +165,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:leonard_richardson:beautifulsoup4:4.14
 ##### 
 
 PackageName: soupsieve
-SPDXID: SPDXRef-10-soupsieve
+SPDXID: SPDXRef-9-soupsieve
 PackageVersion: 2.8.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Isaac Muse (Isaac.Muse@gmail.com)
@@ -193,9 +173,8 @@ PackageDownloadLocation: https://pypi.org/project/soupsieve/2.8.3/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/facelessuser/soupsieve
 PackageChecksum: SHA256: ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95
-PackageLicenseDeclared: NOASSERTION
+PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
-PackageLicenseComments: <text>soupsieve declares MIT License which is not currently a valid SPDX License identifier or expression.</text>
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>A modern CSS selector implementation for Beautiful Soup.</text>
 ReleaseDate: 2026-01-20T04:27:01Z
@@ -204,7 +183,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:isaac_muse:soupsieve:2.8.3:*:*:*:*:*:*
 ##### 
 
 PackageName: typing-extensions
-SPDXID: SPDXRef-11-typing-extensions
+SPDXID: SPDXRef-10-typing-extensions
 PackageVersion: 4.15.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: Guido van Jukka ukasz Michael (levkivskyi@gmail.com)
@@ -212,8 +191,8 @@ PackageDownloadLocation: https://pypi.org/project/typing-extensions/4.15.0/#file
 FilesAnalyzed: false
 PackageHomePage: https://github.com/python/typing_extensions
 PackageChecksum: SHA256: f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: PSF-2.0
+PackageLicenseConcluded: PSF-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Backported and Experimental Type Hints for Python 3.9+</text>
 ReleaseDate: 2025-08-25T13:49:24Z
@@ -227,15 +206,15 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:guido_van_jukka_ukasz_michael:typing-e
 ##### 
 
 PackageName: click
-SPDXID: SPDXRef-12-click
+SPDXID: SPDXRef-11-click
 PackageVersion: 8.3.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: NOASSERTION
 PackageDownloadLocation: https://pypi.org/project/click/8.3.1/#files
 FilesAnalyzed: false
 PackageChecksum: SHA256: 981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Composable command line interface toolkit</text>
 ReleaseDate: 2025-11-15T20:45:41Z
@@ -248,7 +227,7 @@ ExternalRef: PACKAGE-MANAGER purl pkg:pypi/click@8.3.1
 ##### 
 
 PackageName: requests
-SPDXID: SPDXRef-13-requests
+SPDXID: SPDXRef-12-requests
 PackageVersion: 2.32.5
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kenneth Reitz (me@kennethreitz.org)
@@ -268,36 +247,36 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:requests:2.32.5:*:*:*:*:
 ##### 
 
 PackageName: charset-normalizer
-SPDXID: SPDXRef-14-charset-normalizer
-PackageVersion: 3.4.4
+SPDXID: SPDXRef-13-charset-normalizer
+PackageVersion: 3.4.5
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: Ahmed R. (tahri.ahmed@proton.me)
-PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.4/#files
+PackageDownloadLocation: https://pypi.org/project/charset-normalizer/3.4.5/#files
 FilesAnalyzed: false
-PackageChecksum: SHA256: e824f1492727fa856dd6eda4f7cee25f8518a12f3c4a56a74e8095695089cf6d
+PackageChecksum: SHA256: 4167a621a9a1a986c73777dbc15d4b5eac8ac5c10393374109a343d4013ec765
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.</text>
-ReleaseDate: 2025-10-14T04:40:11Z
+ReleaseDate: 2026-03-06T06:00:26Z
 ExternalRef: OTHER log https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md
 ExternalRef: OTHER documentation https://charset-normalizer.readthedocs.io/
 ExternalRef: OTHER vcs https://github.com/jawah/charset_normalizer
 ExternalRef: OTHER issue-tracker https://github.com/jawah/charset_normalizer/issues
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.4
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.4:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/charset-normalizer@3.4.5
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.5:*:*:*:*:*:*:*
 ##### 
 
 PackageName: idna
-SPDXID: SPDXRef-15-idna
+SPDXID: SPDXRef-14-idna
 PackageVersion: 3.11
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kim Davies (kim+pypi@gumleaf.org)
 PackageDownloadLocation: https://pypi.org/project/idna/3.11/#files
 FilesAnalyzed: false
 PackageChecksum: SHA256: 771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Internationalized Domain Names in Applications (IDNA)</text>
 ReleaseDate: 2025-10-12T14:55:18Z
@@ -309,15 +288,15 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kim_davies:idna:3.11:*:*:*:*:*:*:*
 ##### 
 
 PackageName: urllib3
-SPDXID: SPDXRef-16-urllib3
+SPDXID: SPDXRef-15-urllib3
 PackageVersion: 2.6.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Andrey Petrov (andrey.petrov@shazow.net)
 PackageDownloadLocation: https://pypi.org/project/urllib3/2.6.3/#files
 FilesAnalyzed: false
 PackageChecksum: SHA256: bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>HTTP library with thread-safe connection pooling, file post, and more.</text>
 ReleaseDate: 2026-01-07T16:24:42Z
@@ -330,7 +309,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:andrey_petrov:urllib3:2.6.3:*:*:*:*:*:
 ##### 
 
 PackageName: certifi
-SPDXID: SPDXRef-17-certifi
+SPDXID: SPDXRef-16-certifi
 PackageVersion: 2026.2.25
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kenneth Reitz (me@kennethreitz.com)
@@ -349,7 +328,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kenneth_reitz:certifi:2026.2.25:*:*:*:
 ##### 
 
 PackageName: saneyaml
-SPDXID: SPDXRef-18-saneyaml
+SPDXID: SPDXRef-17-saneyaml
 PackageVersion: 0.6.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: nexB. Inc. and others (info@aboutcode.org)
@@ -367,7 +346,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:saneyaml:0.6.1:*
 ##### 
 
 PackageName: pyyaml
-SPDXID: SPDXRef-19-pyyaml
+SPDXID: SPDXRef-18-pyyaml
 PackageVersion: 6.0.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Kirill Simonov (xi@resolvent.net)
@@ -390,7 +369,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:kirill_simonov:pyyaml:6.0.3:*:*:*:*:*:
 ##### 
 
 PackageName: text-unidecode
-SPDXID: SPDXRef-20-text-unidecode
+SPDXID: SPDXRef-19-text-unidecode
 PackageVersion: 1.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Mikhail Korobov (kmike84@gmail.com)
@@ -409,7 +388,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:mikhail_korobov:text-unidecode:1.3:*:*
 ##### 
 
 PackageName: plugincode
-SPDXID: SPDXRef-21-plugincode
+SPDXID: SPDXRef-20-plugincode
 PackageVersion: 32.0.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: nexB. Inc. and others (info@aboutcode.org)
@@ -427,7 +406,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:nexb._inc._and_others:plugincode:32.0.
 ##### 
 
 PackageName: pluggy
-SPDXID: SPDXRef-22-pluggy
+SPDXID: SPDXRef-21-pluggy
 PackageVersion: 1.6.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Holger Krekel (holger@merlinux.eu)
@@ -444,24 +423,25 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:holger_krekel:pluggy:1.6.0:*:*:*:*:*:*
 ##### 
 
 PackageName: lib4sbom
-SPDXID: SPDXRef-23-lib4sbom
-PackageVersion: 0.10.0
+SPDXID: SPDXRef-22-lib4sbom
+PackageVersion: 0.10.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Anthony Harrison (anthony.p.harrison@gmail.com)
-PackageDownloadLocation: https://pypi.org/project/lib4sbom/0.10.0/#files
+PackageDownloadLocation: https://pypi.org/project/lib4sbom/0.10.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/anthonyharrison/lib4sbom
+PackageChecksum: SHA256: 836079f07fe4767f5bb2bc0169fb118f917c2afe8c052be8dc6e6af98d176626
 PackageLicenseDeclared: Apache-2.0
 PackageLicenseConcluded: Apache-2.0
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Software Bill of Material (SBOM) generator and consumer library</text>
-ReleaseDate: 2025-05-15T12:30:06Z
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/lib4sbom@0.10.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:lib4sbom:0.10.0:*:*:*:*:*:*:*
+ReleaseDate: 2026-03-05T15:00:02Z
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/lib4sbom@0.10.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:anthony_harrison:lib4sbom:0.10.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: semantic-version
-SPDXID: SPDXRef-24-semantic-version
+SPDXID: SPDXRef-23-semantic-version
 PackageVersion: 2.10.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Raphael Barrois (raphael.barrois+semver@polytechnique.org)
@@ -480,7 +460,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:raphael_barrois:semantic-version:2.10.
 ##### 
 
 PackageName: defusedxml
-SPDXID: SPDXRef-25-defusedxml
+SPDXID: SPDXRef-24-defusedxml
 PackageVersion: 0.7.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Christian Heimes (christian@python.org)
@@ -499,7 +479,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:christian_heimes:defusedxml:0.7.1:*:*:
 ##### 
 
 PackageName: fastjsonschema
-SPDXID: SPDXRef-26-fastjsonschema
+SPDXID: SPDXRef-25-fastjsonschema
 PackageVersion: 2.21.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Michal Horejsek (fastjsonschema@horejsek.com)
@@ -518,7 +498,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:michal_horejsek:fastjsonschema:2.21.2:
 ##### 
 
 PackageName: jsonschema
-SPDXID: SPDXRef-27-jsonschema
+SPDXID: SPDXRef-26-jsonschema
 PackageVersion: 4.26.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+jsonschema@GrayVines.com)
@@ -526,8 +506,8 @@ PackageDownloadLocation: https://pypi.org/project/jsonschema/4.26.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/python-jsonschema/jsonschema
 PackageChecksum: SHA256: d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>An implementation of JSON Schema validation for Python</text>
 ReleaseDate: 2026-01-07T13:41:05Z
@@ -542,7 +522,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:jsonschema:4.26.0:*:*:*:
 ##### 
 
 PackageName: jsonschema-specifications
-SPDXID: SPDXRef-28-jsonschema-specifications
+SPDXID: SPDXRef-27-jsonschema-specifications
 PackageVersion: 2025.9.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+jsonschema-specifications@GrayVines.com)
@@ -550,8 +530,8 @@ PackageDownloadLocation: https://pypi.org/project/jsonschema-specifications/2025
 FilesAnalyzed: false
 PackageHomePage: https://github.com/python-jsonschema/jsonschema-specifications
 PackageChecksum: SHA256: 98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>The JSON Schema meta-schemas and vocabularies, exposed as a Registry</text>
 ReleaseDate: 2025-09-08T01:34:57Z
@@ -565,7 +545,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:jsonschema-specification
 ##### 
 
 PackageName: referencing
-SPDXID: SPDXRef-29-referencing
+SPDXID: SPDXRef-28-referencing
 PackageVersion: 0.37.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+referencing@GrayVines.com)
@@ -573,8 +553,8 @@ PackageDownloadLocation: https://pypi.org/project/referencing/0.37.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/python-jsonschema/referencing
 PackageChecksum: SHA256: 381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>JSON Referencing + Python</text>
 ReleaseDate: 2025-10-13T15:30:47Z
@@ -589,7 +569,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:referencing:0.37.0:*:*:*
 ##### 
 
 PackageName: rpds-py
-SPDXID: SPDXRef-30-rpds-py
+SPDXID: SPDXRef-29-rpds-py
 PackageVersion: 0.30.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Julian Berman (Julian+rpds@GrayVines.com)
@@ -597,8 +577,8 @@ PackageDownloadLocation: https://pypi.org/project/rpds-py/0.30.0/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/crate-py/rpds
 PackageChecksum: SHA256: 679ae98e00c0e8d68a7fda324e16b90fd5260945b45d3b824c892cec9eea3288
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Python bindings to Rust's persistent data structures (rpds)</text>
 ReleaseDate: 2025-11-30T20:21:33Z
@@ -613,7 +593,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:julian_berman:rpds-py:0.30.0:*:*:*:*:*
 ##### 
 
 PackageName: xmlschema
-SPDXID: SPDXRef-31-xmlschema
+SPDXID: SPDXRef-30-xmlschema
 PackageVersion: 4.3.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Davide Brunato (brunato@sissa.it)
@@ -621,8 +601,8 @@ PackageDownloadLocation: https://pypi.org/project/xmlschema/4.3.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/sissaschool/xmlschema
 PackageChecksum: SHA256: 9560314d70ae87be0aecb8712cfebed636f867707ccf9758d4b0645d607f64b9
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>An XML Schema validator and decoder</text>
 ReleaseDate: 2026-01-17T23:01:00Z
@@ -631,7 +611,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:davide_brunato:xmlschema:4.3.1:*:*:*:*
 ##### 
 
 PackageName: elementpath
-SPDXID: SPDXRef-32-elementpath
+SPDXID: SPDXRef-31-elementpath
 PackageVersion: 5.1.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Davide Brunato (brunato@sissa.it)
@@ -639,8 +619,8 @@ PackageDownloadLocation: https://pypi.org/project/elementpath/5.1.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/sissaschool/elementpath
 PackageChecksum: SHA256: 57637359065e60654422d8474c1749b09bb21348012b7197f868027e3c09c9b9
-PackageLicenseDeclared: NOASSERTION
-PackageLicenseConcluded: NOASSERTION
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml</text>
 ReleaseDate: 2026-01-20T21:42:24Z
@@ -649,7 +629,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:davide_brunato:elementpath:5.1.1:*:*:*
 ##### 
 
 PackageName: packageurl-python
-SPDXID: SPDXRef-33-packageurl-python
+SPDXID: SPDXRef-32-packageurl-python
 PackageVersion: 0.17.6
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: the purl authors
@@ -667,7 +647,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:the_purl_authors:packageurl-python:0.1
 ##### 
 
 PackageName: tantivy
-SPDXID: SPDXRef-34-tantivy
+SPDXID: SPDXRef-33-tantivy
 PackageVersion: 0.25.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Organization: Damir Jelic Caleb Hattingh Cam Parry (cam.parry@kapiche.com)
@@ -684,28 +664,28 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:damir_jelic_caleb_hattingh_cam_parry:t
 ##### 
 
 PackageName: textual
-SPDXID: SPDXRef-35-textual
-PackageVersion: 8.0.0
+SPDXID: SPDXRef-34-textual
+PackageVersion: 8.1.1
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (will@textualize.io)
-PackageDownloadLocation: https://pypi.org/project/textual/8.0.0/#files
+PackageDownloadLocation: https://pypi.org/project/textual/8.1.1/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/Textualize/textual
-PackageChecksum: SHA256: 8908f4ebe93a6b4f77ca7262197784a52162bc88b05f4ecf50ac93a92d49bb8f
+PackageChecksum: SHA256: 6712f96e335cd782e76193dee16b9c8875fe0699d923bc8d3f1228fd23e773a6
 PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>Modern Text User Interface framework</text>
-ReleaseDate: 2026-02-16T17:12:11Z
+ReleaseDate: 2026-03-10T10:01:48Z
 ExternalRef: OTHER issue-tracker https://github.com/Textualize/textual/issues
 ExternalRef: OTHER documentation https://textual.textualize.io/
 ExternalRef: OTHER vcs https://github.com/Textualize/textual
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@8.0.0
-ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:8.0.0:*:*:*:*:*:*:*
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/textual@8.1.1
+ExternalRef: SECURITY cpe23Type cpe:2.3:a:will_mcgugan:textual:8.1.1:*:*:*:*:*:*:*
 ##### 
 
 PackageName: markdown-it-py
-SPDXID: SPDXRef-36-markdown-it-py
+SPDXID: SPDXRef-35-markdown-it-py
 PackageVersion: 4.0.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Chris Sewell (chrisj_sewell@hotmail.com)
@@ -725,7 +705,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:chris_sewell:markdown-it-py:4.0.0:*:*:
 ##### 
 
 PackageName: mdurl
-SPDXID: SPDXRef-37-mdurl
+SPDXID: SPDXRef-36-mdurl
 PackageVersion: 0.1.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Taneli Hukkinen (hukkin@users.noreply.github.com)
@@ -744,7 +724,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:taneli_hukkinen:mdurl:0.1.2:*:*:*:*:*:
 ##### 
 
 PackageName: mdit-py-plugins
-SPDXID: SPDXRef-38-mdit-py-plugins
+SPDXID: SPDXRef-37-mdit-py-plugins
 PackageVersion: 0.5.0
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Chris Sewell (chrisj_sewell@hotmail.com)
@@ -764,29 +744,28 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:chris_sewell:mdit-py-plugins:0.5.0:*:*
 ##### 
 
 PackageName: platformdirs
-SPDXID: SPDXRef-39-platformdirs
-PackageVersion: 4.9.2
+SPDXID: SPDXRef-38-platformdirs
+PackageVersion: 4.9.4
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: NOASSERTION
-PackageDownloadLocation: https://pypi.org/project/platformdirs/4.9.2/#files
+PackageDownloadLocation: https://pypi.org/project/platformdirs/4.9.4/#files
 FilesAnalyzed: false
 PackageHomePage: https://github.com/tox-dev/platformdirs
-PackageChecksum: SHA256: 9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd
-PackageLicenseDeclared: NOASSERTION
+PackageChecksum: SHA256: 68a9a4619a666ea6439f2ff250c12a853cd1cbd5158d258bd824a7df6be2f868
+PackageLicenseDeclared: MIT
 PackageLicenseConcluded: MIT
-PackageLicenseComments: <text>platformdirs declares MIT License which is not currently a valid SPDX License identifier or expression.</text>
 PackageCopyrightText: NOASSERTION
 PackageSummary: <text>A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`.</text>
-ReleaseDate: 2026-02-16T03:56:08Z
+ReleaseDate: 2026-03-05T18:34:12Z
 ExternalRef: OTHER log https://platformdirs.readthedocs.io/en/latest/changelog.html
 ExternalRef: OTHER documentation https://platformdirs.readthedocs.io
 ExternalRef: OTHER vcs https://github.com/tox-dev/platformdirs
 ExternalRef: OTHER issue-tracker https://github.com/tox-dev/platformdirs/issues
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/platformdirs@4.9.2
+ExternalRef: PACKAGE-MANAGER purl pkg:pypi/platformdirs@4.9.4
 ##### 
 
 PackageName: pygments
-SPDXID: SPDXRef-40-pygments
+SPDXID: SPDXRef-39-pygments
 PackageVersion: 2.19.2
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Georg Brandl (georg@python.org)
@@ -808,7 +787,7 @@ ExternalRef: SECURITY cpe23Type cpe:2.3:a:georg_brandl:pygments:2.19.2:*:*:*:*:*
 ##### 
 
 PackageName: rich
-SPDXID: SPDXRef-41-rich
+SPDXID: SPDXRef-40-rich
 PackageVersion: 14.3.3
 PrimaryPackagePurpose: LIBRARY
 PackageSupplier: Person: Will McGugan (willmcgugan@gmail.com)
@@ -832,51 +811,50 @@ Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-3-typecode-libmagic-sys
 Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-4-typecode
 Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-5-attrs
 Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-6-binaryornot
-Relationship: SPDXRef-6-binaryornot DEPENDS_ON SPDXRef-7-chardet
-Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-8-commoncode
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-5-attrs
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-9-beautifulsoup4
-Relationship: SPDXRef-9-beautifulsoup4 DEPENDS_ON SPDXRef-10-soupsieve
-Relationship: SPDXRef-9-beautifulsoup4 DEPENDS_ON SPDXRef-11-typing-extensions
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-12-click
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-13-requests
-Relationship: SPDXRef-13-requests DEPENDS_ON SPDXRef-14-charset-normalizer
-Relationship: SPDXRef-13-requests DEPENDS_ON SPDXRef-15-idna
-Relationship: SPDXRef-13-requests DEPENDS_ON SPDXRef-16-urllib3
-Relationship: SPDXRef-13-requests DEPENDS_ON SPDXRef-17-certifi
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-18-saneyaml
-Relationship: SPDXRef-18-saneyaml DEPENDS_ON SPDXRef-19-pyyaml
-Relationship: SPDXRef-8-commoncode DEPENDS_ON SPDXRef-20-text-unidecode
-Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-21-plugincode
-Relationship: SPDXRef-21-plugincode DEPENDS_ON SPDXRef-12-click
-Relationship: SPDXRef-21-plugincode DEPENDS_ON SPDXRef-8-commoncode
-Relationship: SPDXRef-21-plugincode DEPENDS_ON SPDXRef-22-pluggy
-Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-23-lib4sbom
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-19-pyyaml
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-24-semantic-version
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-25-defusedxml
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-26-fastjsonschema
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-27-jsonschema
-Relationship: SPDXRef-27-jsonschema DEPENDS_ON SPDXRef-5-attrs
-Relationship: SPDXRef-27-jsonschema DEPENDS_ON SPDXRef-28-jsonschema-specifications
-Relationship: SPDXRef-28-jsonschema-specifications DEPENDS_ON SPDXRef-29-referencing
-Relationship: SPDXRef-29-referencing DEPENDS_ON SPDXRef-5-attrs
-Relationship: SPDXRef-29-referencing DEPENDS_ON SPDXRef-30-rpds-py
-Relationship: SPDXRef-29-referencing DEPENDS_ON SPDXRef-11-typing-extensions
-Relationship: SPDXRef-27-jsonschema DEPENDS_ON SPDXRef-29-referencing
-Relationship: SPDXRef-27-jsonschema DEPENDS_ON SPDXRef-30-rpds-py
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-31-xmlschema
-Relationship: SPDXRef-31-xmlschema DEPENDS_ON SPDXRef-32-elementpath
-Relationship: SPDXRef-23-lib4sbom DEPENDS_ON SPDXRef-33-packageurl-python
-Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-34-tantivy
-Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-35-textual
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-36-markdown-it-py
-Relationship: SPDXRef-36-markdown-it-py DEPENDS_ON SPDXRef-37-mdurl
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-38-mdit-py-plugins
-Relationship: SPDXRef-38-mdit-py-plugins DEPENDS_ON SPDXRef-36-markdown-it-py
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-39-platformdirs
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-40-pygments
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-41-rich
-Relationship: SPDXRef-41-rich DEPENDS_ON SPDXRef-36-markdown-it-py
-Relationship: SPDXRef-41-rich DEPENDS_ON SPDXRef-40-pygments
-Relationship: SPDXRef-35-textual DEPENDS_ON SPDXRef-11-typing-extensions
+Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-7-commoncode
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-5-attrs
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-8-beautifulsoup4
+Relationship: SPDXRef-8-beautifulsoup4 DEPENDS_ON SPDXRef-9-soupsieve
+Relationship: SPDXRef-8-beautifulsoup4 DEPENDS_ON SPDXRef-10-typing-extensions
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-11-click
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-12-requests
+Relationship: SPDXRef-12-requests DEPENDS_ON SPDXRef-13-charset-normalizer
+Relationship: SPDXRef-12-requests DEPENDS_ON SPDXRef-14-idna
+Relationship: SPDXRef-12-requests DEPENDS_ON SPDXRef-15-urllib3
+Relationship: SPDXRef-12-requests DEPENDS_ON SPDXRef-16-certifi
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-17-saneyaml
+Relationship: SPDXRef-17-saneyaml DEPENDS_ON SPDXRef-18-pyyaml
+Relationship: SPDXRef-7-commoncode DEPENDS_ON SPDXRef-19-text-unidecode
+Relationship: SPDXRef-4-typecode DEPENDS_ON SPDXRef-20-plugincode
+Relationship: SPDXRef-20-plugincode DEPENDS_ON SPDXRef-11-click
+Relationship: SPDXRef-20-plugincode DEPENDS_ON SPDXRef-7-commoncode
+Relationship: SPDXRef-20-plugincode DEPENDS_ON SPDXRef-21-pluggy
+Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-22-lib4sbom
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-18-pyyaml
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-23-semantic-version
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-24-defusedxml
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-25-fastjsonschema
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-26-jsonschema
+Relationship: SPDXRef-26-jsonschema DEPENDS_ON SPDXRef-5-attrs
+Relationship: SPDXRef-26-jsonschema DEPENDS_ON SPDXRef-27-jsonschema-specifications
+Relationship: SPDXRef-27-jsonschema-specifications DEPENDS_ON SPDXRef-28-referencing
+Relationship: SPDXRef-28-referencing DEPENDS_ON SPDXRef-5-attrs
+Relationship: SPDXRef-28-referencing DEPENDS_ON SPDXRef-29-rpds-py
+Relationship: SPDXRef-28-referencing DEPENDS_ON SPDXRef-10-typing-extensions
+Relationship: SPDXRef-26-jsonschema DEPENDS_ON SPDXRef-28-referencing
+Relationship: SPDXRef-26-jsonschema DEPENDS_ON SPDXRef-29-rpds-py
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-30-xmlschema
+Relationship: SPDXRef-30-xmlschema DEPENDS_ON SPDXRef-31-elementpath
+Relationship: SPDXRef-22-lib4sbom DEPENDS_ON SPDXRef-32-packageurl-python
+Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-33-tantivy
+Relationship: SPDXRef-1-bids-analyser DEPENDS_ON SPDXRef-34-textual
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-35-markdown-it-py
+Relationship: SPDXRef-35-markdown-it-py DEPENDS_ON SPDXRef-36-mdurl
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-37-mdit-py-plugins
+Relationship: SPDXRef-37-mdit-py-plugins DEPENDS_ON SPDXRef-35-markdown-it-py
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-38-platformdirs
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-39-pygments
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-40-rich
+Relationship: SPDXRef-40-rich DEPENDS_ON SPDXRef-35-markdown-it-py
+Relationship: SPDXRef-40-rich DEPENDS_ON SPDXRef-39-pygments
+Relationship: SPDXRef-34-textual DEPENDS_ON SPDXRef-10-typing-extensions
