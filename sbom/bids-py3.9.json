@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:45eacebe-7580-481d-b3c8-7205712b40c6",
+  "serialNumber": "urn:uuid:b26b13a4-ee30-4807-855e-894e1512801a",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-03-01T03:20:45Z",
+    "timestamp": "2026-03-15T03:26:35Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -15,7 +15,7 @@
       "components": [
         {
           "name": "sbom4python",
-          "version": "0.12.4",
+          "version": "0.12.5",
           "type": "application"
         }
       ]
@@ -218,6 +218,15 @@
         {
           "alg": "SHA-256",
           "content": "adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -578,10 +587,6 @@
         {
           "name": "python_version",
           "value": "3.9.25"
-        },
-        {
-          "name": "License Comments",
-          "value": "soupsieve declares MIT License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
@@ -604,6 +609,15 @@
         {
           "alg": "SHA-256",
           "content": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0",
+            "url": "https://opensource.org/licenses/Python-2.0",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -743,6 +757,15 @@
           "content": "5a1f80bf1daa489495071efbb095d75a634cf28a8bc299581244063b53176151"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://pypi.org/project/importlib-metadata/8.7.1/#files",
@@ -789,6 +812,15 @@
         {
           "alg": "SHA-256",
           "content": "071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -888,7 +920,7 @@
       "type": "library",
       "bom-ref": "15-charset-normalizer",
       "name": "charset-normalizer",
-      "version": "3.4.4",
+      "version": "3.4.5",
       "supplier": {
         "name": "Ahmed R .",
         "contact": [
@@ -897,12 +929,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.4:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.5:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e824f1492727fa856dd6eda4f7cee25f8518a12f3c4a56a74e8095695089cf6d"
+          "content": "4167a621a9a1a986c73777dbc15d4b5eac8ac5c10393374109a343d4013ec765"
         }
       ],
       "licenses": [
@@ -916,7 +948,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.4/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.5/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -937,11 +969,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.4",
+      "purl": "pkg:pypi/charset-normalizer@3.4.5",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-10-14T04:40:11Z"
+          "value": "2026-03-06T06:00:26Z"
         },
         {
           "name": "language",
@@ -972,6 +1004,15 @@
         {
           "alg": "SHA-256",
           "content": "771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1028,6 +1069,15 @@
         {
           "alg": "SHA-256",
           "content": "bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1444,7 +1494,7 @@
       "type": "library",
       "bom-ref": "24-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1453,8 +1503,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.10.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.10.1:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "836079f07fe4767f5bb2bc0169fb118f917c2afe8c052be8dc6e6af98d176626"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1471,16 +1527,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.10.0/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.10.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.10.0",
+      "purl": "pkg:pypi/lib4sbom@0.10.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-05-15T12:30:06Z"
+          "value": "2026-03-05T15:00:02Z"
         },
         {
           "name": "language",
@@ -1699,6 +1755,15 @@
           "content": "3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/python-jsonschema/jsonschema",
@@ -1772,6 +1837,15 @@
           "content": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/python-jsonschema/jsonschema-specifications",
@@ -1839,6 +1913,15 @@
         {
           "alg": "SHA-256",
           "content": "e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1914,6 +1997,15 @@
           "content": "68afeec26d42ab3b47e541b272166a0b4400313946871cba3ed3a4fc0cab1cef"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/crate-py/rpds",
@@ -1987,6 +2079,15 @@
           "content": "82d24a50eea5e7f2d603312813848cd66fddf8fa2b6730839c6aa3d66312e3b6"
         }
       ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
+        }
+      ],
       "externalReferences": [
         {
           "url": "https://github.com/sissaschool/xmlschema",
@@ -2034,6 +2135,15 @@
         {
           "alg": "SHA-256",
           "content": "75d6f31c614d57e50eb749fc50806e3102880cd1f6552da3f2265f8eb8d3bbc6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -2165,7 +2275,7 @@
       "type": "library",
       "bom-ref": "36-textual",
       "name": "textual",
-      "version": "8.0.0",
+      "version": "8.1.1",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2174,12 +2284,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:8.0.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:8.1.1:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8908f4ebe93a6b4f77ca7262197784a52162bc88b05f4ecf50ac93a92d49bb8f"
+          "content": "6712f96e335cd782e76193dee16b9c8875fe0699d923bc8d3f1228fd23e773a6"
         }
       ],
       "licenses": [
@@ -2198,7 +2308,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/8.0.0/#files",
+          "url": "https://pypi.org/project/textual/8.1.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2215,11 +2325,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@8.0.0",
+      "purl": "pkg:pypi/textual@8.1.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-02-16T17:12:11Z"
+          "value": "2026-03-10T10:01:48Z"
         },
         {
           "name": "language",
@@ -2487,10 +2597,6 @@
         {
           "name": "python_version",
           "value": "3.9.25"
-        },
-        {
-          "name": "License Comments",
-          "value": "platformdirs declares MIT License which is not currently a valid SPDX License identifier or expression."
         }
       ]
     },
