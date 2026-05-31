@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:2153c59a-134c-4390-b187-8963da3def5e",
+  "serialNumber": "urn:uuid:694820e8-c0c3-4c8c-ae45-77b646b47180",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-03-01T03:20:31Z",
+    "timestamp": "2026-05-31T04:46:49Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -15,7 +15,7 @@
       "components": [
         {
           "name": "sbom4python",
-          "version": "0.12.4",
+          "version": "0.12.5",
           "type": "application"
         }
       ]
@@ -84,7 +84,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
@@ -92,7 +92,7 @@
       "type": "library",
       "bom-ref": "2-pyelftools",
       "name": "pyelftools",
-      "version": "0.32",
+      "version": "0.33",
       "supplier": {
         "name": "Eli Bendersky",
         "contact": [
@@ -101,12 +101,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.32:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:eli_bendersky:pyelftools:0.33:*:*:*:*:*:*:*",
       "description": "Library for analyzing ELF files and DWARF debugging information",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738"
+          "content": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036"
         }
       ],
       "externalReferences": [
@@ -116,16 +116,24 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pyelftools/0.32/#files",
+          "url": "https://pypi.org/project/pyelftools/0.33/#files",
           "type": "distribution",
           "comment": "Download location for component"
+        },
+        {
+          "url": "https://github.com/eliben/pyelftools.git",
+          "type": "vcs"
+        },
+        {
+          "url": "https://github.com/eliben/pyelftools/issues",
+          "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/pyelftools@0.32",
+      "purl": "pkg:pypi/pyelftools@0.33",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-02-19T14:19:59Z"
+          "value": "2026-05-29T12:56:20Z"
         },
         {
           "name": "language",
@@ -133,7 +141,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -186,7 +194,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -198,7 +206,7 @@
       "type": "library",
       "bom-ref": "4-typecode",
       "name": "typecode",
-      "version": "30.1.0",
+      "version": "30.2.0",
       "supplier": {
         "name": "nexB. Inc . and others",
         "contact": [
@@ -207,12 +215,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:nexb._inc._and_others:typecode:30.1.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:nexb._inc._and_others:typecode:30.2.0:*:*:*:*:*:*:*",
       "description": "Comprehensive filetype and mimetype detection using libmagic and Pygments.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "d61a9cc8dfb22712c15f83936564cc034429b81f66e24058b89ce5169af39b34"
+          "content": "5e59d65ea899b30926f66c32f43d811aa200e8ce1aa84f95b109cdabb4af2acd"
         }
       ],
       "licenses": [
@@ -231,16 +239,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/typecode/30.1.0/#files",
+          "url": "https://pypi.org/project/typecode/30.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/typecode@30.1.0",
+      "purl": "pkg:pypi/typecode@30.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-09T06:19:44Z"
+          "value": "2026-03-23T15:12:02Z"
         },
         {
           "name": "language",
@@ -248,7 +256,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
@@ -256,7 +264,7 @@
       "type": "library",
       "bom-ref": "5-attrs",
       "name": "attrs",
-      "version": "25.4.0",
+      "version": "26.1.0",
       "supplier": {
         "name": "Hynek Schlawack",
         "contact": [
@@ -265,17 +273,26 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:25.4.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:hynek_schlawack:attrs:26.1.0:*:*:*:*:*:*:*",
       "description": "Classes Without Boilerplate",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373"
+          "content": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/attrs/25.4.0/#files",
+          "url": "https://pypi.org/project/attrs/26.1.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -300,11 +317,11 @@
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/attrs@25.4.0",
+      "purl": "pkg:pypi/attrs@26.1.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-10-06T13:54:43Z"
+          "value": "2026-03-19T14:22:23Z"
         },
         {
           "name": "language",
@@ -312,7 +329,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
@@ -320,7 +337,7 @@
       "type": "library",
       "bom-ref": "6-binaryornot",
       "name": "binaryornot",
-      "version": "0.4.4",
+      "version": "0.6.0",
       "supplier": {
         "name": "Audrey Roy Greenfeld",
         "contact": [
@@ -329,114 +346,52 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:audrey_roy_greenfeld:binaryornot:0.4.4:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:audrey_roy_greenfeld:binaryornot:0.6.0:*:*:*:*:*:*:*",
       "description": "Ultra-lightweight pure Python package to check if a file is binary or text.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b8b71173c917bddcd2c16070412e369c3ed7f0528926f70cac18a6c97fd563e4"
+          "content": "900adfd5e1b821255ba7e63139b0396b14c88b9286e74e03b6f51e0200331337"
         }
       ],
       "licenses": [
         {
           "license": {
-            "id": "BSD-3-Clause",
-            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
             "acknowledgement": "concluded"
           }
         }
       ],
       "externalReferences": [
         {
-          "url": "https://github.com/audreyr/binaryornot",
+          "url": "https://github.com/binaryornot/binaryornot",
           "type": "website",
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/binaryornot/0.4.4/#files",
-          "type": "distribution",
-          "comment": "Download location for component"
-        }
-      ],
-      "purl": "pkg:pypi/binaryornot@0.4.4",
-      "properties": [
-        {
-          "name": "release_date",
-          "value": "2017-08-03T15:55:31Z"
-        },
-        {
-          "name": "language",
-          "value": "Python"
-        },
-        {
-          "name": "python_version",
-          "value": "3.12.12"
-        },
-        {
-          "name": "License Comments",
-          "value": "binaryornot declares BSD which is not currently a valid SPDX License identifier or expression."
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "7-chardet",
-      "name": "chardet",
-      "version": "5.2.0",
-      "supplier": {
-        "name": "Mark Pilgrim",
-        "contact": [
-          {
-            "email": "mark@diveintomark.org"
-          }
-        ]
-      },
-      "cpe": "cpe:2.3:a:mark_pilgrim:chardet:5.2.0:*:*:*:*:*:*:*",
-      "description": "Universal encoding detector for Python 3",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "LGPL-2.0-or-later",
-            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html",
-            "acknowledgement": "concluded"
-          }
-        }
-      ],
-      "externalReferences": [
-        {
-          "url": "https://github.com/chardet/chardet",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/chardet/5.2.0/#files",
+          "url": "https://pypi.org/project/binaryornot/0.6.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
         {
-          "url": "https://chardet.readthedocs.io/",
-          "type": "documentation"
-        },
-        {
-          "url": "https://github.com/chardet/chardet",
-          "type": "other"
-        },
-        {
-          "url": "https://github.com/chardet/chardet/issues",
+          "url": "https://github.com/binaryornot/binaryornot/issues",
           "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/binaryornot/binaryornot/releases",
+          "type": "log"
+        },
+        {
+          "url": "https://binaryornot.github.io/binaryornot/",
+          "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/chardet@5.2.0",
+      "purl": "pkg:pypi/binaryornot@0.6.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2023-08-01T19:23:00Z"
+          "value": "2026-03-08T16:26:27Z"
         },
         {
           "name": "language",
@@ -444,17 +399,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
-        },
-        {
-          "name": "License Comments",
-          "value": "chardet declares LGPL which is not currently a valid SPDX License identifier or expression."
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "8-commoncode",
+      "bom-ref": "7-commoncode",
       "name": "commoncode",
       "version": "32.4.2",
       "supplier": {
@@ -506,13 +457,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "9-beautifulsoup4",
+      "bom-ref": "8-beautifulsoup4",
       "name": "beautifulsoup4",
       "version": "4.14.3",
       "supplier": {
@@ -568,7 +519,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -578,9 +529,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "10-soupsieve",
+      "bom-ref": "9-soupsieve",
       "name": "soupsieve",
-      "version": "2.8.3",
+      "version": "2.8.4",
       "supplier": {
         "name": "Isaac Muse",
         "contact": [
@@ -589,12 +540,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.8.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:isaac_muse:soupsieve:2.8.4:*:*:*:*:*:*:*",
       "description": "A modern CSS selector implementation for Beautiful Soup.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ed64f2ba4eebeab06cc4962affce381647455978ffc1e36bb79a545b91f45a95"
+          "content": "e7e6b0769c8f51ed59acab6e994b00621096cfb1c640a7509295987388fbaf65"
         }
       ],
       "licenses": [
@@ -613,16 +564,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/soupsieve/2.8.3/#files",
+          "url": "https://pypi.org/project/soupsieve/2.8.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/soupsieve@2.8.3",
+      "purl": "pkg:pypi/soupsieve@2.8.4",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-20T04:27:01Z"
+          "value": "2026-05-24T13:55:55Z"
         },
         {
           "name": "language",
@@ -630,17 +581,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
-        },
-        {
-          "name": "License Comments",
-          "value": "soupsieve declares MIT License which is not currently a valid SPDX License identifier or expression."
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "11-typing-extensions",
+      "bom-ref": "10-typing-extensions",
       "name": "typing-extensions",
       "version": "4.15.0",
       "supplier": {
@@ -657,6 +604,15 @@
         {
           "alg": "SHA-256",
           "content": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "PSF-2.0",
+            "url": "https://opensource.org/licenses/Python-2.0",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -703,25 +659,34 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "12-click",
+      "bom-ref": "11-click",
       "name": "click",
-      "version": "8.3.1",
+      "version": "8.4.1",
       "description": "Composable command line interface toolkit",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6"
+          "content": "482be17c6991b8c19c5429a1e995d9b0efdbb63172824c41f99965dc0ade8ec2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/click/8.3.1/#files",
+          "url": "https://pypi.org/project/click/8.4.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -746,11 +711,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/click@8.3.1",
+      "purl": "pkg:pypi/click@8.4.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-11-15T20:45:41Z"
+          "value": "2026-05-22T04:08:35Z"
         },
         {
           "name": "language",
@@ -758,15 +723,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "13-requests",
+      "bom-ref": "12-requests",
       "name": "requests",
-      "version": "2.32.5",
+      "version": "2.34.2",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -775,12 +740,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.32.5:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:requests:2.34.2:*:*:*:*:*:*:*",
       "description": "Python HTTP for Humans.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
+          "content": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
         }
       ],
       "licenses": [
@@ -794,12 +759,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://requests.readthedocs.io",
-          "type": "website",
-          "comment": "Home page for project"
-        },
-        {
-          "url": "https://pypi.org/project/requests/2.32.5/#files",
+          "url": "https://pypi.org/project/requests/2.34.2/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -812,11 +772,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/requests@2.32.5",
+      "purl": "pkg:pypi/requests@2.34.2",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-08-18T20:46:00Z"
+          "value": "2026-05-14T19:25:26Z"
         },
         {
           "name": "language",
@@ -824,15 +784,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "14-charset-normalizer",
+      "bom-ref": "13-charset-normalizer",
       "name": "charset-normalizer",
-      "version": "3.4.4",
+      "version": "3.4.7",
       "supplier": {
         "name": "Ahmed R .",
         "contact": [
@@ -841,12 +801,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.4:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:ahmed_r.:charset-normalizer:3.4.7:*:*:*:*:*:*:*",
       "description": "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "e824f1492727fa856dd6eda4f7cee25f8518a12f3c4a56a74e8095695089cf6d"
+          "content": "cdd68a1fb318e290a2077696b7eb7a21a49163c455979c639bf5a5dcdc46617d"
         }
       ],
       "licenses": [
@@ -860,7 +820,7 @@
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/charset-normalizer/3.4.4/#files",
+          "url": "https://pypi.org/project/charset-normalizer/3.4.7/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -881,11 +841,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/charset-normalizer@3.4.4",
+      "purl": "pkg:pypi/charset-normalizer@3.4.7",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-10-14T04:40:11Z"
+          "value": "2026-04-02T09:25:40Z"
         },
         {
           "name": "language",
@@ -893,15 +853,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "15-idna",
+      "bom-ref": "14-idna",
       "name": "idna",
-      "version": "3.11",
+      "version": "3.17",
       "supplier": {
         "name": "Kim Davies",
         "contact": [
@@ -910,22 +870,31 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kim_davies:idna:3.11:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kim_davies:idna:3.17:*:*:*:*:*:*:*",
       "description": "Internationalized Domain Names in Applications (IDNA)",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea"
+          "content": "466e48829084efe2548012b855df21540b96f2e20e51bd124c851536556a592c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/idna/3.11/#files",
+          "url": "https://pypi.org/project/idna/3.17/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
         {
-          "url": "https://github.com/kjd/idna/blob/master/HISTORY.rst",
+          "url": "https://github.com/kjd/idna/blob/master/HISTORY.md",
           "type": "log"
         },
         {
@@ -937,11 +906,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/idna@3.11",
+      "purl": "pkg:pypi/idna@3.17",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-10-12T14:55:18Z"
+          "value": "2026-05-28T14:32:37Z"
         },
         {
           "name": "language",
@@ -949,15 +918,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "16-urllib3",
+      "bom-ref": "15-urllib3",
       "name": "urllib3",
-      "version": "2.6.3",
+      "version": "2.7.0",
       "supplier": {
         "name": "Andrey Petrov",
         "contact": [
@@ -966,17 +935,26 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.6.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:andrey_petrov:urllib3:2.7.0:*:*:*:*:*:*:*",
       "description": "HTTP library with thread-safe connection pooling, file post, and more.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4"
+          "content": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/urllib3/2.6.3/#files",
+          "url": "https://pypi.org/project/urllib3/2.7.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -997,11 +975,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/urllib3@2.6.3",
+      "purl": "pkg:pypi/urllib3@2.7.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-01-07T16:24:42Z"
+          "value": "2026-05-07T16:13:17Z"
         },
         {
           "name": "language",
@@ -1009,15 +987,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "17-certifi",
+      "bom-ref": "16-certifi",
       "name": "certifi",
-      "version": "2026.2.25",
+      "version": "2026.5.20",
       "supplier": {
         "name": "Kenneth Reitz",
         "contact": [
@@ -1026,12 +1004,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2026.2.25:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:kenneth_reitz:certifi:2026.5.20:*:*:*:*:*:*:*",
       "description": "Python package for providing Mozilla's CA Bundle.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"
+          "content": "3c52e209ba0a4ad7aebe60436a4ab349c39e1e602e8c134221e546902ad25897"
         }
       ],
       "licenses": [
@@ -1050,7 +1028,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/certifi/2026.2.25/#files",
+          "url": "https://pypi.org/project/certifi/2026.5.20/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1059,11 +1037,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/certifi@2026.2.25",
+      "purl": "pkg:pypi/certifi@2026.5.20",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-02-25T02:54:15Z"
+          "value": "2026-05-20T11:46:48Z"
         },
         {
           "name": "language",
@@ -1071,13 +1049,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "18-saneyaml",
+      "bom-ref": "17-saneyaml",
       "name": "saneyaml",
       "version": "0.6.1",
       "supplier": {
@@ -1129,13 +1107,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "19-pyyaml",
+      "bom-ref": "18-pyyaml",
       "name": "pyyaml",
       "version": "6.0.3",
       "supplier": {
@@ -1207,13 +1185,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "20-text-unidecode",
+      "bom-ref": "19-text-unidecode",
       "name": "text-unidecode",
       "version": "1.3",
       "supplier": {
@@ -1265,7 +1243,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -1275,7 +1253,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "21-plugincode",
+      "bom-ref": "20-plugincode",
       "name": "plugincode",
       "version": "32.0.0",
       "supplier": {
@@ -1327,13 +1305,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "22-pluggy",
+      "bom-ref": "21-pluggy",
       "name": "pluggy",
       "version": "1.6.0",
       "supplier": {
@@ -1380,15 +1358,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "23-lib4sbom",
+      "bom-ref": "22-lib4sbom",
       "name": "lib4sbom",
-      "version": "0.10.0",
+      "version": "0.10.4",
       "supplier": {
         "name": "Anthony Harrison",
         "contact": [
@@ -1397,8 +1375,14 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.10.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:anthony_harrison:lib4sbom:0.10.4:*:*:*:*:*:*:*",
       "description": "Software Bill of Material (SBOM) generator and consumer library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ba6652ac2d0ba767d48f912c762f41ab3843cf5817303082aaa2ee8a1952de04"
+        }
+      ],
       "licenses": [
         {
           "license": {
@@ -1415,16 +1399,16 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/lib4sbom/0.10.0/#files",
+          "url": "https://pypi.org/project/lib4sbom/0.10.4/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/lib4sbom@0.10.0",
+      "purl": "pkg:pypi/lib4sbom@0.10.4",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-05-15T12:30:06Z"
+          "value": "2026-04-17T12:06:29Z"
         },
         {
           "name": "language",
@@ -1432,13 +1416,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "24-semantic-version",
+      "bom-ref": "23-semantic-version",
       "name": "semantic-version",
       "version": "2.10.0",
       "supplier": {
@@ -1490,7 +1474,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -1500,7 +1484,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "25-defusedxml",
+      "bom-ref": "24-defusedxml",
       "name": "defusedxml",
       "version": "0.7.1",
       "supplier": {
@@ -1552,7 +1536,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -1562,7 +1546,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "26-fastjsonschema",
+      "bom-ref": "25-fastjsonschema",
       "name": "fastjsonschema",
       "version": "2.21.2",
       "supplier": {
@@ -1614,7 +1598,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -1624,7 +1608,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "27-jsonschema",
+      "bom-ref": "26-jsonschema",
       "name": "jsonschema",
       "version": "4.26.0",
       "supplier": {
@@ -1641,6 +1625,15 @@
         {
           "alg": "SHA-256",
           "content": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1691,13 +1684,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "28-jsonschema-specifications",
+      "bom-ref": "27-jsonschema-specifications",
       "name": "jsonschema-specifications",
       "version": "2025.9.1",
       "supplier": {
@@ -1714,6 +1707,15 @@
         {
           "alg": "SHA-256",
           "content": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1760,13 +1762,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "29-referencing",
+      "bom-ref": "28-referencing",
       "name": "referencing",
       "version": "0.37.0",
       "supplier": {
@@ -1783,6 +1785,15 @@
         {
           "alg": "SHA-256",
           "content": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1833,15 +1844,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "30-rpds-py",
+      "bom-ref": "29-rpds-py",
       "name": "rpds-py",
-      "version": "0.30.0",
+      "version": "2026.5.1",
       "supplier": {
         "name": "Julian Berman",
         "contact": [
@@ -1850,12 +1861,21 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:julian_berman:rpds-py:0.30.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:julian_berman:rpds-py:2026.5.1:*:*:*:*:*:*:*",
       "description": "Python bindings to Rust's persistent data structures (rpds)",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "679ae98e00c0e8d68a7fda324e16b90fd5260945b45d3b824c892cec9eea3288"
+          "content": "3397a5ed7174dc2786bb214030232fc36fe8e5584fec43a9952cc542b1a12036"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1865,7 +1885,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/rpds-py/0.30.0/#files",
+          "url": "https://pypi.org/project/rpds-py/2026.5.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -1874,31 +1894,31 @@
           "type": "documentation"
         },
         {
-          "url": "https://github.com/crate-py/rpds/issues/",
-          "type": "issue-tracker"
-        },
-        {
           "url": "https://github.com/sponsors/Julian",
           "type": "other"
         },
         {
-          "url": "https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
-          "type": "other"
+          "url": "https://github.com/crate-py/rpds/issues/",
+          "type": "issue-tracker"
         },
         {
           "url": "https://github.com/crate-py/rpds",
           "type": "vcs"
         },
         {
+          "url": "https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
+          "type": "other"
+        },
+        {
           "url": "https://github.com/orium/rpds",
           "type": "other"
         }
       ],
-      "purl": "pkg:pypi/rpds-py@0.30.0",
+      "purl": "pkg:pypi/rpds-py@2026.5.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-11-30T20:21:33Z"
+          "value": "2026-05-28T11:58:50Z"
         },
         {
           "name": "language",
@@ -1906,13 +1926,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "31-xmlschema",
+      "bom-ref": "30-xmlschema",
       "name": "xmlschema",
       "version": "4.3.1",
       "supplier": {
@@ -1929,6 +1949,15 @@
         {
           "alg": "SHA-256",
           "content": "9560314d70ae87be0aecb8712cfebed636f867707ccf9758d4b0645d607f64b9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -1955,13 +1984,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "32-elementpath",
+      "bom-ref": "31-elementpath",
       "name": "elementpath",
       "version": "5.1.1",
       "supplier": {
@@ -1978,6 +2007,15 @@
         {
           "alg": "SHA-256",
           "content": "57637359065e60654422d8474c1749b09bb21348012b7197f868027e3c09c9b9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/license/mit/",
+            "acknowledgement": "concluded"
+          }
         }
       ],
       "externalReferences": [
@@ -2004,13 +2042,13 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "33-packageurl-python",
+      "bom-ref": "32-packageurl-python",
       "name": "packageurl-python",
       "version": "0.17.6",
       "supplier": {
@@ -2057,15 +2095,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "34-tantivy",
+      "bom-ref": "33-tantivy",
       "name": "tantivy",
-      "version": "0.25.1",
+      "version": "0.26.0",
       "supplier": {
         "name": "Damir Jelic Caleb Hattingh Cam Parry",
         "contact": [
@@ -2074,26 +2112,26 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:damir_jelic_caleb_hattingh_cam_parry:tantivy:0.25.1:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:damir_jelic_caleb_hattingh_cam_parry:tantivy:0.26.0:*:*:*:*:*:*:*",
       "description": "Official Python bindings for the Tantivy search engine",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "7aa587a3dc9470584cacf5e3640fee93d12ec5f10109669c1f47c4e90820b958"
+          "content": "7c5b86629e5f0834b520607497f91545b0deedf800a912872a1b647f13cef54f"
         }
       ],
       "externalReferences": [
         {
-          "url": "https://pypi.org/project/tantivy/0.25.1/#files",
+          "url": "https://pypi.org/project/tantivy/0.26.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         }
       ],
-      "purl": "pkg:pypi/tantivy@0.25.1",
+      "purl": "pkg:pypi/tantivy@0.26.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-12-02T11:56:08Z"
+          "value": "2026-04-29T11:50:26Z"
         },
         {
           "name": "language",
@@ -2101,15 +2139,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "35-textual",
+      "bom-ref": "34-textual",
       "name": "textual",
-      "version": "8.0.0",
+      "version": "8.2.7",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2118,12 +2156,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:textual:8.0.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:textual:8.2.7:*:*:*:*:*:*:*",
       "description": "Modern Text User Interface framework",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "8908f4ebe93a6b4f77ca7262197784a52162bc88b05f4ecf50ac93a92d49bb8f"
+          "content": "4caaa13a90bc4cf9c6c862c067ccd34fe84e9c161710a2a907a8026313b6bd73"
         }
       ],
       "licenses": [
@@ -2142,7 +2180,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/textual/8.0.0/#files",
+          "url": "https://pypi.org/project/textual/8.2.7/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2159,11 +2197,11 @@
           "type": "vcs"
         }
       ],
-      "purl": "pkg:pypi/textual@8.0.0",
+      "purl": "pkg:pypi/textual@8.2.7",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-02-16T17:12:11Z"
+          "value": "2026-05-19T10:52:51Z"
         },
         {
           "name": "language",
@@ -2171,15 +2209,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "36-markdown-it-py",
+      "bom-ref": "35-markdown-it-py",
       "name": "markdown-it-py",
-      "version": "4.0.0",
+      "version": "4.2.0",
       "supplier": {
         "name": "Chris Sewell",
         "contact": [
@@ -2188,12 +2226,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:chris_sewell:markdown-it-py:4.0.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:chris_sewell:markdown-it-py:4.2.0:*:*:*:*:*:*:*",
       "description": "Python port of markdown-it. Markdown parsing, done right!",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147"
+          "content": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
         }
       ],
       "licenses": [
@@ -2212,7 +2250,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/markdown-it-py/4.0.0/#files",
+          "url": "https://pypi.org/project/markdown-it-py/4.2.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2221,11 +2259,11 @@
           "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/markdown-it-py@4.0.0",
+      "purl": "pkg:pypi/markdown-it-py@4.2.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-08-11T12:57:51Z"
+          "value": "2026-05-07T12:08:27Z"
         },
         {
           "name": "language",
@@ -2233,7 +2271,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -2243,7 +2281,7 @@
     },
     {
       "type": "library",
-      "bom-ref": "37-mdurl",
+      "bom-ref": "36-mdurl",
       "name": "mdurl",
       "version": "0.1.2",
       "supplier": {
@@ -2295,7 +2333,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -2305,9 +2343,9 @@
     },
     {
       "type": "library",
-      "bom-ref": "38-mdit-py-plugins",
+      "bom-ref": "37-mdit-py-plugins",
       "name": "mdit-py-plugins",
-      "version": "0.5.0",
+      "version": "0.6.1",
       "supplier": {
         "name": "Chris Sewell",
         "contact": [
@@ -2316,12 +2354,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:chris_sewell:mdit-py-plugins:0.5.0:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:chris_sewell:mdit-py-plugins:0.6.1:*:*:*:*:*:*:*",
       "description": "Collection of plugins for markdown-it-py",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "07a08422fc1936a5d26d146759e9155ea466e842f5ab2f7d2266dd084c8dab1f"
+          "content": "214c82fb2ac524472ab6a5bcab1de80f73b50443e187f401bfd77efbc7c6481d"
         }
       ],
       "licenses": [
@@ -2340,7 +2378,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/mdit-py-plugins/0.5.0/#files",
+          "url": "https://pypi.org/project/mdit-py-plugins/0.6.1/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2349,11 +2387,11 @@
           "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/mdit-py-plugins@0.5.0",
+      "purl": "pkg:pypi/mdit-py-plugins@0.6.1",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-08-11T07:25:47Z"
+          "value": "2026-05-13T09:03:37Z"
         },
         {
           "name": "language",
@@ -2361,7 +2399,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         },
         {
           "name": "License Comments",
@@ -2371,14 +2409,14 @@
     },
     {
       "type": "library",
-      "bom-ref": "39-platformdirs",
+      "bom-ref": "38-platformdirs",
       "name": "platformdirs",
-      "version": "4.9.2",
+      "version": "4.10.0",
       "description": "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd"
+          "content": "fb516cdb12eb0d857d0cd85a7c57cea4d060bee4578d6cf5a14dfdf8cbf8784a"
         }
       ],
       "licenses": [
@@ -2397,7 +2435,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/platformdirs/4.9.2/#files",
+          "url": "https://pypi.org/project/platformdirs/4.10.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2418,11 +2456,11 @@
           "type": "issue-tracker"
         }
       ],
-      "purl": "pkg:pypi/platformdirs@4.9.2",
+      "purl": "pkg:pypi/platformdirs@4.10.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-02-16T03:56:08Z"
+          "value": "2026-05-28T03:32:52Z"
         },
         {
           "name": "language",
@@ -2430,19 +2468,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
-        },
-        {
-          "name": "License Comments",
-          "value": "platformdirs declares MIT License which is not currently a valid SPDX License identifier or expression."
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "40-pygments",
+      "bom-ref": "39-pygments",
       "name": "pygments",
-      "version": "2.19.2",
+      "version": "2.20.0",
       "supplier": {
         "name": "Georg Brandl",
         "contact": [
@@ -2451,12 +2485,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:georg_brandl:pygments:2.19.2:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:georg_brandl:pygments:2.20.0:*:*:*:*:*:*:*",
       "description": "Pygments is a syntax highlighting package written in Python.",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b"
+          "content": "81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176"
         }
       ],
       "licenses": [
@@ -2475,7 +2509,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/pygments/2.19.2/#files",
+          "url": "https://pypi.org/project/pygments/2.20.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2496,11 +2530,11 @@
           "type": "log"
         }
       ],
-      "purl": "pkg:pypi/pygments@2.19.2",
+      "purl": "pkg:pypi/pygments@2.20.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2025-06-21T13:39:07Z"
+          "value": "2026-03-29T13:29:30Z"
         },
         {
           "name": "language",
@@ -2508,15 +2542,15 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     },
     {
       "type": "library",
-      "bom-ref": "41-rich",
+      "bom-ref": "40-rich",
       "name": "rich",
-      "version": "14.3.3",
+      "version": "15.0.0",
       "supplier": {
         "name": "Will McGugan",
         "contact": [
@@ -2525,12 +2559,12 @@
           }
         ]
       },
-      "cpe": "cpe:2.3:a:will_mcgugan:rich:14.3.3:*:*:*:*:*:*:*",
+      "cpe": "cpe:2.3:a:will_mcgugan:rich:15.0.0:*:*:*:*:*:*:*",
       "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "793431c1f8619afa7d3b52b2cdec859562b950ea0d4b6b505397612db8d5362d"
+          "content": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb"
         }
       ],
       "licenses": [
@@ -2549,7 +2583,7 @@
           "comment": "Home page for project"
         },
         {
-          "url": "https://pypi.org/project/rich/14.3.3/#files",
+          "url": "https://pypi.org/project/rich/15.0.0/#files",
           "type": "distribution",
           "comment": "Download location for component"
         },
@@ -2558,11 +2592,11 @@
           "type": "documentation"
         }
       ],
-      "purl": "pkg:pypi/rich@14.3.3",
+      "purl": "pkg:pypi/rich@15.0.0",
       "properties": [
         {
           "name": "release_date",
-          "value": "2026-02-19T17:23:13Z"
+          "value": "2026-04-12T08:24:02Z"
         },
         {
           "name": "language",
@@ -2570,7 +2604,7 @@
         },
         {
           "name": "python_version",
-          "value": "3.12.12"
+          "value": "3.12.13"
         }
       ]
     }
@@ -2588,9 +2622,9 @@
         "2-pyelftools",
         "3-typecode-libmagic-system-provided",
         "4-typecode",
-        "23-lib4sbom",
-        "34-tantivy",
-        "35-textual"
+        "22-lib4sbom",
+        "33-tantivy",
+        "34-textual"
       ]
     },
     {
@@ -2598,126 +2632,120 @@
       "dependsOn": [
         "5-attrs",
         "6-binaryornot",
-        "8-commoncode",
-        "21-plugincode"
+        "7-commoncode",
+        "20-plugincode"
       ]
     },
     {
-      "ref": "6-binaryornot",
-      "dependsOn": [
-        "7-chardet"
-      ]
-    },
-    {
-      "ref": "8-commoncode",
+      "ref": "7-commoncode",
       "dependsOn": [
         "5-attrs",
-        "9-beautifulsoup4",
-        "12-click",
-        "13-requests",
-        "18-saneyaml",
-        "20-text-unidecode"
+        "8-beautifulsoup4",
+        "11-click",
+        "12-requests",
+        "17-saneyaml",
+        "19-text-unidecode"
       ]
     },
     {
-      "ref": "9-beautifulsoup4",
+      "ref": "8-beautifulsoup4",
       "dependsOn": [
-        "10-soupsieve",
-        "11-typing-extensions"
+        "9-soupsieve",
+        "10-typing-extensions"
       ]
     },
     {
-      "ref": "13-requests",
+      "ref": "12-requests",
       "dependsOn": [
-        "14-charset-normalizer",
-        "15-idna",
-        "16-urllib3",
-        "17-certifi"
+        "13-charset-normalizer",
+        "14-idna",
+        "15-urllib3",
+        "16-certifi"
       ]
     },
     {
-      "ref": "18-saneyaml",
+      "ref": "17-saneyaml",
       "dependsOn": [
-        "19-pyyaml"
+        "18-pyyaml"
       ]
     },
     {
-      "ref": "21-plugincode",
+      "ref": "20-plugincode",
       "dependsOn": [
-        "12-click",
-        "8-commoncode",
-        "22-pluggy"
+        "11-click",
+        "7-commoncode",
+        "21-pluggy"
       ]
     },
     {
-      "ref": "23-lib4sbom",
+      "ref": "22-lib4sbom",
       "dependsOn": [
-        "19-pyyaml",
-        "24-semantic-version",
-        "25-defusedxml",
-        "26-fastjsonschema",
-        "27-jsonschema",
-        "31-xmlschema",
-        "33-packageurl-python"
+        "18-pyyaml",
+        "23-semantic-version",
+        "24-defusedxml",
+        "25-fastjsonschema",
+        "26-jsonschema",
+        "30-xmlschema",
+        "32-packageurl-python"
       ]
     },
     {
-      "ref": "27-jsonschema",
-      "dependsOn": [
-        "5-attrs",
-        "28-jsonschema-specifications",
-        "29-referencing",
-        "30-rpds-py"
-      ]
-    },
-    {
-      "ref": "28-jsonschema-specifications",
-      "dependsOn": [
-        "29-referencing"
-      ]
-    },
-    {
-      "ref": "29-referencing",
+      "ref": "26-jsonschema",
       "dependsOn": [
         "5-attrs",
-        "30-rpds-py",
-        "11-typing-extensions"
+        "27-jsonschema-specifications",
+        "28-referencing",
+        "29-rpds-py"
       ]
     },
     {
-      "ref": "31-xmlschema",
+      "ref": "27-jsonschema-specifications",
       "dependsOn": [
-        "32-elementpath"
+        "28-referencing"
       ]
     },
     {
-      "ref": "35-textual",
+      "ref": "28-referencing",
       "dependsOn": [
-        "36-markdown-it-py",
-        "38-mdit-py-plugins",
-        "39-platformdirs",
-        "40-pygments",
-        "41-rich",
-        "11-typing-extensions"
+        "5-attrs",
+        "29-rpds-py",
+        "10-typing-extensions"
       ]
     },
     {
-      "ref": "36-markdown-it-py",
+      "ref": "30-xmlschema",
       "dependsOn": [
-        "37-mdurl"
+        "31-elementpath"
       ]
     },
     {
-      "ref": "38-mdit-py-plugins",
+      "ref": "34-textual",
       "dependsOn": [
-        "36-markdown-it-py"
+        "35-markdown-it-py",
+        "37-mdit-py-plugins",
+        "38-platformdirs",
+        "39-pygments",
+        "40-rich",
+        "10-typing-extensions"
       ]
     },
     {
-      "ref": "41-rich",
+      "ref": "35-markdown-it-py",
       "dependsOn": [
-        "36-markdown-it-py",
-        "40-pygments"
+        "36-mdurl"
+      ]
+    },
+    {
+      "ref": "37-mdit-py-plugins",
+      "dependsOn": [
+        "35-markdown-it-py"
+      ]
+    },
+    {
+      "ref": "40-rich",
+      "dependsOn": [
+        "35-markdown-it-py",
+        "39-pygments"
       ]
     }
   ]
